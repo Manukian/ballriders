@@ -65,24 +65,30 @@ main {
     text-align: center;
     font-size: 13vw; } }
 @media (max-width: 480px) {
-  main {
-    background-position: -770px 0; }
-
   .text {
-    margin-top: 80px; }
+    margin-top: 30px;
+    margin-right: 4%; }
 
   .text-developing {
-    margin-top: -10px; }
+    margin-top: -10px;
+    text-align: right;
+    font-size: 12px; }
 
   .text-ballriders {
-    font-size: 14vw; } }
+    font-size: 40px;
+    text-align: right; } }
 @media (max-width: 320px) {
-  main {
-    background-position: -770px -120px; }
+  .text {
+    margin-right: 0;
+    margin-top: 60px; }
 
   .text-developing {
     font-size: 12px;
     font-weight: 200;
-    margin-top: -5px; } }
+    margin-top: -5px;
+    text-align: center; }
+
+  .text-ballriders {
+    text-align: center; } }
 
 /*# sourceMappingURL=main.css.map */
