@@ -59,7 +59,19 @@ main
         text-align: center
         font-size: 13vw
 
-@media (max-width: 480px)
+@media (max-width: 768px) and (orientation:landscape)
+    .text
+        margin-top: 30px
+        margin-right: 3%
+    .text-developing
+        margin-top: -10px
+        text-align: right
+        font-size: 2.7vw
+    .text-ballriders
+        font-size: 8vw
+        text-align: right
+
+@media (max-width: 480px) and (orientation:landscape)
     .text
         margin-top: 30px
         margin-right: 4%
@@ -71,16 +83,44 @@ main
         font-size: 40px
         text-align: right
 
-@media (max-width: 320px)
-
+@media (max-width: 480px) and (orientation: portrait)
+    main
+        background-position: -630px 0px
     .text
         margin-right: 0
-        margin-top: 60px
+        margin-top: 100px
     .text-developing
-        font-size: 12px
+        font-size: 17px
         font-weight: 200
-        margin-top: -5px
+        margin-top: -10px
         text-align: center
     .text-ballriders
         text-align: center
 
+@media (max-width: 380px) and (orientation: portrait)
+    main
+        background-position: -530px 0px
+    .text
+        margin-right: 0
+        margin-top: 90px
+    .text-developing
+        font-size: 15px
+        font-weight: 200
+        margin-top: -10px
+        text-align: center
+    .text-ballriders
+        text-align: center
+
+@media (max-width: 320px) and (orientation: portrait)
+    main
+        background-position: -470px 0px
+    .text
+        margin-right: 0
+        margin-top: 75px
+    .text-developing
+        font-size: 12px
+        font-weight: 200
+        margin-top: -10px
+        text-align: center
+    .text-ballriders
+        text-align: center
