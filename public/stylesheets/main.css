@@ -20,7 +20,7 @@ main {
     text-align: right;
     display: block;
     margin-right: 4%;
-    margin-top: 70px; }
+    margin-top: 4%; }
 
   .text-developing {
     font-size: 47px;
@@ -34,9 +34,6 @@ main {
     display: block;
     font-weight: 400; } }
 @media (max-width: 1280px) {
-  .text {
-    margin-top: 100px; }
-
   .text-developing {
     font-size: 38px; }
 
@@ -90,7 +87,7 @@ main {
   .text-ballriders {
     font-size: 40px;
     text-align: right; } }
-@media (max-width: 480px) and (orientation: portrait) {
+@media (max-width: 420px) and (orientation: portrait) {
   main {
     background-position: -630px 0px; }
 
@@ -125,6 +122,22 @@ main {
 @media (max-width: 320px) and (orientation: portrait) {
   main {
     background-position: -470px 0px; }
+
+  .text {
+    margin-right: 0;
+    margin-top: 75px; }
+
+  .text-developing {
+    font-size: 12px;
+    font-weight: 200;
+    margin-top: -10px;
+    text-align: center; }
+
+  .text-ballriders {
+    text-align: center; } }
+@media (max-height: 480px) and (orientation: portrait) {
+  main {
+    background-position: -400px 0px; }
 
   .text {
     margin-right: 0;
