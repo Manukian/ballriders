@@ -2,8 +2,13 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/main.css')
     meta(name="viewport", content ="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="stylesheets/base/reset.css")
+    link(rel="stylesheet", href="stylesheets/base/normalize.css")
+    script(src="javascripts/jquery.js")
+    block head
   body
     main
-      block content
+      block main
+    footer
+      block footer
