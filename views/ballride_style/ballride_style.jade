@@ -1,4 +1,12 @@
-extends layout
+extends ../layout
 
-block content
-  span Ballride Style
+block head
+  link(rel="stylesheet", href="stylesheets/ballride_style/ballride_style.css")
+block main
+  include ../topside_menu.jade
+  section.intro
+    h1#logo Ballride Style    
+    span#hello
+        b Hello. 
+        span You're about to dive into the ballride style.
+  section.about

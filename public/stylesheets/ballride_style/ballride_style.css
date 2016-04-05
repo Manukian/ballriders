@@ -1,3 +1,43 @@
+@import "http://webfonts.ru/import/roboto.css";
+html, body {
+  height: 100%;
+  width: 100%;
+  -webkit-font-smoothing: antialiased; }
 
+main {
+  height: 100%;
+  background-color: white; }
+
+.intro {
+  height: 88%; }
+
+#logo {
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -75px;
+  margin-top: -90px;
+  text-indent: -9999px;
+  width: 150px;
+  height: 170px;
+  background-image: url(../../images/6.svg);
+  background-repeat: no-repeat;
+  background-size: 100%; }
+
+#hello {
+  position: relative;
+  display: block;
+  width: auto;
+  top: 67%;
+  font-family: "Roboto";
+  text-align: center;
+  font-size: 28px;
+  font-weight: 100;
+  padding: 0 20px; }
+
+.about {
+  height: 600px;
+  background-color: black; }
 
 /*# sourceMappingURL=ballride_style.css.map */

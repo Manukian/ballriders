@@ -27,16 +27,19 @@ menu {
   right: 0;
   bottom: 0;
   text-decoration: none; }
+  .menu_block a:hover > .section_header, .menu_block-soaring_balls_syndicate a:hover > .section_header, .menu_block-ballride_style a:hover > .section_header, .menu_block-ballriders_creative_group a:hover > .section_header {
+    color: black; }
 
 .menu_block span.section_header, .menu_block-soaring_balls_syndicate span.section_header, .menu_block-ballride_style span.section_header, .menu_block-ballriders_creative_group span.section_header {
   text-align: center;
-  margin-top: 40%;
+  margin-top: 18%;
   display: block;
   font-weight: 400;
   letter-spacing: 1px;
-  font-family: Helvetica;
-  font-size: 45px;
-  color: white; }
+  font-family: Heue;
+  font-size: 28px;
+  color: white;
+  transition: 0.4s; }
 
 .menu_block-soaring_balls_syndicate {
   left: -10%;
@@ -46,13 +49,15 @@ menu {
 
 .menu_block-ballride_style {
   left: 30%;
-  background-image: url(../images/6.jpg);
+  background-image: url(../images/6.svg);
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  background-size: 30%;
+  background-repeat: no-repeat; }
 
 .menu_block-ballriders_creative_group {
   left: 70%;
-  background-image: url(../images/3.jpg);
+  background-image: url(../images/333.jpg);
   background-position: center;
   background-size: cover; }
 

@@ -1,5 +1,355 @@
-extends layout
+extends ../layout
+mixin project_item(href, number, title, year, category, music)
+    article
+        .wrapper_work
+            a.proj_link(href=href)
+            .proj_wrapper
+              .info_main
+                span.main_number= number
+                h2.main_title= title
+              .info_link
+                  .info_link_wrapper
+                    span.link_year= year
+                    span.link_project
+                      span.project_view View Project
+                      span.project_arrow Go To Project
+              .info_detail
+                h1.detail_title= title
+                .detail_wrapper
+                    .detail_category
+                      .top Category
+                      .bot= category
+                    .detail_music
+                      .top Music
+                      .bot= music
 
-block content
-  span.text
-    span soaring balls syndicate
+mixin project_item_reverse(href, number, title, year, category, music)
+    article
+        .wrapper_work
+            a.proj_link(href=href)
+            .proj_wrapper
+              .info_main
+                h2.main_title= title
+                span.main_number= number
+              .info_link
+                  .info_link_wrapper
+                    span.link_year= year
+                    span.link_project
+                      span.project_arrow Go To Project
+                      span.project_view View Project
+              .info_detail
+                .detail_wrapper
+                    .detail_category
+                      .top Category
+                      .bot= category
+                    .detail_music
+                      .top Music
+                      .bot= music
+                h1.detail_title= title
+
+block head
+  link(rel="stylesheet", href="stylesheets/soaring_balls_syndicate/soaring_balls_syndicate.css")
+  script(src="javascripts/soaring_balls_syndicate.js")
+block main
+    .menu_big_toggle
+    section.menu_big
+        ul
+            li.menu_big_item
+                img(src="../../images/ballriders_logotype_minimal_white.svg", alt="")
+            li.menu_big_item
+                a(href="soaring_balls_syndicate#home").color1 H &nbsp&nbsp&nbsp&nbsp&nbsp o &nbsp&nbsp&nbsp&nbsp&nbsp m &nbsp&nbsp&nbsp&nbsp&nbsp e
+            li.menu_big_item
+                a(href="soaring_balls_syndicate#intro").color2 I &nbsp&nbsp&nbsp&nbsp n &nbsp&nbsp&nbsp&nbsp t &nbsp&nbsp&nbsp&nbsp r &nbsp&nbsp&nbsp&nbsp o
+            li.menu_big_item
+                a(href="soaring_balls_syndicate#works").color3 W &nbsp&nbsp&nbsp o &nbsp&nbsp&nbsp r &nbsp&nbsp&nbsp k &nbsp&nbsp&nbsp s
+            li.menu_big_item
+                a(href="soaring_balls_syndicate#clients").color4 C &nbsp&nbsp l &nbsp&nbsp i &nbsp&nbsp e &nbsp&nbsp n &nbsp&nbsp t &nbsp&nbsp s
+            li.menu_big_item
+                a(href="soaring_balls_syndicate#about").color5 A &nbsp&nbsp&nbsp b &nbsp&nbsp&nbsp o &nbsp&nbsp&nbsp u &nbsp&nbsp&nbsp t
+            li.menu_big_item
+                a(href="soaring_balls_syndicate#service").color6 S &nbsp e &nbsp r &nbsp v &nbsp i &nbsp c &nbsp e
+            li.menu_big_item
+                a(href="soaring_balls_syndicate#contact").color7 C &nbsp o &nbsp n &nbsp t &nbsp a &nbsp c &nbsp t
+    section#home
+      include ../topside_menu.jade
+      .circle
+        svg.soaring_balls_syndicate_circle(xmlns='http://www.w3.org/2000/svg', viewbox='208.5 8.8 704 668.3')
+          path(fill='none', stroke='#000', stroke-width='1.094', d='M372.4 468.3h383.3')
+          lineargradient#a(gradientunits='userSpaceOnUse', x1='280.055', y1='422.495', x2='845.966', y2='260.223')
+            stop(offset='0', stop-color='#eaff00')
+            stop(offset='.203', stop-color='#eaff00')
+            stop(offset='.73', stop-color='#a2fc59')
+            stop(offset='1', stop-color='#57f866')
+          ellipse(fill='none', stroke='url(#a)', stroke-width='15', stroke-miterlimit='10', cx='563', cy='341.4', rx='286.3', ry='293')
+          text(transform='translate(414.6 309.636)', font-family="'ProximaNova-Light'", font-size='22', letter-spacing='1') SOARING BALLS SYNDICATE
+          text(transform='translate(396.29 528.749)', font-family="'ProximaNova-Light'", font-size='16', letter-spacing='1') Choreography • Classes • Collaborations
+          text(transform='translate(237.593 419.007)', font-family="'ProximaNova-Light'", font-size='108', letter-spacing='5') BALLRIDERS
+          path(d='M567 165.8l12.4 9-3.3 3.2-7.4-6.8zM557.9 197.7l-5.2 4.4 1.5-77.9 3.8 7.1zM589.4 172.3L565.8 151v-4.7l29.1 21.7zM589.7 190.2l-41.5 32.3v-3.3l37.6-33z')
+          path(d='M565.8 164.9l3.4 2.5.1 17.4-3.4 3.3z')
+          path(d='M589.5 172.2L565.9 191v-3l19.7-19.6z')
+          path(d='M589.5 190.3l-12.7-11.7 2.4-3.8 15.5 11.6z')
+      .arrow_down_pure
+        img(src="../../images/arrow_down_pure.svg", alt="")
+    section#intro
+    section#works
+        .video_wrapper
+          video#hands(autoplay loop )
+            source(src="../../images/hands.mov" type="video/mp4")
+        #left.menu_div
+          h3 Collaborations
+        #right.menu_div
+          h3 Choreographies
+        .works_wrapper
+            .project_list
+                .project_list_collab
+                    .wrapper
+                        .title
+                            h1 Selected Collaborations
+                            span - project list
+                    +project_item_reverse('#','.02','Some Collab','Y - 2015', 'Choreo', 'Kizaru')
+                    +project_item_reverse('#','.01','Another Collab','Y - 2014', 'Choreo', 'Kizaru')
+                .project_list_choreo
+                    .wrapper
+                        .title
+                            h1 Selected Choreographies
+                            span - project list
+                    +project_item('#','.04','Delay Kak Nado','Y - 2016', 'Choreo', 'Kizaru')
+                    +project_item('#','.03','Vse Moi Parni','Y - 2014', 'Choreo', 'Kizaru')
+                    +project_item('#','.02','Ne Lez Na Ugol','Y - 2014', 'Choreo', 'Kizaru')
+                    +project_item('#','.01','Ne Ostavlyayut Palcev','Y - 2014', 'Choreo', 'Kizaru')
+    section#clients
+        .circle
+            svg.soaring_balls_syndicate_circle(xmlns='http://www.w3.org/2000/svg', viewbox='208.5 8.8 704 668.3')
+              ellipse(fill='none', stroke='#FFF', stroke-width='15', stroke-miterlimit='10', cx='563', cy='341.4', rx='286.3', ry='293')
+              path(d='M568.9 168.9l9 6.5-2.4 2.3-5.4-4.9zM562.3 192.1l-3.8 3.2 1.1-56.7 2.7 5.2zM585.1 173.6L568 158.2v-3.5l21.1 15.8zM585.3 186.6l-30.1 23.5v-2.4l27.3-24z')
+              path(d='M568 168.2l2.5 1.9v12.6l-2.5 2.4z')
+              path(d='M585.2 173.6L568 187.2V185l14.4-14.3z')
+              path(d='M585.2 186.7l-9.2-8.5 1.7-2.8 11.3 8.4z')
+              path(fill='none', d='M215.9 282.8h696.6v473.8H215.9z')
+              text(transform='translate(215.888 293.493)')
+                tspan(x='0', y='0', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') Adidas
+                tspan(x='58.8', y='0', font-family="'Roboto-Light'", font-size='14', letter-spacing='29')  
+                tspan(x='91.3', y='0', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') •
+                tspan(x='98.7', y='0', font-family="'Roboto-Light'", font-size='14', letter-spacing='29')  
+                tspan(x='131.2', y='0', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') A-One
+                tspan(x='184.1', y='0', font-family="'Roboto-Light'", font-size='14', letter-spacing='29')  
+                tspan(x='216.6', y='0', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') •
+                tspan(x='224', y='0', font-family="'Roboto-Light'", font-size='14', letter-spacing='29')  
+                tspan(x='256.5', y='0', font-family="'Roboto-Bold'", font-size='14', letter-spacing='2') Apple
+                tspan(x='306.3', y='0', font-family="'Roboto-Light'", font-size='14', letter-spacing='29')  
+                tspan(x='338.8', y='0', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') •
+                tspan(x='346.2', y='0', font-family="'Roboto-Light'", font-size='14', letter-spacing='29')  
+                tspan(x='378.7', y='0', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') Asus
+                tspan(x='420.5', y='0', font-family="'Roboto-Light'", font-size='14', letter-spacing='29')  
+                tspan(x='453.1', y='0', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') •
+                tspan(x='460.4', y='0', font-family="'Roboto-Light'", font-size='14', letter-spacing='29')  
+                tspan(x='492.9', y='0', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') Ballaholix
+                tspan(x='579.8', y='0', font-family="'Roboto-Light'", font-size='14', letter-spacing='29')  
+                tspan(x='612.3', y='0', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') •
+                tspan(x='619.6', y='0', font-family="'Roboto-Light'", font-size='14', letter-spacing='29')  
+                tspan(x='652.2', y='0', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') Centr
+                tspan(x='0', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') Дождь
+                tspan(x='57.9', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='13')  
+                tspan(x='74.9', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') •
+                tspan(x='82.2', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='13')  
+                tspan(x='99.2', y='25.8', font-family="'Roboto-Bold'", font-size='14', letter-spacing='2') FIBA
+                tspan(x='140.2', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='13')  
+                tspan(x='157.2', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') •
+                tspan(x='164.5', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='13')  
+                tspan(x='181.5', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') Funbox
+                tspan(x='244', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='13')  
+                tspan(x='261', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') •
+                tspan(x='268.4', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='13')  
+                tspan(x='285.4', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') Gurme
+                tspan(x='341.2', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='13')  
+                tspan(x='358.2', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') •
+                tspan(x='365.5', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='13')  
+                tspan(x='382.5', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') Kia
+                tspan(x='410.3', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='13')  
+                tspan(x='427.3', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') •
+                tspan(x='434.6', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='13')  
+                tspan(x='451.6', y='25.8', font-family="'Roboto-Bold'", font-size='14', letter-spacing='2') Ленинград
+                tspan(x='548.3', y='25.8', font-family="'Roboto-Bold'", font-size='14', letter-spacing='13')  
+                tspan(x='565.5', y='25.8', font-family="'Roboto-Bold'", font-size='14', letter-spacing='2') Центр
+                tspan(x='620.6', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='13')  
+                tspan(x='637.6', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') •
+                tspan(x='645', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='13')  
+                tspan(x='662', y='25.8', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') МЕЧ
+                tspan(x='0', y='51.6', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') Minsk
+                tspan(x='51.1', y='51.6', font-family="'Roboto-Light'", font-size='14', letter-spacing='22')  
+                tspan(x='76.7', y='51.6', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') Street
+                tspan(x='130.2', y='51.6', font-family="'Roboto-Light'", font-size='14', letter-spacing='22')  
+                tspan(x='155.8', y='51.6', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') Gamez
+                tspan(x='213.4', y='51.6', font-family="'Roboto-Light'", font-size='14', letter-spacing='22')  
+                tspan(x='239.1', y='51.6', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') •
+                tspan(x='246.4', y='51.6', font-family="'Roboto-Light'", font-size='14', letter-spacing='22')  
+                tspan(x='272.1', y='51.6', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') НТВ
+                tspan(x='307.3', y='51.6', font-family="'Roboto-Light'", font-size='14', letter-spacing='22')  
+                tspan(x='333', y='51.6', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') •
+                tspan(x='340.3', y='51.6', font-family="'Roboto-Light'", font-size='14', letter-spacing='22')  
+                tspan(x='366', y='51.6', font-family="'Roboto-Bold'", font-size='14', letter-spacing='2') Redbull
+                tspan(x='433', y='51.6', font-family="'Roboto-Light'", font-size='14', letter-spacing='22')  
+                tspan(x='458.7', y='51.6', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') •
+                tspan(x='466', y='51.6', font-family="'Roboto-Light'", font-size='14', letter-spacing='22')  
+                tspan(x='491.7', y='51.6', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') Reebok
+                tspan(x='554.5', y='51.6', font-family="'Roboto-Light'", font-size='14', letter-spacing='22')  
+                tspan(x='580.1', y='51.6', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') •
+                tspan(x='587.5', y='51.6', font-family="'Roboto-Light'", font-size='14', letter-spacing='22')  
+                tspan(x='613.1', y='51.6', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') Streetball
+                tspan(x='0', y='77.4', font-family="'Roboto-Bold'", font-size='14', letter-spacing='2') ТНТ
+                tspan(x='34.3', y='77.4', font-family="'Roboto-Light'", font-size='14', letter-spacing='73')  
+                tspan(x='111', y='77.4', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') •
+                tspan(x='118.3', y='77.4', font-family="'Roboto-Light'", font-size='14', letter-spacing='73')  
+                tspan(x='194.9', y='77.4', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') WFBA
+                tspan(x='243.4', y='77.4', font-family="'Roboto-Light'", font-size='14', letter-spacing='73')  
+                tspan(x='320', y='77.4', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') •
+                tspan(x='327.4', y='77.4', font-family="'Roboto-Light'", font-size='14', letter-spacing='73')  
+                tspan(x='404', y='77.4', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') Zero
+                tspan(x='443.3', y='77.4', font-family="'Roboto-Light'", font-size='14', letter-spacing='73')  
+                tspan(x='519.9', y='77.4', font-family="'Roboto-Light'", font-size='14', letter-spacing='2') •
+                tspan(x='527.2', y='77.4', font-family="'Roboto-Light'", font-size='14', letter-spacing='73')  
+                tspan(x='603.9', y='77.4', font-family="'Roboto-Bold'", font-size='14', letter-spacing='2') Zuiderpark
+
+    section#about
+    section#service
+        .circle    
+            svg.soaring_balls_syndicate_circle(xmlns='http://www.w3.org/2000/svg', viewbox='208.5 8.8 704 668.3')
+              ellipse(stroke='#FFF', stroke-width='1.05', stroke-miterlimit='10', cx='563.3', cy='338.4', rx='286.3', ry='291.2')
+              lineargradient#a(gradientunits='userSpaceOnUse', x1='280.055', y1='422.495', x2='845.966', y2='260.223')
+                stop(offset='0', stop-color='#eaff00')
+                stop(offset='.203', stop-color='#eaff00')
+                stop(offset='.73', stop-color='#a2fc59')
+                stop(offset='1', stop-color='#57f866')
+              ellipse(fill='none', stroke='url(#a)', stroke-width='15', stroke-miterlimit='10', cx='563', cy='341.4', rx='286.3', ry='293')
+              path(fill='#E0DCDC', d='M569 166.6l8.6 6.2-2.3 2.2-5.1-4.7zM562.8 188.6l-3.6 3 1-53.7 2.6 4.9zM584.4 171.1l-16.2-14.7v-3.3l20 15zM584.6 183.4l-28.5 22.2v-2.2l25.9-22.8z')
+              path(fill='#E0DCDC', d='M568.2 166l2.3 1.7.1 12-2.4 2.3z')
+              path(fill='#E0DCDC', d='M584.5 171l-16.3 12.9v-2l13.6-13.6z')
+              path(fill='#E0DCDC', d='M584.5 183.4l-8.8-8 1.7-2.7 10.7 8z')
+              path(fill='none', d='M312.6 325.1h506.7v29.8H312.6z')
+              text(transform='translate(312.568 335.055)')
+                tspan(x='0', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Audience
+                tspan(x='86.1', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='14')  
+                tspan(x='104.3', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Entertainment
+                tspan(x='233', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='14')  
+                tspan(x='251.2', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='2') Play
+                tspan(x='290', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='14')  
+                tspan(x='308.2', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') •
+                tspan(x='316.5', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='14')  
+                tspan(x='334.7', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Solo
+                tspan(x='375.8', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='14')  
+                tspan(x='393.9', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Performance
+              path(fill='none', d='M321.2 288.9h490.6v18.6H321.2z')
+              text(transform='translate(321.2 298.88)')
+                tspan(x='0', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Ballride
+                tspan(x='72.5', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='12')  
+                tspan(x='88.4', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Style
+                tspan(x='135.2', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='12')  
+                tspan(x='151.2', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Masterclass
+                tspan(x='260.3', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='12')  
+                tspan(x='276.2', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') •
+                tspan(x='284.6', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='12')  
+                tspan(x='300.6', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Creative
+                tspan(x='378.8', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='12')  
+                tspan(x='394.7', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Consulting
+              path(fill='none', d='M327 401.2h477.2v23H327z')
+              text(transform='translate(326.982 411.16)', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='1') Show
+              text(transform='translate(369.147 411.16)', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='8')
+              text(transform='translate(381.915 411.16)', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='1') Directing
+              text(transform='translate(453.659 411.16)', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='8')
+              text(transform='translate(466.427 411.16)', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='1') •
+              text(transform='translate(473.297 411.16)', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='8')
+              text(transform='translate(486.065 411.16)', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Choreographing
+              text(transform='translate(634.22 411.16)', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='12')
+              text(transform='translate(650.545 411.16)', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') •
+              text(transform='translate(658.915 411.16)', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='12')
+              text(transform='matrix(1.0525 0 0 1 675.24 411.16)', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='2.9') Collaborating
+              text(transform='translate(814.634 411.16)', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3')
+              path(fill='none', d='M317.8 362h495.7v20.6H317.8z')
+              text(transform='matrix(1.0525 0 0 1 317.81 372.018)')
+                tspan(x='0', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='2.9') Photoshooting
+                tspan(x='133', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='21.9')  
+                tspan(x='159.5', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='2.9') •
+                tspan(x='167.9', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='21.9')  
+                tspan(x='194.4', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='2.9') Videoshooting
+                tspan(x='328', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='21.9')  
+                tspan(x='354.5', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='2.9') •
+                tspan(x='362.9', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='21.9')  
+                tspan(x='389.4', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='2.9') Modeling
+              path(fill='none', d='M434.5 552.8h256.4V571H434.5z')
+              text(transform='translate(434.501 562.779)', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Soaring
+              text(transform='translate(505.21 562.779)', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='22')
+              text(transform='translate(531.479 562.779)', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Balls
+              text(transform='translate(576.808 562.779)', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='22')
+              text(transform='translate(603.077 562.779)', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Showcase
+              text(transform='matrix(1.0525 0 0 1 693.856 562.779)', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='2.9')
+              path(fill='none', d='M336.2 438.3h455.9v25.1H336.2z')
+              text(transform='translate(336.216 448.274)')
+                tspan(x='0', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Children
+                tspan(x='78.5', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='14')  
+                tspan(x='96.6', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Fun
+                tspan(x='129.9', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='14')  
+                tspan(x='148', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Showcase
+                tspan(x='238.8', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='14')  
+                tspan(x='256.9', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') •
+                tspan(x='265.3', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='14')  
+                tspan(x='283.4', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Ballride
+                tspan(x='355.8', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='14')  
+                tspan(x='373.9', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Intensive
+              path(fill='none', d='M354.7 477.8h414.8v22.3H354.7z')
+              text(transform='translate(354.719 487.789)')
+                tspan(x='0', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Multy-language
+                tspan(x='141.6', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='2')  
+                tspan(x='155', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Freestyle
+                tspan(x='241.8', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='2')  
+                tspan(x='248.5', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Lessons
+                tspan(x='322.9', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='2')  
+                tspan(x='329.6', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') •
+                tspan(x='338', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='2')  
+                tspan(x='344.6', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Judging
+              path(fill='none', d='M368.4 516.7h393v21h-393z')
+              text(transform='translate(368.426 526.668)')
+                tspan(x='0', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Wedding
+                tspan(x='79.5', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='17')  
+                tspan(x='100.5', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='2') Performance
+                tspan(x='216.2', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='17')  
+                tspan(x='237.2', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') •
+                tspan(x='245.6', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='17')  
+                tspan(x='266.5', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') FSBB
+                tspan(x='313.8', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='17')  
+                tspan(x='334.7', y='0', fill='#FFF', font-family="'ProximaNova-Light'", font-size='15', letter-spacing='3') Events
+    section#contact
+        .circle
+            svg.soaring_balls_syndicate_circle(xmlns='http://www.w3.org/2000/svg', viewbox='136.9 8.8 852.2 668.3')
+              path(fill='none', stroke='#000', stroke-width='1.094', d='M372.4 468.3h383.3')
+              lineargradient#a(gradientunits='userSpaceOnUse', x1='280.055', y1='422.495', x2='845.966', y2='260.223')
+                stop(offset='0', stop-color='#eaff00')
+                stop(offset='.203', stop-color='#eaff00')
+                stop(offset='.73', stop-color='#a2fc59')
+                stop(offset='1', stop-color='#57f866')
+              ellipse(fill='none', stroke='url(#a)', stroke-width='15', stroke-miterlimit='10', cx='563', cy='341.4', rx='286.3', ry='293')
+              text(transform='translate(488.9 312.808)', font-family="'ProximaNova-Light'", font-size='22', letter-spacing='1') FOR CONTACT
+              text(transform='translate(414.857 528.749)', font-family="'ProximaNova-Light'", font-size='16', letter-spacing='1') ©2016 • Ballriders • Creative Group
+              a.contact_link_wrapper(xlink:href="mailto:weballriders@gmail.com")
+                  text(transform='translate(144.667 419.007)', font-family="'ProximaNova-Light'", font-size='108', letter-spacing='32') HITMEBABY
+              path(d='M567 165.8l12.4 9-3.3 3.2-7.4-6.8zM557.9 197.7l-5.2 4.4 1.5-77.9 3.8 7.1zM589.4 172.3L565.8 151v-4.7l29.1 21.7zM589.7 190.2l-41.5 32.3v-3.3l37.6-33z')
+              path(d='M565.8 164.9l3.4 2.5.1 17.4-3.4 3.3z')
+              path(d='M589.5 172.2L565.9 191v-3l19.7-19.6z')
+              path(d='M589.5 190.3l-12.7-11.7 2.4-3.8 15.5 11.6z')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
