@@ -105,10 +105,25 @@ body {
 
 #intro {
   width: 100%;
-  height: 700px;
-  background-color: black;
+  height: auto;
   position: relative;
   margin-bottom: 100px; }
+
+#intro1 {
+  width: 100%;
+  height: 700px;
+  background-color: black; }
+
+#intro2 {
+  width: 100%;
+  height: 700px;
+  background-image: url(../../images/grain.jpg);
+  background-repeat: repeat;
+  background-position: 0 0;
+  -webkit-animation: noiseAnim 0.5s infinite linear alternate;
+  -moz-animation: noiseAnim 0.5s infinite linear alternate;
+  -o-animation: noiseAnim 0.5s infinite linear alternate;
+  animation: noiseAnim 0.5s infinite linear alternate; }
 
 #works {
   position: relative;

@@ -48,8 +48,7 @@ mixin project_item_reverse(href, number, title, year, category, music)
                 h1.detail_title= title
 
 block head
-  link(rel="stylesheet", href="stylesheets/soaring_balls_syndicate/soaring_balls_syndicate.css")
-  script(src="javascripts/soaring_balls_syndicate.js")
+    link(rel="stylesheet", href="stylesheets/soaring_balls_syndicate/soaring_balls_syndicate.css")
 block main
     .menu_big_toggle
     section.menu_big
@@ -91,6 +90,8 @@ block main
       .arrow_down_pure
         img(src="../../images/arrow_down_pure.svg", alt="")
     section#intro
+        #intro1
+        #intro2
     section#works
         .video_wrapper
           video#hands(autoplay loop )
@@ -336,6 +337,8 @@ block main
               path(d='M589.5 172.2L565.9 191v-3l19.7-19.6z')
               path(d='M589.5 190.3l-12.7-11.7 2.4-3.8 15.5 11.6z')
 
+block js
+    script(src="javascripts/soaring_balls_syndicate.js")
 
 
 
