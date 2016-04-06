@@ -2,10 +2,7 @@ extends ../layout
 
 block head
     link(rel="stylesheet", href="bootstrap-3.3.6-dist/css/bootstrap.min.css")
-    script(src="bootstrap-3.3.6-dist/js/bootstrap.min.js")
     link(rel="stylesheet", href="stylesheets/ballriders_creative_group/ballriders_creative_group.css")
-    script(src="javascripts/ballriders_creative_group.js")
-
 block main
     include ../topside_menu.jade
     section.intro
@@ -78,3 +75,7 @@ block main
                 img(src="../../images/insta.png", alt="")
     .arrow_up
       img(src="../../images/arrow_up.svg", alt="")
+      
+block js
+    script(src="bootstrap-3.3.6-dist/js/bootstrap.min.js")
+    script(src="javascripts/ballriders_creative_group.js")
