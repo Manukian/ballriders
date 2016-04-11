@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "http://webfonts.ru/import/roboto.css";
 html, body {
   height: 100%;
@@ -8,7 +9,7 @@ main {
   height: 100%;
   background-color: white; }
 
-.intro {
+#intro {
   height: 88%; }
 
 #logo {
@@ -36,8 +37,174 @@ main {
   font-weight: 100;
   padding: 0 20px; }
 
-.about {
-  height: 600px;
-  background-color: black; }
+#about {
+  background-color: white;
+  text-align: center; }
+  #about [class*="col-"] {
+    padding: 0; }
+  #about img {
+    width: 50%; }
+
+.about_left {
+  background-color: #f73b29;
+  background-color: white;
+  height: 400px;
+  text-align: left; }
+  .about_left .about_text {
+    width: 66%;
+    display: block;
+    font-size: 40px;
+    color: black;
+    margin: 70px auto;
+    font-weight: 100; }
+
+.about_right {
+  background-color: #38a4f7;
+  background-color: white;
+  height: 400px; }
+
+#mail_form {
+  margin-top: 30px; }
+
+.form_wrapper {
+  width: 70%;
+  margin: 0 auto; }
+
+#mail_button {
+  padding: 15px 0;
+  height: 60px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  border: solid 1px #1271c4;
+  border-radius: 0 5px 5px 0;
+  background: #38a4f7;
+  color: white;
+  display: inline-block;
+  vertical-align: top;
+  width: 35%; }
+
+/* form starting stylings ------------------------------- */
+.group {
+  position: relative;
+  margin-bottom: 45px;
+  display: inline-block;
+  vertical-align: top;
+  width: 65%; }
+
+input {
+  font-size: 18px;
+  height: 60px;
+  padding: 15px;
+  display: block;
+  position: relative;
+  border: none;
+  width: 100%;
+  border: 1px solid #dde5ed;
+  border-right: 0;
+  border-radius: 5px 0 0 5px;
+  color: #8da2b5;
+  background: #fafbfc; }
+
+input:focus {
+  outline: none; }
+
+/* LABEL ======================================= */
+label {
+  color: #999;
+  font-size: 18px;
+  font-weight: 300;
+  position: absolute;
+  pointer-events: none;
+  left: 15px;
+  top: 17px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all; }
+
+/* active state */
+input:focus ~ label, input:valid ~ label {
+  top: 5px;
+  font-size: 14px;
+  color: #38a4f7; }
+
+input:focus {
+  padding-bottom: 0px !important; }
+
+#why_is_great {
+  background-color: white; }
+  #why_is_great .container-fluid {
+    padding: 0 150px; }
+
+.ballride_is_wrapper {
+  margin-top: 50px;
+  text-align: center;
+  height: 150px; }
+
+.ballride_is_text {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 200; }
+
+.why_is_great_wrapper {
+  text-align: center;
+  margin-bottom: 80px; }
+  .why_is_great_wrapper img {
+    width: 15%; }
+
+.emoji_wrapper {
+  font-size: 40px; }
+
+.why_is_great_text {
+  display: inline-block;
+  width: 90%; }
+
+#tutorials {
+  height: auto;
+  background-color: white;
+  color: black;
+  padding: 100px 0; }
+
+.tutorials_header {
+  text-align: center;
+  padding-bottom: 100px;
+  margin: 0;
+  font-weight: 100;
+  font-size: 40px; }
+
+.tutorials_wrapper {
+  width: 40%;
+  margin: 0 auto; }
+  .tutorials_wrapper .tutorial_link:last-child {
+    margin-bottom: 0; }
+
+.tutorial_link {
+  display: block;
+  width: auto;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 50px;
+  padding: 10px; }
+  .tutorial_link:hover {
+    color: inherit; }
+  .tutorial_link:hover:after {
+    content: "🎬";
+    display: inline-block;
+    margin-left: 10px; }
+
+.tutorial_title {
+  font-size: 22px;
+  font-weight: 700;
+  display: inline-block;
+  vertical-align: baseline;
+  border-bottom: 3px solid black;
+  padding-bottom: 5px;
+  text-transform: uppercase; }
+
+.tutorial_description {
+  font-size: 20px;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 30px; }
 
 /*# sourceMappingURL=ballride_style.css.map */

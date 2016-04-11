@@ -32,17 +32,9 @@ $(document).scroll(function(){
     }
 });    
     
-$('.menu_big_toggle').click(function(){
-   if ($(this).hasClass('menu_close')) {
-        $(this).removeClass('menu_close');
-        $('.menu_big').removeClass('on');
-        var html = jQuery('html');
-        var scrollPosition = html.data('scroll-position');
-        html.css('overflow', html.data('previous-overflow'));
-        window.scrollTo(scrollPosition[0], scrollPosition[1])
-   }else {
-        $(this).addClass('menu_close');  
+$('.menu_big_toggle').click(function(){ 
        $('.menu_big').addClass('on');
+        $('.menu_big_toggle').hide();
        // lock scroll position, but retain settings for later
         var scrollPosition = [
           self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
@@ -53,8 +45,15 @@ $('.menu_big_toggle').click(function(){
         html.data('previous-overflow', html.css('overflow'));
         html.css('overflow', 'hidden');
         window.scrollTo(scrollPosition[0], scrollPosition[1]);
-   }
-
+});
+    
+$('.menu_close').click(function(){
+    $('.menu_big').removeClass('on');
+    $('.menu_big_toggle').show();
+    var html = jQuery('html');
+    var scrollPosition = html.data('scroll-position');
+    html.css('overflow', html.data('previous-overflow'));
+    window.scrollTo(scrollPosition[0], scrollPosition[1])
 });
 
 var hands = $('#hands');      
