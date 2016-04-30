@@ -1,0 +1,84 @@
+extends ../layout
+
+mixin project_item(href, number, title, year, category, music)
+    article
+        .wrapper_work
+            a.proj_link(href=href)
+            .proj_wrapper
+              .info_main
+                span.main_number= number
+                h2.main_title= title
+              .info_link
+                  .info_link_wrapper
+                    span.link_year= year
+                    span.link_project
+                      span.project_view View Project
+                      span.project_arrow Go To Project
+              .info_detail
+                h1.detail_title= title
+                .detail_wrapper
+                    .detail_category
+                      .top Category
+                      .bot= category
+                    .detail_music
+                      .top Music
+                      .bot= music
+
+mixin project_item_reverse(href, number, title, year, category, music)
+    article
+        .wrapper_work
+            a.proj_link(href=href)
+            .proj_wrapper
+              .info_main
+                h2.main_title= title
+                span.main_number= number
+              .info_link
+                  .info_link_wrapper
+                    span.link_year= year
+                    span.link_project
+                      span.project_arrow Go To Project
+                      span.project_view View Project
+              .info_detail
+                .detail_wrapper
+                    .detail_category
+                      .top Category
+                      .bot= category
+                    .detail_music
+                      .top Music
+                      .bot= music
+                h1.detail_title= title
+                
+block head
+    link(rel="stylesheet", href="stylesheets/soaring_balls_syndicate/sbs_works.css")
+    
+block main
+    include ../topside_menu.jade
+    section#works
+        .video_wrapper
+          video#hands(autoplay loop )
+            source(src="../../images/hands.mov" type="video/mp4")
+        #left.menu_div
+          h3 Collaborations
+        #right.menu_div
+          h3 Choreographies
+        .works_wrapper
+            .project_list
+                .project_list_collab
+                    .wrapper
+                        .title
+                            h1 Selected Collaborations
+                            span - project list
+                    +project_item_reverse('#','.02','Some Collab','Y - 2015', 'Choreo', 'Kizaru')
+                    +project_item_reverse('#','.01','Another Collab','Y - 2014', 'Choreo', 'Kizaru')
+                .project_list_choreo
+                    .wrapper
+                        .title
+                            h1 Selected Choreographies
+                            span - project list
+                    +project_item('#','.04','Delay Kak Nado','Y - 2016', 'Choreo', 'Kizaru')
+                    +project_item('#','.03','Vse Moi Parni','Y - 2014', 'Choreo', 'Kizaru')
+                    +project_item('#','.02','Ne Lez Na Ugol','Y - 2014', 'Choreo', 'Kizaru')
+                    +project_item('#','.01','Ne Ostavlyayut Palcev','Y - 2014', 'Choreo', 'Kizaru')
+                    
+block js
+    script(src="javascripts/sbs_works.js")

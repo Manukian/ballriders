@@ -49,8 +49,19 @@ body {
   height: 510px;
   width: 100%; }
 
+.projects .container-fluid {
+  padding: 0 7%; }
+
 .project_wrapper img {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 10px; }
+
+.project_link {
+  display: inline-block;
+  color: black; }
+  .project_link:hover {
+    text-decoration: none;
+    color: black; }
 
 .row {
   margin-top: 30px; }
@@ -63,11 +74,5 @@ body {
   text-align: center; }
   .arrow_down > img, .arrow_up > img {
     cursor: pointer; }
-
-.square:hover {
-  fill: green; }
-
-.round:hover {
-  fill: red; }
 
 /*# sourceMappingURL=ballriders_creative_group.css.map */
