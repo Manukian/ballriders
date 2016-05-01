@@ -1,66 +1,115 @@
 extends ../layout
 
+mixin in_circle(label_big, href, section_title, span1, span2, span3)
+    .circle_wrapper
+        .circle
+            .logotype
+                img.logotype_image(src="../../images/8.svg", alt="")
+            .label_big= label_big
+            h1.section_title
+                a.link_wrapper(href= href)= section_title
+            hr(noshade width="150px" size="1px")
+            .label_small
+                span= span1
+                span= span2
+                span= span3
+
 block head
     link(rel="stylesheet", href="stylesheets/soaring_balls_syndicate/soaring_balls_syndicate.css")
 block main
     .menu_big_toggle
     section.menu_big
         .menu_close
-        ul
+        ul.menu_big_list
             li.menu_big_item
-                img(src="../../images/ballriders_logotype_minimal_white.svg", alt="")
+                img.logotype_image(src="../../images/ballriders_logotype_minimal_white.svg", alt="")
             li.menu_big_item
-                a(href="soaring_balls_syndicate#home").color1 H &nbsp&nbsp&nbsp&nbsp&nbsp o &nbsp&nbsp&nbsp&nbsp&nbsp m &nbsp&nbsp&nbsp&nbsp&nbsp e
+                a.menu_big_item_link(href="soaring_balls_syndicate#home").color1 H &nbsp&nbsp&nbsp&nbsp&nbsp o &nbsp&nbsp&nbsp&nbsp&nbsp m &nbsp&nbsp&nbsp&nbsp&nbsp e
             li.menu_big_item
-                a(href="soaring_balls_syndicate#intro").color2 I &nbsp&nbsp&nbsp&nbsp n &nbsp&nbsp&nbsp&nbsp t &nbsp&nbsp&nbsp&nbsp r &nbsp&nbsp&nbsp&nbsp o
+                a.menu_big_item_link(href="soaring_balls_syndicate#intro").color2 I &nbsp&nbsp&nbsp&nbsp n &nbsp&nbsp&nbsp&nbsp t &nbsp&nbsp&nbsp&nbsp r &nbsp&nbsp&nbsp&nbsp o
             li.menu_big_item
-                a(href="soaring_balls_syndicate#works").color3 W &nbsp&nbsp&nbsp o &nbsp&nbsp&nbsp r &nbsp&nbsp&nbsp k &nbsp&nbsp&nbsp s
+                a.menu_big_item_link(href="soaring_balls_syndicate#works").color3 W &nbsp&nbsp&nbsp o &nbsp&nbsp&nbsp r &nbsp&nbsp&nbsp k &nbsp&nbsp&nbsp s
             li.menu_big_item
-                a(href="soaring_balls_syndicate#clients").color4 C &nbsp&nbsp l &nbsp&nbsp i &nbsp&nbsp e &nbsp&nbsp n &nbsp&nbsp t &nbsp&nbsp s
+                a.menu_big_item_link(href="soaring_balls_syndicate#clients").color4 C &nbsp&nbsp l &nbsp&nbsp i &nbsp&nbsp e &nbsp&nbsp n &nbsp&nbsp t &nbsp&nbsp s
             li.menu_big_item
-                a(href="soaring_balls_syndicate#about").color5 A &nbsp&nbsp&nbsp b &nbsp&nbsp&nbsp o &nbsp&nbsp&nbsp u &nbsp&nbsp&nbsp t
+                a.menu_big_item_link(href="soaring_balls_syndicate#about").color5 A &nbsp&nbsp&nbsp b &nbsp&nbsp&nbsp o &nbsp&nbsp&nbsp u &nbsp&nbsp&nbsp t
             li.menu_big_item
-                a(href="soaring_balls_syndicate#service").color6 S &nbsp e &nbsp r &nbsp v &nbsp i &nbsp c &nbsp e
+                a.menu_big_item_link(href="soaring_balls_syndicate#service").color6 S &nbsp e &nbsp r &nbsp v &nbsp i &nbsp c &nbsp e
             li.menu_big_item
-                a(href="soaring_balls_syndicate#contact").color7 C &nbsp o &nbsp n &nbsp t &nbsp a &nbsp c &nbsp t
+                a.menu_big_item_link(href="soaring_balls_syndicate#contact").color7 C &nbsp o &nbsp n &nbsp t &nbsp a &nbsp c &nbsp t
+    include ../topside_menu.jade
     section#home
-        include ../topside_menu.jade
-        .circle
-            include soaring_balls.jade
-        .arrow_down_pure
-            img(src="../../images/arrow_down_pure.svg", alt="")
+        .circle_wrapper
+            .circle
+                .logotype
+                    img.logotype_image(src="../../images/8.svg", alt="")
+                .label_big Soaring Balls Syndicate
+                h1.section_title_thin Ballriders
+                hr(noshade width="150px" size="1px")
+                .label_small Performance • Master Class • Collaboration
+            img.arrow_down_pure(src="../../images/arrow_down_pure.svg", alt="")
     section#intro
         #intro1
         #intro2
     section#works
-        .circle
-            include works_selection.jade
+        .circle_wrapper
+            .circle
+                .logotype
+                    img.logotype_image(src="../../images/8.svg", alt="")
+                .label_big Works
+                h1.section_title_thick
+                    a.link_wrapper(href='/sbs_works') Selection
+                hr(noshade width="150px" size="1px")
+                .label_small.copyright 2016 • Ballriders • Soaring Balls Syndicate
     section#clients
-        .circle
-            include clients.jade
+        .circle_wrapper
+            .circle_white
+                .logotype
+                    img.logotype_image(src="../../images/8.svg", alt="")
+                .clients_text
+                    .clients_text_row
+                        span Adidas • A-One • 
+                        b Apple 
+                        span • Asus • Ballaholix • Centr
+                    .clients_text_row
+                        span Дождь • 
+                        b FIBA 
+                        span • Funbox • Gurme • Kia • 
+                        b Ленинград Центр 
+                        span • МЕЧ
+                    .clients_text_row
+                        span Minsk Street Gamez • НТВ • 
+                        b Redbull 
+                        span • Reebok • Streetball
+                    .clients_text_row
+                        b ТНТ 
+                        span • WFBA • Zero • 
+                        b Zuiderpark
     section#about
     section#service
-        .circle    
-            include service.jade
+        .circle_wrapper
+            .circle_black
+                .logotype
+                    img.logotype_image(src="../../images/ballriders_logotype_minimal_white.svg", alt="")
+                .service_text
+                    .service_text_row Ballride Style Masterclass • Creative Consulting
+                    .service_text_row Audience Entertainment Play • Solo Performance 
+                    .service_text_row Photoshooting • Videoshooting • Modeling
+                    .service_text_row Show Directing • Choreographing • Collaborating   
+                    .service_text_row Children Fun Showcase • Ballride Intensive
+                    .service_text_row Multy-language  Freestyle Lessons • Judging
+                    .service_text_row Wedding Performance • FSBB Events  
+                    .service_text_row Soaring Balls Showcase   
+                    .service_text_row •
     section#contact
-        .circle
-            include contact.jade
+        .circle_wrapper
+            .circle
+                .logotype
+                    img.logotype_image(src="../../images/8.svg", alt="")
+                .label_big For Contact
+                h1.section_title_thick
+                    a.link_wrapper(href='mailto:weballriders@gmail.com') Hitmebaby
+                hr(noshade width="150px" size="1px")
+                .label_small.copyright 2016 • Ballriders • Soaring Balls Syndicate
 block js
     script(src="javascripts/soaring_balls_syndicate.js")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
