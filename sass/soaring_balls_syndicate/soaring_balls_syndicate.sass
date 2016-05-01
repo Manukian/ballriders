@@ -91,6 +91,7 @@ $section_height: 700px
     position: relative
     height: $section_height
     width: auto
+    background-color: $white
     text-align: center
     & .circle_wrapper
         padding-top: 0
@@ -168,11 +169,10 @@ $section_height: 700px
     width: 100%
     line-height: 1.5
     letter-spacing: 3px
-
-.clients_text_row:after
-    content: ""
-    display: inline-block
-    width: 100%
+    &:after
+        content: ""
+        display: inline-block
+        width: 100%
    
 .circle_black
     position: relative
@@ -185,11 +185,16 @@ $section_height: 700px
 .service_text
     color: $white
     display: inline-block
-    font-size: 14px
+    font-size: 16px
+    padding-top: 75px
 
 .service_text_row
-    margin-bottom: 16px
+    margin-bottom: 10px
     letter-spacing: 2px
+    &:after
+        content: ""
+        display: inline-block
+        width: 100%
 
 #intro
     width: 100%

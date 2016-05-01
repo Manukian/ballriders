@@ -19,7 +19,7 @@ body {
   position: relative;
   width: 100%;
   height: 70px;
-  background-color: white;
+  background-color: #f9f9f9;
   z-index: 1000;
   text-align: center; }
   .menu_wrapper > ul.menu {
