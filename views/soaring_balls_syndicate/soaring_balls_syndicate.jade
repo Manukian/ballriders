@@ -1,19 +1,5 @@
 extends ../layout
 
-mixin in_circle(label_big, href, section_title, span1, span2, span3)
-    .circle_wrapper
-        .circle
-            .logotype
-                img.logotype_image(src="../../images/8.svg", alt="")
-            .label_big= label_big
-            h1.section_title
-                a.link_wrapper(href= href)= section_title
-            hr(noshade width="150px" size="1px")
-            .label_small
-                span= span1
-                span= span2
-                span= span3
-
 block head
     link(rel="stylesheet", href="stylesheets/soaring_balls_syndicate/soaring_balls_syndicate.css")
 block main
@@ -58,7 +44,7 @@ block main
                     img.logotype_image(src="../../images/8.svg", alt="")
                 .label_big Works
                 h1.section_title_thick
-                    a.link_wrapper(href='/sbs_works') Selection
+                    a.link_wrapper(href='sbs_works') Selection
                 hr(noshade width="150px" size="1px")
                 .label_small.copyright 2016 • Ballriders • Soaring Balls Syndicate
     section#clients
