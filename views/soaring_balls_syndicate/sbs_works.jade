@@ -58,23 +58,23 @@ block main
           video#hands(autoplay loop )
             source(src="../../images/hands.mov" type="video/mp4")
         #left.menu_div
-          h3 Collaborations
+          h3.menu_div_title Collaborations
         #right.menu_div
-          h3 Choreographies
+          h3.menu_div_title Choreographies
         .works_wrapper
             .project_list
                 .project_list_collab
                     .wrapper
-                        .title
-                            h1 Selected Collaborations
-                            span - project list
+                        .title.text_right
+                            h1.project_list_title Selected Collaborations
+                            span.under_title_text - project list
                     +project_item_reverse('#','.02','Some Collab','Y - 2015', 'Choreo', 'Kizaru')
                     +project_item_reverse('#','.01','Another Collab','Y - 2014', 'Choreo', 'Kizaru')
                 .project_list_choreo
                     .wrapper
                         .title
-                            h1 Selected Choreographies
-                            span - project list
+                            h1.project_list_title Selected Choreographies
+                            span.under_title_text - project list
                     +project_item('#','.04','Delay Kak Nado','Y - 2016', 'Choreo', 'Kizaru')
                     +project_item('#','.03','Vse Moi Parni','Y - 2014', 'Choreo', 'Kizaru')
                     +project_item('#','.02','Ne Lez Na Ugol','Y - 2014', 'Choreo', 'Kizaru')

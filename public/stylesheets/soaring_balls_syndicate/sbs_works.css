@@ -1,6 +1,65 @@
 @charset "UTF-8";
-@import "http://webfonts.ru/import/inconsolata.css";
-@import "http://webfonts.ru/import/sourcesanspro.css";
+@font-face {
+  font-family: proxima-nova;
+  src: url(../../fonts/ProximaNova/ProximaNovaRegular.otf) format("opentype"); }
+@font-face {
+  font-family: proxima-nova;
+  font-weight: light;
+  src: url(../../fonts/ProximaNova/ProximaNovaLight.otf) format("opentype"); }
+@font-face {
+  font-family: proxima-nova;
+  font-weight: bold;
+  src: url(../../fonts/ProximaNova/ProximaNovaBold.otf) format("opentype"); }
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: proxima-nova; }
+
+.menu_wrapper {
+  font-family: Neue;
+  position: relative;
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  z-index: 1000;
+  text-align: center; }
+  .menu_wrapper > ul.menu {
+    position: relative;
+    list-style-type: none;
+    display: inline-block;
+    width: 50%;
+    margin: 0;
+    height: 100%; }
+
+.menu_wrapper > .menu > li.menu_items {
+  display: inline-block;
+  width: 33.3%;
+  height: 100%; }
+
+li.menu_items > a {
+  padding: 30px 0;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  text-decoration: none;
+  color: #777;
+  font-size: 10px;
+  text-transform: uppercase;
+  word-spacing: 2px;
+  transition: 0.3s; }
+  li.menu_items > a:hover {
+    color: black; }
+
+@media(max-width: 1050px) {
+  .menu_wrapper > ul.menu {
+    width: 70%; } }
+@media(max-width: 768px) {
+  .menu_wrapper > ul.menu {
+    width: 100%; } }
+@media(max-width: 540px) {
+  .menu_wrapper > ul.menu > li.menu_items > a {
+    font-size: 7px; } }
 #works {
   position: relative;
   width: 100%;
@@ -15,11 +74,10 @@
   width: 100%;
   height: 30%;
   text-align: center; }
-  .video_wrapper #hands {
-    width: 100%;
-    height: 100%; }
-  .video_wrapper video {
-    height: 100%; }
+
+#hands {
+  width: 100%;
+  height: 100%; }
 
 #left {
   text-align: left; }
@@ -34,18 +92,18 @@
   height: 30%;
   display: inline-block;
   cursor: pointer; }
-  .menu_div h3 {
-    opacity: 0;
-    padding: 30px 130px;
-    font-size: 15px;
-    font-family: Sans;
-    text-transform: lowercase; }
   .menu_div:hover h3 {
     opacity: 1; }
 
+.menu_div_title {
+  opacity: 0;
+  padding: 30px 130px;
+  font-size: 15px;
+  text-transform: lowercase; }
+
 .handed {
   outline: solid 5px #FF3399; }
-  .handed h3 {
+  .handed .menu_div_title {
     opacity: 1; }
 
 .works_wrapper {
@@ -55,20 +113,19 @@
   text-align: left;
   overflow: hidden; }
 
-.title h1 {
+.project_list_title {
   margin: 0;
   font-size: 45px;
   font-weight: 700;
   border-bottom: 5px solid black;
   padding-bottom: 30px;
-  margin-bottom: 30px;
-  font-family: Sans; }
-.title span {
+  margin-bottom: 30px; }
+
+.under_title_text {
   display: inline-block;
   margin-bottom: 30px;
   font-size: 16px;
   letter-spacing: 3px;
-  font-family: "Inconsolata";
   text-transform: uppercase; }
 
 .wrapper {
@@ -90,12 +147,6 @@
   .project_list_collab:before {
     content: "";
     display: table; }
-  .project_list_collab .title {
-    margin-top: 100px;
-    width: 65%;
-    text-align: right;
-    margin-right: 35%;
-    transition: 0.5s; }
 
 .project_list_choreo {
   position: absolute;
@@ -108,12 +159,18 @@
   .project_list_choreo:before {
     content: "";
     display: table; }
-  .project_list_choreo .title {
-    margin-top: 100px;
-    width: 65%;
-    text-align: left;
-    margin-left: 35%;
-    transition: 0.5s; }
+
+.title {
+  margin-top: 100px;
+  width: 65%;
+  text-align: left;
+  margin-left: 35%;
+  transition: 0.5s; }
+
+.text_right {
+  text-align: right;
+  margin-left: 0;
+  margin-right: 35%; }
 
 article {
   position: relative;
@@ -160,16 +217,14 @@ article {
 
 .main_title {
   font-size: 30px;
-  font-weight: 700;
-  font-family: "Source Sans Pro"; }
+  font-weight: 700; }
 
 .main_number {
   position: absolute;
   top: 45%;
   left: -50px;
   height: 100%;
-  display: inline-block;
-  font-family: "Inconsolata"; }
+  display: inline-block; }
 
 .info_link {
   position: absolute;
@@ -193,7 +248,6 @@ article {
   position: absolute;
   display: block;
   top: 50%;
-  font-family: "Inconsolata";
   margin-top: -8px;
   text-align: right;
   transition: 0.3s;
@@ -205,7 +259,6 @@ article {
   width: 100%;
   transition: transform 0.3s;
   white-space: nowrap;
-  font-family: "Inconsolata";
   letter-spacing: 3px;
   text-transform: uppercase;
   top: 50%;
@@ -254,7 +307,6 @@ article {
   margin-left: 1.6%;
   margin-right: 2%;
   width: 30%;
-  font-family: Sans;
   font-weight: 700;
   font-size: 35px;
   height: 100%;
@@ -291,14 +343,12 @@ article {
   position: relative;
   margin-bottom: 15px;
   padding-top: 10px;
-  font-family: "Inconsolata";
   letter-spacing: 3px;
   text-transform: uppercase; }
 
 .bot {
   position: relative;
   text-transform: uppercase;
-  font-family: "Inconsolata";
   font-weight: 600; }
 
 .active a {
