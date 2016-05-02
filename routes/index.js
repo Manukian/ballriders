@@ -11,7 +11,7 @@ router.get('/main', function(req, res, next) {
 router.get('/soaring_balls_syndicate', function(req, res, next) {
   res.render('soaring_balls_syndicate/soaring_balls_syndicate', { title: 'Ballriders | Soaring Balls Syndicate' });
 });
-router.get('/soaring_balls_syndicate/works', function(req, res, next) {
+router.get('/works', function(req, res, next) {
   res.render('soaring_balls_syndicate/works', { title: 'Ballriders | Soaring Balls Syndicate' });
 });
 router.get('/ballride_style', function(req, res, next) {
