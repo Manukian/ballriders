@@ -49,7 +49,7 @@ mixin project_item_reverse(href, number, title, year, category, music)
                 h1.detail_title= title
       
 block head
-    link(rel="stylesheet", href="stylesheets/soaring_balls_syndicate/works.css")
+    link(rel="stylesheet", href="/stylesheets/soaring_balls_syndicate/works.css")
     
 block main
     include ../topside_menu.jade
@@ -81,4 +81,4 @@ block main
                     +project_item('#','.01','Ne Ostavlyayut Palcev','Y - 2014', 'Choreo', 'Kizaru')
                     
 block js
-    script(src="javascripts/works.js")
+    script(src="/javascripts/works.js")
