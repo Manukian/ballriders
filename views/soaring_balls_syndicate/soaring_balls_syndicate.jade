@@ -1,30 +1,31 @@
 extends ../layout
 
 block head
+    link(rel='stylesheet', type='text/css', href='fullpage.js/jquery.fullPage.css')
     link(rel="stylesheet", href="stylesheets/soaring_balls_syndicate/soaring_balls_syndicate.css")
 block main
-    .menu_big_toggle
-    section.menu_big
+    .menu_big#menu
         .menu_close
         ul.menu_big_list
             li.menu_big_item
                 img.logotype_image(src="../../images/ballriders_logotype_minimal_white.svg", alt="")
-            li.menu_big_item
-                a.menu_big_item_link(href="soaring_balls_syndicate#home").color1 H &nbsp&nbsp&nbsp&nbsp&nbsp o &nbsp&nbsp&nbsp&nbsp&nbsp m &nbsp&nbsp&nbsp&nbsp&nbsp e
-            li.menu_big_item
-                a.menu_big_item_link(href="soaring_balls_syndicate#intro").color2 I &nbsp&nbsp&nbsp&nbsp n &nbsp&nbsp&nbsp&nbsp t &nbsp&nbsp&nbsp&nbsp r &nbsp&nbsp&nbsp&nbsp o
-            li.menu_big_item
-                a.menu_big_item_link(href="soaring_balls_syndicate#works").color3 W &nbsp&nbsp&nbsp o &nbsp&nbsp&nbsp r &nbsp&nbsp&nbsp k &nbsp&nbsp&nbsp s
-            li.menu_big_item
-                a.menu_big_item_link(href="soaring_balls_syndicate#clients").color4 C &nbsp&nbsp l &nbsp&nbsp i &nbsp&nbsp e &nbsp&nbsp n &nbsp&nbsp t &nbsp&nbsp s
-            li.menu_big_item
-                a.menu_big_item_link(href="soaring_balls_syndicate#about").color5 A &nbsp&nbsp&nbsp b &nbsp&nbsp&nbsp o &nbsp&nbsp&nbsp u &nbsp&nbsp&nbsp t
-            li.menu_big_item
-                a.menu_big_item_link(href="soaring_balls_syndicate#service").color6 S &nbsp e &nbsp r &nbsp v &nbsp i &nbsp c &nbsp e
-            li.menu_big_item
-                a.menu_big_item_link(href="soaring_balls_syndicate#contact").color7 C &nbsp o &nbsp n &nbsp t &nbsp a &nbsp c &nbsp t
-    include ../topside_menu.jade
-    section#home
+            li.menu_big_item(data-menuanchor="home")
+                a.menu_big_item_link(href="#home").color1 H o m e
+            li.menu_big_item(data-menuanchor="intro1")
+                a.menu_big_item_link(href="#intro1").color2 I n t r o
+            li.menu_big_item(data-menuanchor="works")
+                a.menu_big_item_link(href="#works").color3 W o r k s
+            li.menu_big_item(data-menuanchor="clients")
+                a.menu_big_item_link(href="#clients").color4 C l i e n t s
+            li.menu_big_item(data-menuanchor="about")
+                a.menu_big_item_link(href="#about").color5 A b o u t
+            li.menu_big_item(data-menuanchor="service")
+                a.menu_big_item_link(href="#service").color6 S e r v i c e
+            li.menu_big_item(data-menuanchor="contact")
+                a.menu_big_item_link(href="#contact").color7 C o n t a c t
+    .section#home_section
+        include ../topside_menu.jade
+        .menu_big_toggle_black
         .circle_wrapper
             .circle
                 .logotype
@@ -33,8 +34,14 @@ block main
                 h1.section_title_thin Ballriders
                 hr(noshade width="150px" size="1px")
                 .label_small Performance • Master Class • Collaboration
-            img.arrow_down_pure(src="../../images/arrow_down_pure.svg", alt="")
-    section#works
+            a(href="#intro1")
+                img.arrow_pure(src="../../images/arrow_down_pure.svg", alt="")
+    .section#intro_section1
+        .menu_big_toggle
+    .section#intro_section2
+        .menu_big_toggle
+    .section#works_section
+        .menu_big_toggle_black
         .circle_wrapper
             .circle
                 .logotype
@@ -44,7 +51,8 @@ block main
                     a.link_wrapper(href="soaring_balls_syndicate/works") Selection
                 hr(noshade width="150px" size="1px")
                 .label_small.copyright 2016 • Ballriders • Soaring Balls Syndicate
-    section#clients
+    .section#clients_section
+        .menu_big_toggle_black
         .circle_wrapper
             .circle_white
                 .logotype
@@ -68,7 +76,10 @@ block main
                         b ТНТ 
                         span • WFBA • Zero • 
                         b Zuiderpark
-    section#service
+    .section#about_section
+        .menu_big_toggle
+    .section#service_section
+        .menu_big_toggle
         .circle_wrapper
             .circle_black
                 .service_text
@@ -82,8 +93,11 @@ block main
                     .service_text_row Wedding Performance • FSBB Events
                     .service_text_row Multy-language  Freestyle Lessons     
                     .service_text_row •
-    section#contact
+    .section#contact_section
+        .menu_big_toggle
         .circle_wrapper
+            a(href="#home")
+                img.arrow_pure(src="../../images/arrow_up_pure.svg", alt="")
             .circle
                 .logotype
                     img.logotype_image(src="../../images/8.svg", alt="")
@@ -94,3 +108,7 @@ block main
                 .label_small.copyright 2016 • Ballriders • Soaring Balls Syndicate
 block js
     script(src="javascripts/soaring_balls_syndicate.js")
+    script(type='text/javascript', src='fullpage.js/jquery.fullPage.js')
+
+
+

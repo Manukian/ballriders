@@ -6,20 +6,21 @@
     background-color: $white
     z-index: 1000
     text-align: center
-    & > ul.menu
-        position: relative
-        list-style-type: none
-        display: inline-block
-        width: 50%
-        margin: 0
-        height: 100%
 
-.menu_wrapper > .menu > li.menu_items
+.topside_menu
+    position: relative
+    list-style-type: none
+    display: inline-block
+    width: 50%
+    margin: 0
+    height: 100%
+
+.menu_items
     display: inline-block
     width: 33.3%
     height: 100%
     
-li.menu_items > a
+.menu_items > a
     padding: 30px 0
     box-sizing: border-box
     display: inline-block
@@ -36,14 +37,14 @@ li.menu_items > a
         color: black
     
 @media(max-width: 1050px)
-    .menu_wrapper>ul.menu
-        width: 70%
+    .topside_menu
+        width: 80%
 
 @media(max-width: 768px)
-    .menu_wrapper>ul.menu
+    .topside_menu
         width: 100%
         
 @media(max-width: 540px)
-    .menu_wrapper>ul.menu>li.menu_items>a
+    li.menu_items>a
         font-size: 7px
         

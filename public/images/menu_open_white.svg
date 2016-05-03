@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="24px" height="14px" viewBox="0 0 24 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="21px" height="19px" viewBox="0 0 21 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.3.1 (12005) - http://www.bohemiancoding.com/sketch -->
     <title>Untitled</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <path d="M1.50116606,2.00357076 L22.0618624,1.99642924" id="Path-1" stroke="#FFFFFF" stroke-width="2" sketch:type="MSShapeGroup"></path>
-        <path d="M1.50116606,7.00357076 L22.0618624,6.99642924" id="Path-1-Copy" stroke="#FFFFFF" stroke-width="2" sketch:type="MSShapeGroup"></path>
-        <path d="M1.50116606,12.0035708 L22.0618624,11.9964292" id="Path-1-Copy-2" stroke="#FFFFFF" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        <path d="M-4.21818182,8.87272727 L10.7636364,8.87272727" id="Path-1" stroke="#F9F9F9" stroke-width="2" sketch:type="MSShapeGroup" transform="translate(3.272727, 9.645455) rotate(-90.000000) translate(-3.272727, -9.645455) "></path>
+        <path d="M3.50909091,8.87272727 L18.4909091,8.87272727" id="Path-1-Copy" stroke="#F9F9F9" stroke-width="2" sketch:type="MSShapeGroup" transform="translate(11.000000, 9.645455) rotate(-90.000000) translate(-11.000000, -9.645455) "></path>
+        <path d="M11.2363636,8.87272727 L26.2181818,8.87272727" id="Path-1-Copy-2" stroke="#F9F9F9" stroke-width="2" sketch:type="MSShapeGroup" transform="translate(18.727273, 9.645455) rotate(-90.000000) translate(-18.727273, -9.645455) "></path>
     </g>
 </svg>
