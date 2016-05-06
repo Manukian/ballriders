@@ -208,10 +208,12 @@ article
     -webkit-transform: translate(0, -50%)
     
 .project_view
+    display: inline-block
+    font-size: 14px
     color: white
     opacity: 0
     width: 60%
-    
+
 .project_arrow
     position: relative
     width: 40%
@@ -224,9 +226,9 @@ article
     background-repeat: no-repeat
     &:before
         position: absolute
-        content: "\e600"
+        content: ""
         display: inline-block
-        line-height: 1
+        line-height: 0
         top: 50%
         right: 0
 
@@ -355,7 +357,7 @@ article
         background-position: center left
         &:before
             position: absolute
-            content: "\e600"
+            content: ""
             display: inline-block
             line-height: 1
             top: 50%
@@ -387,3 +389,101 @@ article
         clear: none
         text-align: right
     
+@media(max-width: 1050px)
+    .main_title
+        font-size: 22px
+    .top, .bot, .link_year
+        font-size: 12px
+    .detail_music
+        display: none
+    .project_view
+        font-size: 0
+    .detail_title
+        width: 45%
+        font-size: 25px
+    .detail_wrapper
+        width: 40%
+    .link_year
+        margin-top: -5px
+    .active .link_year
+        -webkit-transform: translateY(0px)
+        color: white
+    .active .link_project
+        -webkit-transform: translateY(-8px)
+    .project_list_title
+        font-size: 35px
+    .info_main, .title, .proj_link
+        width: 80%
+        margin-left: 20%
+    .project_list_collab
+        & .info_main,.title,.proj_link
+            width: 80%
+            margin-left: 0
+            margin-right: 20%
+        & .detail_wrapper
+            width: 50%
+        & .detail_title
+            width: 45%
+        & .info_detail
+            left: -70px
+        & .detail_category
+            width: 50%
+
+@media(max-width: 768px)
+    .info_main, .title, .proj_link
+        width: 140%
+        margin-left: 0
+    .info_detail
+        left: -30px
+    .detail_title
+        text-align: left
+        padding: 20px 0 10px
+        margin-left: 12%
+        font-size: 18px
+    .detail_category
+        display: none
+    .info_link_wrapper
+        width: 45%
+        margin-left: 55%
+    .info_main
+        padding: 10px 0
+    .wrapper_work, .wrapper
+        padding: 0 20px
+    .main_number
+        position: relative
+        left: 0
+        margin-right: 10px
+        font-size: 12px
+    .main_title
+        display: inline-block
+        font-size: 18px
+    .project_list_collab
+        & .info_main,.title,.proj_link
+            width: 100%
+            margin-right: 0
+        & .proj_link
+            left: 0px
+        & .info_link_wrapper
+            width: 45%
+            margin-left: 0
+            margin-right: 55%
+        & .main_number
+            margin-left: 10px
+            margin-right: 0px
+        & .detail_title
+            text-align: right
+            margin-right: 12%
+            float: right
+        & .detail_wrapper
+            display: none
+
+@media(max-width: 540px)
+    .menu_div_title
+        padding: 30px
+    .link_year
+        display: none
+    .detail_title
+        width: 70%
+    .project_list_collab
+        & .info_detail
+            left: -30px
