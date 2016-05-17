@@ -3,10 +3,9 @@ $(document).ready(function(){
 var hands = $('#hands');
     
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    hands.html('');
+    $('.video_wrapper').html('<p>some picture here</p>');
 }
-
-
+    
 function cicle(what,a,b) {
     if (what.attr('id') == 'left'){
         start = 5.13;
