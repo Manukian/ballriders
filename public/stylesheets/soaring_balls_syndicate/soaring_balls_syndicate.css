@@ -102,11 +102,11 @@ body {
   width: 100%;
   position: absolute;
   top: 50%;
-  margin-top: -100px; }
+  margin-top: -124px; }
 
 .topside_menu_mobile_list_item {
   height: 100%;
-  margin-bottom: 50px; }
+  margin: 50px 0; }
 
 .topside_menu_mobile_list_item_link {
   text-decoration: none;

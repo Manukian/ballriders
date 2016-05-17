@@ -1,6 +1,11 @@
 $(document).ready(function(){
 
-var hands = $('#hands');      
+var hands = $('#hands');
+    
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    hands.html('');
+}
+
 
 function cicle(what,a,b) {
     if (what.attr('id') == 'left'){
