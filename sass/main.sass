@@ -1,4 +1,5 @@
-$menu_block-width: 40%
+@import 'partials/variables'
+@import 'partials/base'
 
 body
     overflow: hidden
@@ -21,6 +22,17 @@ menu
     float: left
     overflow: hidden
     
+.menu_block_mobile
+    position: relative
+    width: 100%
+    opacity: 1
+    & .section_header
+        font-size: 20px !important
+    &:first-child
+        background-image: url(../../images/ballhead.jpg)
+        background-position: center
+        background-size: cover
+    
 .menu_block a
     position: absolute
     display: block
@@ -30,44 +42,51 @@ menu
     bottom: 0
     text-decoration: none
     &:hover > .section_header
-        color: black
+        color: $black
     
 
 .menu_block span.section_header
     text-align: center
-    margin-top: 18%
+    margin-top: 600px
     display: block
     font-weight: 400
     letter-spacing: 1px
-    font-family: Heue
+    font-family: Neue
     font-size: 28px
-    color: white
+    color: $black
     transition: 0.4s
     
     
 .menu_block-soaring_balls_syndicate
     @extend .menu_block
     left: -10%
-    background-image: url(../images/5.jpg)
-    background-position: center
-    background-size: cover
 
 .menu_block-ballride_style
     @extend .menu_block
     left: $menu_block-width - 10%
-    background-image: url(../images/6.svg)
-    background-position: center
-    background-size: cover
-    background-size: 30%
-    background-repeat: no-repeat
 
     
 .menu_block-ballriders_creative_group
     @extend .menu_block
     left: $menu_block-width + 30%
-    background-image: url(../images/333.jpg)
-    background-position: center
-    background-size: cover
     
 .menu_block-selected
     opacity: 1
+    
+#vid
+    height: 100%
+    position: absolute
+    bottom: 0
+    left: 50%
+    margin-left: -580px
+    
+.coming_soon
+    & a:after
+        content: ' (Coming on June 10)'
+        width: 100%
+        display: inline-block
+        text-align: center
+        text-transform: none
+        font-size: 16px
+        color: $coming_soon
+        margin-top: 10px

@@ -3,23 +3,23 @@ $(document).ready(function(){
 var hands = $('#hands');
     
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    $('.video_wrapper').html('<p>some picture here</p>');
+    $('.video_wrapper').html('<img src="../images/ballhead.jpg">');
 }
     
 function cicle(what,a,b) {
     if (what.attr('id') == 'left'){
-        start = 5.13;
+        start = 2.24;
         hands[0].currentTime = start;
         hands[0].ontimeupdate = function(){
-        if ((hands[0].currentTime > b) && (hands[0].currentTime < start)) {
+        if ((hands[0].currentTime > b) && (hands[0].currentTime > a)) {
             hands[0].currentTime = a;
         }
         }
     }else {
-        start = 2.34;
+        start = 5.46;
         hands[0].currentTime = start;
         hands[0].ontimeupdate = function(){
-        if ((hands[0].currentTime > b) && (hands[0].currentTime > a)) {
+        if ((hands[0].currentTime > b) && (hands[0].currentTime < start)) {
         hands[0].currentTime = a;
     }
     }
@@ -37,14 +37,14 @@ function setHandClass(elem) {
 
 function handsChange(elem) {
     if ((elem.attr('id') == 'left') && !(elem.hasClass('handed'))) {
-        cicle(elem,0,2.13);
+        cicle(elem,3.12,5.40);
     }
     if ((elem.attr('id') == 'right') && !(elem.hasClass('handed'))) {
-        cicle(elem,4.21,5.02);
+        cicle(elem,0,1.59);
     }
 }
     
-cicle($('#right'),0,2.13);
+cicle($('#right'),0,1.59);
     
 $('#left').click(function(){
     handsChange($(this));
@@ -73,4 +73,15 @@ $('.proj_link').mouseleave(function(){
             height: "0%"
         }, 300, "swing");
 });
+    
+$('.topside_menu_mobile_toggle').click(function(){
+    $('.topside_menu_mobile').addClass('on');
+    $('.topside_menu_mobile_toggle').hide();
+});
+    
+$('.topside_menu_mobile_close').click(function(){
+    $('.topside_menu_mobile').removeClass('on');
+    $('.topside_menu_mobile_toggle').show();
+});
+
 });

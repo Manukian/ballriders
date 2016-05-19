@@ -9,6 +9,9 @@ return this.each(function () {
 });
 }
 
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    $('.keybord').hide();
+}
 
 $('.menu_big_item').children('a').click(function(){
         $.fn.fullpage.setScrollingSpeed(0);
@@ -43,7 +46,7 @@ $('.topside_menu_mobile_close').click(function(){
 });
     
   $('#fullpage').fullpage({
-      anchors: ['home', 'intro1','intro2', 'works', 'clients', 'about', 'service', 'contact'],
+      anchors: ['home', 'intro1', 'works', 'clients', 'about', 'service', 'contact'],
       menu: "#menu",
       scrollingSpeed: 600,
       normalScrollElements: '#menu, .topside_menu_mobile',

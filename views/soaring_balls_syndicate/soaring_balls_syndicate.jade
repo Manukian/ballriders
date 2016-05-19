@@ -4,15 +4,7 @@ block head
     link(rel='stylesheet', type='text/css', href='fullpage.js/jquery.fullPage.css')
     link(rel="stylesheet", href="stylesheets/soaring_balls_syndicate/soaring_balls_syndicate.css")
 block main
-    .topside_menu_mobile
-        .topside_menu_mobile_close
-        ul.topside_menu_mobile_list
-            li.topside_menu_mobile_list_item
-                a.topside_menu_mobile_list_item_link(href="/Soaring_Balls_Syndicate") - Soaring Balls Syndicate -
-            li.topside_menu_mobile_list_item
-                a.topside_menu_mobile_list_item_link(href="/Ballride_Style") - Ballride Style -
-            li.topside_menu_mobile_list_item
-                a.topside_menu_mobile_list_item_link(href="/Ballriders_Creative_Group") - Ballriders Creative Group -
+    include ../topside_menu_mobile.jade
     .menu_big#menu
         .menu_close
         ul.menu_big_list
@@ -36,6 +28,8 @@ block main
         include ../topside_menu.jade
         .topside_menu_mobile_toggle
         .menu_big_toggle_black
+        .keybord
+            img(src="../images/keybord.svg", alt="")
         .circle_wrapper
             .circle
                 svg.section_svg(xmlns='http://www.w3.org/2000/svg', viewbox='135.3 -11.4 850.4 708.7')
@@ -60,8 +54,9 @@ block main
             img(src="../../images/arrow_down_pure.svg", alt="")
     .section#intro_section1
         .menu_big_toggle
-    .section#intro_section2
-        .menu_big_toggle
+        h1.quotation Freestyle is 
+            span.quotation_colored how 
+            | you live.
     .section#works_section
         .menu_big_toggle_black
         .circle_wrapper
@@ -121,6 +116,29 @@ block main
 
     .section#about_section
         .menu_big_toggle
+        .about_text_wrapper
+            img.logotype_image(src="../../images/ballriders_logotype_minimal_white.svg", alt="")
+            br
+            | Hi.
+            br
+            | I am Vagan Manukian.
+            br
+            | I live and perform in Saint-Petersburg.
+            br
+            | I do freestyle basketball shows, choreographies 
+            br
+            | and master classes.
+            br
+            | I am fluent with the ball.
+            br
+            | I understand freestyle not only 
+            br
+            | as an entertainment industry 
+            br
+            | but as a way to tell some 
+            br
+            | life stories as well.
+            
     .section#service_section
         .menu_big_toggle
         .circle_wrapper

@@ -1,3 +1,22 @@
+@font-face {
+  font-family: proxima-nova;
+  src: url(../../fonts/ProximaNova/ProximaNovaRegular.otf) format("opentype"); }
+@font-face {
+  font-family: proxima-nova-light;
+  font-weight: light;
+  src: url(../../fonts/ProximaNova/ProximaNovaLight.otf) format("opentype"); }
+@font-face {
+  font-family: proxima-nova-bold;
+  font-weight: bold;
+  src: url(../../fonts/ProximaNova/ProximaNovaBold.otf) format("opentype"); }
+@font-face {
+  font-family: proxima-nova-thin;
+  src: url(../../fonts/ProximaNova/ProximaNovaThin.otf) format("opentype"); }
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: proxima-nova;
+  background-color: #f9f9f9; }
+
 body {
   overflow: hidden; }
 
@@ -19,6 +38,17 @@ menu {
   float: left;
   overflow: hidden; }
 
+.menu_block_mobile {
+  position: relative;
+  width: 100%;
+  opacity: 1; }
+  .menu_block_mobile .section_header {
+    font-size: 20px !important; }
+  .menu_block_mobile:first-child {
+    background-image: url(../../images/ballhead.jpg);
+    background-position: center;
+    background-size: cover; }
+
 .menu_block a, .menu_block-soaring_balls_syndicate a, .menu_block-ballride_style a, .menu_block-ballriders_creative_group a {
   position: absolute;
   display: block;
@@ -28,40 +58,46 @@ menu {
   bottom: 0;
   text-decoration: none; }
   .menu_block a:hover > .section_header, .menu_block-soaring_balls_syndicate a:hover > .section_header, .menu_block-ballride_style a:hover > .section_header, .menu_block-ballriders_creative_group a:hover > .section_header {
-    color: black; }
+    color: #1b1b1b; }
 
 .menu_block span.section_header, .menu_block-soaring_balls_syndicate span.section_header, .menu_block-ballride_style span.section_header, .menu_block-ballriders_creative_group span.section_header {
   text-align: center;
-  margin-top: 18%;
+  margin-top: 600px;
   display: block;
   font-weight: 400;
   letter-spacing: 1px;
-  font-family: Heue;
+  font-family: Neue;
   font-size: 28px;
-  color: white;
+  color: #1b1b1b;
   transition: 0.4s; }
 
 .menu_block-soaring_balls_syndicate {
-  left: -10%;
-  background-image: url(../images/5.jpg);
-  background-position: center;
-  background-size: cover; }
+  left: -10%; }
 
 .menu_block-ballride_style {
-  left: 30%;
-  background-image: url(../images/6.svg);
-  background-position: center;
-  background-size: cover;
-  background-size: 30%;
-  background-repeat: no-repeat; }
+  left: 30%; }
 
 .menu_block-ballriders_creative_group {
-  left: 70%;
-  background-image: url(../images/333.jpg);
-  background-position: center;
-  background-size: cover; }
+  left: 70%; }
 
 .menu_block-selected {
   opacity: 1; }
+
+#vid {
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -580px; }
+
+.coming_soon a:after {
+  content: " (Coming on June 10)";
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  text-transform: none;
+  font-size: 16px;
+  color: #FF3399;
+  margin-top: 10px; }
 
 /*# sourceMappingURL=main.css.map */

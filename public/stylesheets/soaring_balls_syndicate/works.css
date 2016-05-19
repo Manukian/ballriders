@@ -2,16 +2,20 @@
   font-family: proxima-nova;
   src: url(../../fonts/ProximaNova/ProximaNovaRegular.otf) format("opentype"); }
 @font-face {
-  font-family: proxima-nova;
+  font-family: proxima-nova-light;
   font-weight: light;
   src: url(../../fonts/ProximaNova/ProximaNovaLight.otf) format("opentype"); }
 @font-face {
-  font-family: proxima-nova;
+  font-family: proxima-nova-bold;
   font-weight: bold;
   src: url(../../fonts/ProximaNova/ProximaNovaBold.otf) format("opentype"); }
+@font-face {
+  font-family: proxima-nova-thin;
+  src: url(../../fonts/ProximaNova/ProximaNovaThin.otf) format("opentype"); }
 body {
   -webkit-font-smoothing: antialiased;
-  font-family: proxima-nova; }
+  font-family: proxima-nova;
+  background-color: #f9f9f9; }
 
 .menu_wrapper {
   font-family: Neue;
@@ -19,7 +23,6 @@ body {
   width: 100%;
   height: 10%;
   background-color: #f9f9f9;
-  z-index: 1000;
   text-align: center; }
 
 .topside_menu {
@@ -27,16 +30,15 @@ body {
   list-style-type: none;
   display: inline-block;
   width: 50%;
-  margin: 0;
-  height: 100%; }
+  margin: 0; }
 
 .menu_items {
   display: inline-block;
   width: 33.3%;
-  height: 100%; }
+  height: 70px; }
 
 .menu_items > a {
-  padding: 30px 0;
+  padding-top: 30px;
   box-sizing: border-box;
   display: inline-block;
   width: 100%;
@@ -47,9 +49,21 @@ body {
   font-size: 10px;
   text-transform: uppercase;
   word-spacing: 2px;
-  transition: 0.3s; }
+  transition: 0.3s;
+  vertical-align: middle; }
   .menu_items > a:hover {
     color: black; }
+
+.coming_soon {
+  pointer-events: none; }
+  .coming_soon a:after {
+    content: " (Coming on June 10)";
+    width: 100%;
+    display: inline-block;
+    text-transform: none;
+    font-size: 12px;
+    color: #FF3399;
+    margin-top: 5px; }
 
 @media(max-width: 1050px) {
   .topside_menu {
@@ -60,11 +74,25 @@ body {
 @media(max-width: 540px) {
   li.menu_items a {
     font-size: 7px; } }
+.go_back {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  width: 35px;
+  height: 35px;
+  z-index: 1000;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../../images/go_back.svg);
+  background-position: center;
+  cursor: pointer; }
+
 #works {
   position: relative;
   width: 100%;
   height: 1000px;
-  background-color: white; }
+  background-color: #f9f9f9;
+  margin-top: 20px; }
 
 .video_wrapper {
   pointer-events: none;
@@ -73,7 +101,10 @@ body {
   left: 0;
   width: 100%;
   height: 30%;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden; }
+  .video_wrapper img {
+    height: 100%; }
 
 #hands {
   width: 100%;
@@ -109,7 +140,7 @@ body {
 .works_wrapper {
   width: 100%;
   height: 60%;
-  background-color: white;
+  background-color: #f9f9f9;
   text-align: left;
   overflow: hidden; }
 
@@ -267,7 +298,7 @@ article {
 .project_view {
   display: inline-block;
   font-size: 14px;
-  color: white;
+  color: #f9f9f9;
   opacity: 0;
   width: 60%; }
 
@@ -300,7 +331,7 @@ article {
   pointer-events: none;
   width: 120%;
   left: -60px;
-  color: white; }
+  color: #f9f9f9; }
 
 .detail_title {
   float: left;
@@ -363,7 +394,7 @@ article {
   -webkit-transform: translateY(-16px); }
 .active .link_year {
   -webkit-transform: translateY(-15px);
-  color: white; }
+  color: #f9f9f9; }
 .active .project_view {
   opacity: 1; }
 .active .link_project {
@@ -444,6 +475,15 @@ article {
   text-align: right; }
 
 @media(max-width: 1050px) {
+  .menu_wrapper {
+    height: 75px; }
+
+  li.menu_items {
+    display: none; }
+
+  .go_back {
+    display: inline-block; }
+
   .main_title {
     font-size: 22px; }
 
@@ -468,7 +508,7 @@ article {
 
   .active .link_year {
     -webkit-transform: translateY(0px);
-    color: white; }
+    color: #f9f9f9; }
 
   .active .link_project {
     -webkit-transform: translateY(-8px); }
@@ -493,6 +533,9 @@ article {
   .project_list_collab .detail_category {
     width: 50%; } }
 @media(max-width: 768px) {
+  #works {
+    height: 600px; }
+
   .info_main, .title, .proj_link {
     width: 140%;
     margin-left: 0; }
@@ -548,6 +591,12 @@ article {
   .project_list_collab .detail_wrapper {
     display: none; } }
 @media(max-width: 540px) {
+  .menu_div, .video_wrapper {
+    height: 20%; }
+
+  .title {
+    margin-top: 40px; }
+
   .menu_div_title {
     padding: 30px; }
 

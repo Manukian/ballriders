@@ -1,63 +1,7 @@
 @import '../partials/variables'
 @import '../partials/base'
 @import '../layout/topside_menu'
-
-.topside_menu_mobile_toggle
-    position: absolute
-    display: none
-    left: 30px
-    top: 30px
-    width: 35px
-    height: 35px
-    z-index: 1000
-    background-repeat: no-repeat
-    background-size: contain
-    background-image: url(../../images/topside_menu_mobile_open.svg)
-    background-position: center
-    cursor: pointer
-    
-.topside_menu_mobile_close
-    background-image: url(../../images/topside_menu_mobile_close.svg)
-    left: 30px
-    top: 30px
-    position: absolute
-    display: inline-block
-    height: 35px
-    width: 35px
-    background-size: contain
-    background-repeat: no-repeat
-    background-position: center
-    cursor: pointer
-
-.topside_menu_mobile
-    position: fixed
-    width: 100%
-    height: 100%
-    top: 0
-    left: 0
-    background-color: $white
-    opacity: 0
-    text-align: center
-    z-index: -100
-    
-.topside_menu_mobile_list
-    width: 100%
-    position: absolute
-    top: 50%
-    margin-top: -124px
-    
-.topside_menu_mobile_list_item
-    height: 100%
-    margin: 50px 0
-    
-.topside_menu_mobile_list_item_link
-    text-decoration: none
-    font-size: 16px
-    color: $darkGray
-    font-family: Neue
-    text-transform: uppercase
-    &:hover
-        color: black
+@import '../layout/topside_menu_mobile'
 
 .menu_big
     position: fixed
@@ -132,10 +76,10 @@
 .menu_big_toggle
     position: absolute
     display: inline-block
-    right: 30px
-    top: 30px
-    width: 30px
-    height: 30px
+    right: 15px
+    top: 15px
+    width: 60px
+    height: 60px
     z-index: 1000
     background-repeat: no-repeat
     background-size: contain
@@ -146,10 +90,10 @@
 .menu_big_toggle_black
     position: absolute
     display: inline-block
-    right: 30px
-    top: 30px
-    width: 30px
-    height: 30px
+    right: 15px
+    top: 15px
+    width: 60px
+    height: 60px
     z-index: 1000
     background-repeat: no-repeat
     background-size: contain
@@ -159,12 +103,12 @@
 
 .menu_close
     background-image: url(../../images/menu_close.svg)
-    right: 25px
-    top: 30px
+    right: 15px
+    top: 15px
     position: absolute
     display: inline-block
-    height: 35px
-    width: 35px
+    height: 60px
+    width: 60px
     background-size: contain
     background-repeat: no-repeat
     background-position: center
@@ -213,14 +157,16 @@
     display: inline-block
     & img
         height: 100%
+        
+.keybord
+    position: absolute
+    right: 20px
+    bottom: 15px
+    display: inline-block
+    & img
+        width: 120px
     
 #intro_section1
-    position: relative
-    width: 100%
-    height: $section_height
-    background-color: black
-    
-#intro_section2
     position: relative
     width: 100%
     height: $section_height
@@ -232,6 +178,23 @@
     -o-animation: noiseAnim 0.5s infinite linear alternate
     animation: noiseAnim 0.5s infinite linear alternate
 
+.quotation
+    text-align: center
+    font-size: 40px
+    letter-spacing: 6px
+    color: $white
+    margin: 0
+    text-transform: uppercase
+    font-family: proxima-nova-light
+    font-weight: 500
+    position: absolute
+    top: 50%
+    margin-top: -20px
+    width: 100%
+
+.quotation_colored
+    color: #5ef8ad
+    
 #works_section
     position: relative
     width: 100%
@@ -308,6 +271,26 @@
     position: relative
     height: $section_height
     background-color: black
+    background-image: url(../../images/intro.jpg)
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+    
+.about_text_wrapper
+    font-size: 23px
+    color: $white
+    text-align: center
+    margin: 0 auto
+    font-family: proxima-nova-thin
+    text-transform: uppercase
+    line-height: 40px
+    letter-spacing: 3px
+    padding: 0 15px
+    box-sizing: border-box
+    position: absolute
+    top: 50%
+    margin-top: -274px
+    width: 100%
 
 #service_section
     width: 100%
@@ -349,12 +332,6 @@
     width: 700px
     height: 100px
     background-color: transparent
-    
-@media(max-width: 1050px)
-    li.menu_items
-        display: none
-    .topside_menu_mobile_toggle
-        display: inline-block
 
 @media(max-width: 600px)
     .menu_big_list
@@ -366,3 +343,7 @@
     .logotype_image
         width: 30px
         margin-bottom: 20px
+    .about_text_wrapper
+        font-size: 15px
+        margin-top: -265px
+        line-height: 30px

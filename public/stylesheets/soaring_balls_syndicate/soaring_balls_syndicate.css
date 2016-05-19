@@ -2,16 +2,20 @@
   font-family: proxima-nova;
   src: url(../../fonts/ProximaNova/ProximaNovaRegular.otf) format("opentype"); }
 @font-face {
-  font-family: proxima-nova;
+  font-family: proxima-nova-light;
   font-weight: light;
   src: url(../../fonts/ProximaNova/ProximaNovaLight.otf) format("opentype"); }
 @font-face {
-  font-family: proxima-nova;
+  font-family: proxima-nova-bold;
   font-weight: bold;
   src: url(../../fonts/ProximaNova/ProximaNovaBold.otf) format("opentype"); }
+@font-face {
+  font-family: proxima-nova-thin;
+  src: url(../../fonts/ProximaNova/ProximaNovaThin.otf) format("opentype"); }
 body {
   -webkit-font-smoothing: antialiased;
-  font-family: proxima-nova; }
+  font-family: proxima-nova;
+  background-color: #f9f9f9; }
 
 .menu_wrapper {
   font-family: Neue;
@@ -19,7 +23,6 @@ body {
   width: 100%;
   height: 10%;
   background-color: #f9f9f9;
-  z-index: 1000;
   text-align: center; }
 
 .topside_menu {
@@ -27,16 +30,15 @@ body {
   list-style-type: none;
   display: inline-block;
   width: 50%;
-  margin: 0;
-  height: 100%; }
+  margin: 0; }
 
 .menu_items {
   display: inline-block;
   width: 33.3%;
-  height: 100%; }
+  height: 70px; }
 
 .menu_items > a {
-  padding: 30px 0;
+  padding-top: 30px;
   box-sizing: border-box;
   display: inline-block;
   width: 100%;
@@ -47,9 +49,21 @@ body {
   font-size: 10px;
   text-transform: uppercase;
   word-spacing: 2px;
-  transition: 0.3s; }
+  transition: 0.3s;
+  vertical-align: middle; }
   .menu_items > a:hover {
     color: black; }
+
+.coming_soon {
+  pointer-events: none; }
+  .coming_soon a:after {
+    content: " (Coming on June 10)";
+    width: 100%;
+    display: inline-block;
+    text-transform: none;
+    font-size: 12px;
+    color: #FF3399;
+    margin-top: 5px; }
 
 @media(max-width: 1050px) {
   .topside_menu {
@@ -117,6 +131,27 @@ body {
   .topside_menu_mobile_list_item_link:hover {
     color: black; }
 
+.on {
+  opacity: 1;
+  z-index: 9999; }
+
+.coming_soon {
+  pointer-events: none; }
+  .coming_soon a:after {
+    content: " (Coming on June 10)";
+    width: 100%;
+    display: inline-block;
+    text-transform: none;
+    font-size: 12px;
+    color: #FF3399;
+    margin-top: 5px; }
+
+@media(max-width: 1050px) {
+  li.menu_items {
+    display: none; }
+
+  .topside_menu_mobile_toggle {
+    display: inline-block; } }
 .menu_big {
   position: fixed;
   width: 100%;
@@ -190,10 +225,10 @@ body {
 .menu_big_toggle {
   position: absolute;
   display: inline-block;
-  right: 30px;
-  top: 30px;
-  width: 30px;
-  height: 30px;
+  right: 15px;
+  top: 15px;
+  width: 60px;
+  height: 60px;
   z-index: 1000;
   background-repeat: no-repeat;
   background-size: contain;
@@ -204,10 +239,10 @@ body {
 .menu_big_toggle_black {
   position: absolute;
   display: inline-block;
-  right: 30px;
-  top: 30px;
-  width: 30px;
-  height: 30px;
+  right: 15px;
+  top: 15px;
+  width: 60px;
+  height: 60px;
   z-index: 1000;
   background-repeat: no-repeat;
   background-size: contain;
@@ -217,12 +252,12 @@ body {
 
 .menu_close {
   background-image: url(../../images/menu_close.svg);
-  right: 25px;
-  top: 30px;
+  right: 15px;
+  top: 15px;
   position: absolute;
   display: inline-block;
-  height: 35px;
-  width: 35px;
+  height: 60px;
+  width: 60px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -272,13 +307,15 @@ body {
   .arrow_pure img {
     height: 100%; }
 
-#intro_section1 {
-  position: relative;
-  width: 100%;
-  height: 679px;
-  background-color: black; }
+.keybord {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  display: inline-block; }
+  .keybord img {
+    width: 120px; }
 
-#intro_section2 {
+#intro_section1 {
   position: relative;
   width: 100%;
   height: 679px;
@@ -289,6 +326,23 @@ body {
   -moz-animation: noiseAnim 0.5s infinite linear alternate;
   -o-animation: noiseAnim 0.5s infinite linear alternate;
   animation: noiseAnim 0.5s infinite linear alternate; }
+
+.quotation {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 6px;
+  color: #f9f9f9;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: proxima-nova-light;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  width: 100%; }
+
+.quotation_colored {
+  color: #5ef8ad; }
 
 #works_section {
   position: relative;
@@ -361,7 +415,27 @@ body {
   height: 679px;
   position: relative;
   height: 679px;
-  background-color: black; }
+  background-color: black;
+  background-image: url(../../images/intro.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.about_text_wrapper {
+  font-size: 23px;
+  color: #f9f9f9;
+  text-align: center;
+  margin: 0 auto;
+  font-family: proxima-nova-thin;
+  text-transform: uppercase;
+  line-height: 40px;
+  letter-spacing: 3px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  margin-top: -274px;
+  width: 100%; }
 
 #service_section {
   width: 100%;
@@ -404,12 +478,6 @@ body {
   height: 100px;
   background-color: transparent; }
 
-@media(max-width: 1050px) {
-  li.menu_items {
-    display: none; }
-
-  .topside_menu_mobile_toggle {
-    display: inline-block; } }
 @media(max-width: 600px) {
   .menu_big_list {
     margin-top: -243px;
@@ -421,6 +489,11 @@ body {
 
   .logotype_image {
     width: 30px;
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+
+  .about_text_wrapper {
+    font-size: 15px;
+    margin-top: -265px;
+    line-height: 30px; } }
 
 /*# sourceMappingURL=soaring_balls_syndicate.css.map */

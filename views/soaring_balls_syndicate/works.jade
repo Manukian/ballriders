@@ -3,7 +3,7 @@ extends ../layout
 mixin project_item(href, number, title, year, category, music)
     article
         .wrapper_work
-            a.proj_link(href=href)
+            a.proj_link(href=href target="_blank")
             .proj_wrapper
               .info_main
                 span.main_number= number
@@ -27,7 +27,7 @@ mixin project_item(href, number, title, year, category, music)
 mixin project_item_reverse(href, number, title, year, category, music)
     article
         .wrapper_work
-            a.proj_link(href=href)
+            a.proj_link(href=href target="_blank")
             .proj_wrapper
               .info_main
                 h2.main_title= title
@@ -53,10 +53,12 @@ block head
     
 block main
     include ../topside_menu.jade
+    a(href="/Soaring_Balls_Syndicate#works")
+        .go_back
     section#works
         .video_wrapper
           video#hands(autoplay loop )
-            source(src="../../images/hands.mov" type="video/mp4")
+            source(src="../../images/hands_new_new.mov" type="video/mp4")
         #left.menu_div
           h3.menu_div_title Collaborations
         #right.menu_div
@@ -76,9 +78,9 @@ block main
                             h1.project_list_title Selected Choreographies
                             span.under_title_text - project list
                     +project_item('#','.04','Delay Kak Nado','Y - 2016', 'Choreo', 'Kizaru')
-                    +project_item('#','.03','Vse Moi Parni','Y - 2014', 'Choreo', 'Kizaru')
-                    +project_item('#','.02','Ne Lez Na Ugol','Y - 2014', 'Choreo', 'Kizaru')
-                    +project_item('#','.01','Ne Ostavlyayut Palcev','Y - 2014', 'Choreo', 'Kizaru')
+                    +project_item('https://vimeo.com/111230188','.03','Vse Moi Parni','Y - 2014', 'Choreo', 'Kizaru')
+                    +project_item('https://vimeo.com/101261220','.02','Ne Lez Na Ugol','Y - 2014', 'Choreo', 'Kizaru')
+                    +project_item('https://vimeo.com/98450544','.01','Ne Ostavlyayut Palcev','Y - 2014', 'Choreo', 'Kizaru')
                     
 block js
     script(src="/javascripts/works.js")
