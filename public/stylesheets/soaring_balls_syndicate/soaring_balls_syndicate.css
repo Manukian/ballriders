@@ -495,5 +495,10 @@ body {
     font-size: 15px;
     margin-top: -265px;
     line-height: 30px; } }
+@media(max-width: 400px) {
+  .about_text_wrapper {
+    font-size: 12px;
+    margin-top: -215px;
+    line-height: 25px; } }
 
 /*# sourceMappingURL=soaring_balls_syndicate.css.map */
