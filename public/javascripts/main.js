@@ -8,7 +8,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     $('body').css('overflow','visible');
     var viewport = $(window).height();
     $('.menu_block_mobile').height(viewport/3);
-    $('.section_header').css('margin-top',viewport/4 + 'px');
+    $('.section_header').css('margin-top',viewport/4 - 15 + 'px');
     $('#vid').hide();
 } else {
 
