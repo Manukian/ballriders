@@ -77,7 +77,28 @@ block main
                         .title
                             h1.project_list_title Selected Choreographies
                             span.under_title_text - project list
-                    +project_item('#','.04','Delay Kak Nado','Y - 2016', 'Choreo', 'Kizaru')
+                    article
+                        .wrapper_work
+                            a.proj_link()
+                            .proj_wrapper
+                              .info_main
+                                span.main_number 04
+                                h2.main_title Delay Kak Nado
+                              .info_link
+                                  .info_link_wrapper
+                                    span.link_year Y - 2016
+                                    span.link_project
+                                      span.project_view View Project
+                                      span.project_arrow Go To Project
+                              .info_detail
+                                h1.detail_title Delay Kak Nado
+                                .detail_wrapper
+                                    .detail_category
+                                      .top Category
+                                      .bot Coming Soon
+                                    .detail_music
+                                      .top Music
+                                      .bot Kizaru
                     +project_item('https://vimeo.com/111230188','.03','Vse Moi Parni','Y - 2014', 'Choreo', 'Kizaru')
                     +project_item('https://vimeo.com/101261220','.02','Ne Lez Na Ugol','Y - 2014', 'Choreo', 'Kizaru')
                     +project_item('https://vimeo.com/98450544','.01','Ne Ostavlyayut Palcev','Y - 2014', 'Choreo', 'Kizaru')
