@@ -28,10 +28,7 @@ menu
     opacity: 1
     & .section_header
         font-size: 20px !important
-    &:first-child
-        background-image: url(../../images/ballhead.jpg)
-        background-position: center
-        background-size: cover
+
     
 .menu_block a
     position: absolute
@@ -41,8 +38,6 @@ menu
     right: 0
     bottom: 0
     text-decoration: none
-    &:hover > .section_header
-        color: $black
     
 
 .menu_block span.section_header
@@ -60,15 +55,24 @@ menu
 .menu_block-soaring_balls_syndicate
     @extend .menu_block
     left: -10%
+    background-image: url(../../images/ballhead.jpg)
+    background-position: center
+    background-size: cover
 
 .menu_block-ballride_style
     @extend .menu_block
     left: $menu_block-width - 10%
+    background-image: url(../../images/soon.jpg)
+    background-position: center
+    background-size: cover
 
     
 .menu_block-ballriders_creative_group
     @extend .menu_block
     left: $menu_block-width + 30%
+    background-image: url(../../images/soon_cg.jpg)
+    background-position: center
+    background-size: cover
     
 .menu_block-selected
     opacity: 1
@@ -81,6 +85,9 @@ menu
     margin-left: -580px
     
 .coming_soon
+    text-align: center
+    & img
+        width: 90%
     & a:after
         content: ' (Coming on June 10)'
         width: 100%

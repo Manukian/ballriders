@@ -52,18 +52,19 @@
     display: inline-block
     cursor: pointer
     &:hover h3
-        opacity: 1
+        color: $coming_soon
+        
 
 .menu_div_title
-    opacity: 0
-    padding: 30px 130px
+    opacity: 1
+    margin: 30px 130px
     font-size: 15px
     text-transform: lowercase
 
 .handed
-    outline: solid 5px #FF3399
+    outline: solid 5px $coming_soon
     & .menu_div_title
-        opacity: 1
+        color: $coming_soon
 
 .works_wrapper
     width: 100%
@@ -255,7 +256,7 @@ article
     height: 0%
     top: 0
     overflow: hidden
-    background-color: #FF3399
+    background-color: $coming_soon
     z-index: 200
     pointer-events: none
     width: 120%
@@ -508,7 +509,7 @@ article
     .title
         margin-top: 40px
     .menu_div_title
-        padding: 30px
+        margin: 30px
     .link_year
         display: none
     .detail_title
