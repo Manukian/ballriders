@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     $('.menu_block').addClass('menu_block_mobile');
