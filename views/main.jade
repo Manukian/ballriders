@@ -4,7 +4,8 @@ block head
   link(rel='stylesheet', href='/stylesheets/main.css')
 block main
   .menu_block.menu_block-soaring_balls_syndicate
-    video#vid(src="images/u.mov")
+    video#vid
+        source(src="images/u.mov" type="video/mp4")
     a(href="soaring_balls_syndicate")
       span.section_header - Soaring Balls Syndicate -
   .menu_block.menu_block-ballride_style.menu_block-selected.coming_soon

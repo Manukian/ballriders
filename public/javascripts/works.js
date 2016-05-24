@@ -8,7 +8,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     
 function cicle(what,a,b) {
     if (what.attr('id') == 'left'){
-        start = 2.24;
+        start = 1.70;
         hands[0].currentTime = start;
         hands[0].ontimeupdate = function(){
         if ((hands[0].currentTime > b) && (hands[0].currentTime > a)) {
@@ -16,7 +16,7 @@ function cicle(what,a,b) {
         }
         }
     }else {
-        start = 5.46;
+        start = 4.19;
         hands[0].currentTime = start;
         hands[0].ontimeupdate = function(){
         if ((hands[0].currentTime > b) && (hands[0].currentTime < start)) {
@@ -37,14 +37,14 @@ function setHandClass(elem) {
 
 function handsChange(elem) {
     if ((elem.attr('id') == 'left') && !(elem.hasClass('handed'))) {
-        cicle(elem,3.12,5.40);
+        cicle(elem,2.29,4.18);
     }
     if ((elem.attr('id') == 'right') && !(elem.hasClass('handed'))) {
-        cicle(elem,0,1.59);
+        cicle(elem,0,1.30);
     }
 }
     
-cicle($('#right'),0,1.59);
+cicle($('#right'),0,1.30);
     
 $('#left').click(function(){
     handsChange($(this));
