@@ -2,14 +2,12 @@ $(document).ready(function () {
     
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     $('.menu_block').addClass('menu_block_mobile');
-    $('.menu_block').removeClass('menu_block-ballriders_creative_group');
-    $('.menu_block').removeClass('menu_block-soaring_balls_syndicate');
-    $('.menu_block').removeClass('menu_block-ballride_style');
     $('body').css('overflow','visible');
     var viewport = $(window).height();
     $('.menu_block_mobile').height(viewport/3);
     $('.section_header').css('margin-top',viewport/4 - 15 + 'px');
     $('#vid').hide();
+    $('img').height(viewport/4-10);
 } else {
 
     var trail = $(window).width() / 10

@@ -25,7 +25,7 @@ menu {
   width: auto;
   position: relative; }
 
-.menu_block, .menu_block-soaring_balls_syndicate, .menu_block-ballride_style, .menu_block-ballriders_creative_group {
+.menu_block {
   position: absolute;
   left: 0;
   height: 100%;
@@ -41,11 +41,12 @@ menu {
 .menu_block_mobile {
   position: relative;
   width: 100%;
-  opacity: 1; }
+  opacity: 1;
+  left: 0 !important; }
   .menu_block_mobile .section_header {
     font-size: 20px !important; }
 
-.menu_block a, .menu_block-soaring_balls_syndicate a, .menu_block-ballride_style a, .menu_block-ballriders_creative_group a {
+.menu_block a {
   position: absolute;
   display: block;
   top: 0;
@@ -54,7 +55,7 @@ menu {
   bottom: 0;
   text-decoration: none; }
 
-.menu_block span.section_header, .menu_block-soaring_balls_syndicate span.section_header, .menu_block-ballride_style span.section_header, .menu_block-ballriders_creative_group span.section_header {
+.menu_block span.section_header {
   text-align: center;
   margin-top: 600px;
   display: block;
