@@ -108,4 +108,10 @@ menu {
     color: #FF3399;
     margin-top: 5px; }
 
+#eventcatalogWidget {
+  opacity: 0;
+  pointer-events: none; }
+  #eventcatalogWidget a:after {
+    content: none; }
+
 /*# sourceMappingURL=main.css.map */
