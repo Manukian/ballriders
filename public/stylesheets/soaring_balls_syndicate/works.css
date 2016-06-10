@@ -74,19 +74,6 @@ body {
 @media(max-width: 540px) {
   li.menu_items a {
     font-size: 7px; } }
-.go_back {
-  position: absolute;
-  left: 30px;
-  top: 30px;
-  width: 35px;
-  height: 35px;
-  z-index: 1000;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url(../../images/go_back.svg);
-  background-position: center;
-  cursor: pointer; }
-
 #works {
   position: relative;
   width: 100%;
@@ -102,7 +89,8 @@ body {
   width: 100%;
   height: 30%;
   text-align: center;
-  overflow: hidden; }
+  overflow: hidden;
+  background-size: cover; }
   .video_wrapper img {
     height: 100%; }
 
@@ -475,14 +463,8 @@ article {
   text-align: right; }
 
 @media(max-width: 1050px) {
-  .menu_wrapper {
-    height: 75px; }
-
   li.menu_items {
     display: none; }
-
-  .go_back {
-    display: inline-block; }
 
   .main_title {
     font-size: 22px; }
@@ -534,7 +516,7 @@ article {
     width: 50%; } }
 @media(max-width: 768px) {
   #works {
-    height: 600px; }
+    height: 750px; }
 
   .info_main, .title, .proj_link {
     width: 140%;

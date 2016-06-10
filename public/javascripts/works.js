@@ -3,7 +3,9 @@ $(document).ready(function(){
 var hands = $('#hands');
     
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    $('.video_wrapper').html('<img src="../images/ballhead.jpg">');
+    $('.video_wrapper').html('');
+    $('.video_wrapper').css('background-image','url(../../images/ballhead.jpg)');
+    
 }
     
 function cicle(what,a,b) {
