@@ -3,7 +3,6 @@ extends ../layout
 block head
     meta(name="keywords" content="freestyle basketball soaring balls syndicate ballride style performance choreography wedding show Vaggi баскетбольный фристайл свадебный перфоманс выступление детское шоу интерактив хореография мяч Вагги")
     meta(name="description" content="Discover one of the best freestyle basketballe team. Get the best entertainment show for your event")
-    link(rel='stylesheet', type='text/css', href='fullpage.js/jquery.fullPage.css')
     link(rel="stylesheet", href="stylesheets/soaring_balls_syndicate/soaring_balls_syndicate.css")
 block main
     include ../topside_menu_mobile.jade
@@ -13,16 +12,14 @@ block main
             li.menu_big_item
                 img.logotype_image(src="../../images/ballriders_logotype_minimal_white.svg", alt="")
             li.menu_big_item(data-menuanchor="home")
-                a.menu_big_item_link(href="#home").color1 H o m e
-            li.menu_big_item(data-menuanchor="intro1")
-                a.menu_big_item_link(href="#intro1").color2 I n t r o
-            li.menu_big_item(data-menuanchor="works")
-                a.menu_big_item_link(href="#works").color3 W o r k s
-            li.menu_big_item(data-menuanchor="clients")
-                a.menu_big_item_link(href="#clients").color4 C l i e n t s
+                a.menu_big_item_link(href="#home").color2 H o m e
             li.menu_big_item(data-menuanchor="about")
-                a.menu_big_item_link(href="#about").color5 A b o u t
-            li.menu_big_item(data-menuanchor="service")
+                a.menu_big_item_link(href="#about").color3 A b o u t
+            li.menu_big_item(data-menuanchor="works")
+                a.menu_big_item_link(href="#works").color4 W o r k s
+            li.menu_big_item(data-menuanchor="clients")
+                a.menu_big_item_link(href="#clients").color5 C l i e n t s
+            li.menu_big_item(data-menuanchor="about")
                 a.menu_big_item_link(href="#service").color6 S e r v i c e
             li.menu_big_item(data-menuanchor="contact")
                 a.menu_big_item_link(href="#contact").color7 C o n t a c t
@@ -52,13 +49,31 @@ block main
                     path(d='M554.8 168.5l3.4 2.5.1 17.4-3.4 3.3z')
                     path(d='M578.5 175.8l-23.7 18.8.1-3 19.7-19.7z')
                     path(d='M578.5 193.9l-12.7-11.7 2.4-3.9 15.5 11.7z')
-        a(href="#intro1").arrow_pure
+        a(href="#about").arrow_pure
             img(src="../../images/arrow_down_pure.svg", alt="")
-    .section#intro_section1
+    .section#about_section
         .menu_big_toggle
-        h1.quotation Freestyle is 
-            span.quotation_colored how 
-            | you live.
+        .about_text_wrapper
+            br
+            | Hi.
+            br
+            | I am Vagan Manukian.
+            br
+            | I live and perform in Saint-Petersburg.
+            br
+            | I do freestyle basketball shows, choreographies 
+            br
+            | and master classes.
+            br
+            | I am fluent with the ball.
+            br
+            | I understand freestyle not only 
+            br
+            | as an entertainment industry 
+            br
+            | but as a way to tell some 
+            br
+            | life stories as well.
     .section#works_section
         .menu_big_toggle_black
         .circle_wrapper
@@ -115,31 +130,6 @@ block main
                     path(d='M578.5 178.2L554.8 197l.1-3 19.7-19.7z')
                     path(d='M578.5 196.3l-12.7-11.7 2.4-3.9 15.5 11.7z')
 
-
-    .section#about_section
-        .menu_big_toggle
-        .about_text_wrapper
-            br
-            | Hi.
-            br
-            | I am Vagan Manukian.
-            br
-            | I live and perform in Saint-Petersburg.
-            br
-            | I do freestyle basketball shows, choreographies 
-            br
-            | and master classes.
-            br
-            | I am fluent with the ball.
-            br
-            | I understand freestyle not only 
-            br
-            | as an entertainment industry 
-            br
-            | but as a way to tell some 
-            br
-            | life stories as well.
-            
     .section#service_section
         .menu_big_toggle
         .circle_wrapper
@@ -170,7 +160,7 @@ block main
                     path(d='M360.8 476.5l-2.7-9.7-2.7 9.7h-1.1l-3.2-11.3h1.1l2.7 10 2.8-10h.9l2.8 10 2.7-10h1.1l-3.2 11.3h-1.2zM369.7 472.4c0-2.4 1.7-4.3 4-4.3 2.5 0 3.9 2 3.9 4.4v.2h-6.9c.1 1.8 1.3 3.3 3.2 3.3 1 0 2-.4 2.7-1.1l.5.6c-.8.9-1.9 1.3-3.2 1.3-2.5-.1-4.2-1.9-4.2-4.4zm4-3.6c-1.9 0-2.9 1.7-3 3.1h6c-.1-1.3-1-3.1-3-3.1zM389.3 476.5v-1.3c-.6.8-1.6 1.5-2.9 1.5-2.2 0-3.7-1.7-3.7-4.3 0-2.6 1.5-4.3 3.7-4.3 1.2 0 2.2.6 2.9 1.5v-4.5h.9v11.3h-.9zm0-2.1v-4.1c-.5-.8-1.5-1.5-2.7-1.5-1.8 0-2.9 1.5-2.9 3.5s1.1 3.5 2.9 3.5c1.1.1 2.2-.6 2.7-1.4zM402.4 476.5v-1.3c-.6.8-1.6 1.5-2.9 1.5-2.2 0-3.7-1.7-3.7-4.3 0-2.6 1.5-4.3 3.7-4.3 1.2 0 2.2.6 2.9 1.5v-4.5h.9v11.3h-.9zm0-2.1v-4.1c-.5-.8-1.5-1.5-2.7-1.5-1.8 0-2.9 1.5-2.9 3.5s1.1 3.5 2.9 3.5c1.1.1 2.2-.6 2.7-1.4zM409.2 466.3c0-.4.3-.7.7-.7.4 0 .7.3.7.7s-.3.7-.7.7c-.4 0-.7-.3-.7-.7zm.2 10.2v-8.2h.9v8.2h-.9zM422 476.5v-5.6c0-1.6-.8-2.1-2-2.1-1.1 0-2.1.7-2.7 1.4v6.2h-.9v-8.2h.9v1.2c.6-.7 1.8-1.4 3-1.4 1.7 0 2.6.8 2.6 2.7v5.7h-.9zM429.1 478.6l.5-.7c.7.8 1.5 1.2 2.7 1.2 1.5 0 2.8-.7 2.8-2.6v-1.3c-.6.8-1.6 1.5-2.9 1.5-2.2 0-3.7-1.6-3.7-4.3 0-2.6 1.5-4.3 3.7-4.3 1.2 0 2.2.6 2.9 1.5v-1.3h.9v8.1c0 2.5-1.7 3.4-3.7 3.4-1.4 0-2.3-.2-3.2-1.2zm6-4.2v-4c-.5-.8-1.6-1.5-2.7-1.5-1.8 0-2.9 1.5-2.9 3.5s1.1 3.5 2.9 3.5c1.1 0 2.2-.7 2.7-1.5zM460 476.5v-11.3h4.2c2.2 0 3.4 1.5 3.4 3.3 0 1.8-1.3 3.3-3.4 3.3H461v4.7h-1zm6.7-8c0-1.4-1-2.4-2.5-2.4H461v4.9h3.2c1.5-.1 2.5-1.1 2.5-2.5zM472.6 472.4c0-2.4 1.7-4.3 4-4.3 2.5 0 3.9 2 3.9 4.4v.2h-6.9c.1 1.8 1.3 3.3 3.2 3.3 1 0 2-.4 2.7-1.1l.5.6c-.8.9-1.9 1.3-3.2 1.3-2.5-.1-4.2-1.9-4.2-4.4zm4-3.6c-1.9 0-2.9 1.7-3 3.1h6c-.1-1.3-1-3.1-3-3.1zM486.1 476.5v-8.2h.9v1.4c.7-.9 1.6-1.6 2.8-1.6v1h-.4c-.8 0-2 .7-2.3 1.5v6h-1zM495.2 476.5v-7.4h-1.4v-.8h1.4v-.7c0-1.6.8-2.5 2.2-2.5.6 0 1 .1 1.6.6l-.4.6c-.3-.3-.6-.4-1.1-.4-.9 0-1.4.6-1.4 1.8v.7h1.7v.8h-1.7v7.4h-.9zM502.3 472.4c0-2.4 1.5-4.3 3.9-4.3s4 1.9 4 4.3-1.5 4.3-4 4.3c-2.3 0-3.9-1.9-3.9-4.3zm7 0c0-1.8-1.1-3.5-3-3.5s-3 1.7-3 3.5 1.1 3.5 3 3.5 3-1.7 3-3.5zM515.9 476.5v-8.2h.9v1.4c.7-.9 1.6-1.6 2.8-1.6v1h-.4c-.8 0-2 .7-2.3 1.5v6h-1zM534.5 476.5v-5.7c0-1.2-.5-1.9-1.6-1.9-.9 0-1.9.6-2.3 1.4v6.2h-.9v-5.7c0-1.2-.5-1.9-1.6-1.9-.9 0-1.9.7-2.3 1.4v6.2h-.9v-8.2h.9v1.2c.3-.5 1.5-1.4 2.7-1.4 1.3 0 2 .7 2.2 1.5.5-.8 1.6-1.5 2.7-1.5 1.5 0 2.2.8 2.2 2.5v5.9h-1.1zM546.7 476.5v-1c-.7.8-1.6 1.2-2.8 1.2-1.4 0-2.9-1-2.9-2.7 0-1.8 1.4-2.7 2.9-2.7 1.1 0 2.1.4 2.8 1.2v-1.7c0-1.2-1-1.9-2.2-1.9-1 0-1.8.4-2.6 1.2l-.5-.6c.8-.9 1.8-1.4 3.2-1.4 1.7 0 3 .8 3 2.6v5.8h-.9zm0-1.6v-1.8c-.6-.7-1.5-1.1-2.5-1.1-1.4 0-2.2.9-2.2 2 0 1.2.9 2 2.2 2 1 0 2-.4 2.5-1.1zM559.3 476.5v-5.6c0-1.6-.8-2.1-2-2.1-1.1 0-2.1.7-2.7 1.4v6.2h-.9v-8.2h.9v1.2c.6-.7 1.8-1.4 3-1.4 1.7 0 2.6.8 2.6 2.7v5.7h-.9zM565.9 472.4c0-2.4 1.6-4.3 4-4.3 1.4 0 2.2.6 2.9 1.4l-.6.5c-.6-.8-1.3-1.1-2.2-1.1-1.9 0-3.1 1.5-3.1 3.5s1.2 3.5 3.1 3.5c.9 0 1.6-.3 2.2-1.2l.6.5c-.7.8-1.5 1.4-2.9 1.4-2.4.1-4-1.8-4-4.2zM577.7 472.4c0-2.4 1.7-4.3 4-4.3 2.5 0 3.9 2 3.9 4.4v.2h-6.9c.1 1.8 1.3 3.3 3.2 3.3 1 0 2-.4 2.7-1.1l.5.6c-.8.9-1.9 1.3-3.2 1.3-2.5-.1-4.2-1.9-4.2-4.4zm3.9-3.6c-1.9 0-2.9 1.7-3 3.1h6c0-1.3-.9-3.1-3-3.1zM610.7 474.1c-1 0-1.8-.8-1.8-1.7 0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8c0 .9-.8 1.7-1.8 1.7zM636.4 476.5v-11.3h7.2v.9h-6.2v4.2h6.1v.9h-6.1v5.4h-1zM648.4 474.9l.6-.7c.7.9 1.9 1.6 3.5 1.6 2.3 0 3-1.3 3-2.3 0-3.3-6.8-1.6-6.8-5.6 0-1.9 1.7-3 3.7-3 1.7 0 3 .6 3.8 1.6l-.6.7c-.8-1-2-1.4-3.2-1.4-1.5 0-2.7.9-2.7 2.1 0 2.9 6.8 1.3 6.8 5.5 0 1.5-1 3.2-4 3.2-1.9.1-3.3-.6-4.1-1.7zM662.3 476.5v-11.3h4.7c1.9 0 3.1 1.1 3.1 2.9 0 1.4-1 2.4-2 2.6 1.2.2 2.2 1.4 2.2 2.8 0 1.9-1.2 3.1-3.2 3.1h-4.8zm6.7-8.3c0-1.2-.8-2.1-2.2-2.1h-3.6v4.2h3.6c1.5-.1 2.2-1 2.2-2.1zm.3 5.2c0-1.2-.8-2.2-2.4-2.2h-3.6v4.5h3.6c1.5-.1 2.4-1 2.4-2.3zM676.1 476.5v-11.3h4.7c1.9 0 3.1 1.1 3.1 2.9 0 1.4-1 2.4-2 2.6 1.2.2 2.2 1.4 2.2 2.8 0 1.9-1.2 3.1-3.2 3.1h-4.8zm6.8-8.3c0-1.2-.8-2.1-2.2-2.1h-3.6v4.2h3.6c1.4-.1 2.2-1 2.2-2.1zm.2 5.2c0-1.2-.8-2.2-2.4-2.2h-3.6v4.5h3.6c1.5-.1 2.4-1 2.4-2.3zM707.8 476.5v-11.3h7.2v.9h-6.2v4.2h6.1v.9h-6.1v4.5h6.2v.9h-7.2zM722.9 476.5l-3.5-8.2h1l3 7.2 3-7.2h1l-3.5 8.2h-1zM731.8 472.4c0-2.4 1.7-4.3 4-4.3 2.5 0 3.9 2 3.9 4.4v.2h-6.9c.1 1.8 1.3 3.3 3.2 3.3 1 0 2-.4 2.7-1.1l.5.6c-.8.9-1.9 1.3-3.2 1.3-2.5-.1-4.2-1.9-4.2-4.4zm4-3.6c-1.9 0-2.9 1.7-3 3.1h6c-.1-1.3-1-3.1-3-3.1zM750.9 476.5v-5.6c0-1.6-.8-2.1-2-2.1-1.1 0-2.1.7-2.7 1.4v6.2h-.9v-8.2h.9v1.2c.6-.7 1.8-1.4 3-1.4 1.7 0 2.6.8 2.6 2.7v5.7h-.9zM758.1 474.9v-5.8h-1.4v-.8h1.4V466h.9v2.2h1.7v.8H759v5.7c0 .7.3 1.1.8 1.1.4 0 .7-.2.9-.4l.3.7c-.3.3-.7.5-1.4.5-1 .1-1.5-.6-1.5-1.7zM765.3 475.4l.5-.7c.5.7 1.5 1.2 2.7 1.2 1.4 0 2.2-.7 2.2-1.7 0-2.2-5.2-1-5.2-3.9 0-1.3 1.1-2.3 2.9-2.3 1.4 0 2.3.5 2.9 1.2l-.5.6c-.5-.6-1.4-1.1-2.4-1.1-1.3 0-2.1.6-2.1 1.5 0 2.1 5.2.8 5.2 4 0 1.3-1 2.4-3.1 2.4-1.3.1-2.3-.3-3.1-1.2z')
                   path(fill='#FFF', d='M561.6 582.7c-1 0-1.8-.8-1.8-1.7 0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8c-.1.9-.9 1.7-1.8 1.7zM561.6 106.8c-1 0-1.8-.8-1.8-1.7 0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8c-.1.9-.9 1.7-1.8 1.7z')
     .section#contact_section
-        .menu_big_toggle
+        .menu_big_toggle_black
         .circle_wrapper
             .circle
                 svg.section_svg(xmlns='http://www.w3.org/2000/svg', viewbox='126 -11.4 850.4 708.7')
