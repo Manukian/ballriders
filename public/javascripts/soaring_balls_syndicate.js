@@ -48,7 +48,7 @@ $('.topside_menu_mobile_close').click(function(){
   $('#fullpage').fullpage({
       anchors: ['home', 'intro1', 'works', 'clients', 'about', 'service', 'contact'],
       menu: "#menu",
-      scrollingSpeed: 600,
+      scrollingSpeed: 500,
       normalScrollElements: '#menu, .topside_menu_mobile',
       'easingcss3':'cubic-bezier(.77,.11,.8,.41)',
       verticalCentered: false,

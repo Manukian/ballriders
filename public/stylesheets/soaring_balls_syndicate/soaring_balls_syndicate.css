@@ -418,11 +418,7 @@ body {
   height: 679px;
   position: relative;
   height: 679px;
-  background-color: black;
-  background-image: url(../../images/intro.jpg);
-  background-size: 70%;
-  background-position: center top;
-  background-repeat: no-repeat; }
+  background-color: black; }
 
 .about_text_wrapper {
   font-size: 23px;
