@@ -1,9 +1,337 @@
 extends ../layout
 
 block head
+    style.
+        html,
+        body,
+        div,
+        a,
+        img,
+        ul,
+        li,
+        main {
+          margin: 0;
+          padding: 0;
+          border: 0;
+          font-size: 100%;
+          font: inherit;
+          vertical-align: baseline;
+        }
+
+        main {
+          display: block;
+        }
+
+        body {
+          line-height: 1;
+        }
+
+        ul {
+          list-style: none;
+        }
+
+        html {
+          font-family: sans-serif;
+          -ms-text-size-adjust: 100%;
+          -webkit-text-size-adjust: 100%;
+        }
+
+        a {
+          background-color: transparent;
+        }
+
+        img {
+          border: 0;
+        }
+
+        svg:not(:root) {
+          overflow: hidden;
+        }
+
+        @font-face {
+          font-family: proxima-nova;
+          src: url(../../fonts/ProximaNova/ProximaNovaRegular.otf) format("opentype");
+        }
+
+        @font-face {
+          font-family: proxima-nova-light;
+          font-weight: light;
+          src: url(../../fonts/ProximaNova/ProximaNovaLight.otf) format("opentype");
+        }
+
+        body {
+          -webkit-font-smoothing: antialiased;
+          font-family: proxima-nova;
+          background-color: #f9f9f9;
+        }
+
+        .menu_wrapper {
+          font-family: Neue;
+          position: relative;
+          width: 100%;
+          height: 10%;
+          background-color: #f9f9f9;
+          text-align: center;
+        }
+
+        .topside_menu {
+          position: relative;
+          list-style-type: none;
+          display: inline-block;
+          width: 50%;
+          margin: 0;
+        }
+
+        .menu_items {
+          display: inline-block;
+          width: 33.3%;
+          height: 70px;
+        }
+
+        .menu_items > a {
+          padding-top: 30px;
+          box-sizing: border-box;
+          display: inline-block;
+          width: 100%;
+          height: 70px;
+          text-align: center;
+          text-decoration: none;
+          color: #777;
+          font-size: 10px;
+          text-transform: uppercase;
+          word-spacing: 2px;
+          vertical-align: middle;
+        }
+
+
+
+        .coming_soon a:after {
+          content: " (Coming on June 23)";
+          width: 100%;
+          display: inline-block;
+          text-transform: none;
+          font-size: 12px;
+          color: #FF3399;
+          margin-top: 5px;
+        }
+
+        .topside_menu_mobile_toggle {
+          position: absolute;
+          display: none;
+          left: 30px;
+          top: 30px;
+          width: 35px;
+          height: 35px;
+          z-index: 1000;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-image: url(../../images/topside_menu_mobile_open.svg);
+          background-position: center;
+        }
+
+        .topside_menu_mobile_close {
+          background-image: url(../../images/topside_menu_mobile_close.svg);
+          left: 30px;
+          top: 30px;
+          position: absolute;
+          display: inline-block;
+          height: 35px;
+          width: 35px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        .topside_menu_mobile {
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: #f9f9f9;
+          opacity: 0;
+          text-align: center;
+          z-index: -100;
+        }
+
+        .topside_menu_mobile_list {
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          margin-top: -124px;
+        }
+
+        .topside_menu_mobile_list_item {
+          height: 100%;
+          margin: 50px 0;
+        }
+
+        .topside_menu_mobile_list_item_link {
+          text-decoration: none;
+          font-size: 16px;
+          color: #3F404B;
+          font-family: Neue;
+          text-transform: uppercase;
+        }
+        .coming_soon a:after {
+          content: " (Coming on June 23)";
+          width: 100%;
+          display: inline-block;
+          text-transform: none;
+          font-size: 12px;
+          color: #FF3399;
+          margin-top: 5px;
+        }
+
+        .section_svg {
+          width: 100%;
+          height: 100%;
+        }
+
+        #home_section {
+          position: relative;
+          height: 679px;
+          width: 100%;
+          background-color: #f9f9f9;
+          text-align: center;
+        }
+
+        #home_section .circle {
+          top: 0;
+          height: 100%;
+        }
+
+        #home_section .circle_wrapper {
+          height: 80%;
+        }
+
+        .circle_wrapper {
+          position: relative;
+          width: 100%;
+          height: 100%;
+        }
+
+        .circle {
+          position: absolute;
+          top: 10%;
+          width: 100%;
+          height: 80%;
+          text-align: center;
+        }
+
+        .arrow_pure {
+          height: 10%;
+          display: inline-block;
+        }
+
+        .arrow_pure img {
+          height: 100%;
+        }
+
+        .keybord {
+          position: absolute;
+          right: 20px;
+          bottom: 15px;
+          display: inline-block;
+        }
+
+        .keybord img {
+          width: 120px;
+        }
+
+        #about_section {
+          width: 100%;
+          height: 679px;
+          position: relative;
+          height: 679px;
+          background-color: black;
+        }
+
+        .about_text_wrapper {
+          font-size: 23px;
+          color: #f9f9f9;
+          text-align: center;
+          margin: 0 auto;
+          font-family: proxima-nova-light;
+          text-transform: uppercase;
+          line-height: 40px;
+          letter-spacing: 3px;
+          padding: 0 15px;
+          box-sizing: border-box;
+          position: absolute;
+          top: 50%;
+          margin-top: -220px;
+          width: 100%;
+        }
+        
+        @media (max-width:1050px) {
+          li.menu_items {
+            display: none;
+          }
+
+          .topside_menu_mobile_toggle {
+            display: inline-block;
+          }
+        }
+        
+        @media (max-width:1050px) {
+          .topside_menu {
+            width: 80%;
+          }
+        }
+
+        @media (max-width:768px) {
+          .topside_menu {
+            width: 100%;
+          }
+        }
+        
+        @media (max-width:600px) {
+          .menu_big_list {
+            margin-top: -243px;
+            width: 250px;
+            margin-left: -125px;
+          }
+
+          .menu_big_item {
+            margin-top: 15px;
+          }
+
+          .logotype_image {
+            width: 30px;
+            margin-bottom: 20px;
+          }
+
+          .about_text_wrapper {
+            font-size: 15px;
+            margin-top: -145px;
+            line-height: 30px;
+          }
+        }
+
+        @media (max-width:540px) {
+          li.menu_items a {
+            font-size: 7px;
+          }
+        }
+
+        @media (max-width:400px) {
+          .about_text_wrapper {
+            font-size: 12px;
+            margin-top: -140px;
+            line-height: 25px;
+          }
+
+          .logotype_image {
+            display: none;
+          }
+
+          .menu_big_list {
+            margin-top: -160px;
+          }
+        }
     meta(name="keywords" content="freestyle basketball soaring balls syndicate ballride style performance choreography wedding show Vaggi баскетбольный фристайл свадебный перфоманс выступление детское шоу интерактив хореография мяч Вагги")
     meta(name="description" content="Discover one of the best freestyle basketballe team. Get the best entertainment show for your event")
-    link(rel="stylesheet", href="stylesheets/soaring_balls_syndicate/soaring_balls_syndicate.css")
 block main
     include ../topside_menu_mobile.jade
     .menu_big#menu
@@ -184,6 +512,7 @@ block main
             a.hitmebaby(href="mailto:weballriders@gmail.com")
             a(href="#home").arrow_pure
                 img(src="../../images/arrow_up_pure.svg", alt="")
+    link(rel="stylesheet", href="stylesheets/soaring_balls_syndicate/soaring_balls_syndicate.css")
 block js
     script(src="javascripts/soaring_balls_syndicate.js")
     script(type='text/javascript', src='fullpage.js/jquery.fullPage.js')
