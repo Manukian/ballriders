@@ -773,10 +773,9 @@ body {
 .hitmebaby {
   position: relative;
   display: block;
-  top: 40%;
+  top: 30%;
   width: 100%;
-  margin-top: -50px;
-  height: 200px;
+  height: 300px;
   background-color: transparent; }
 
 @media(max-width: 600px) {
