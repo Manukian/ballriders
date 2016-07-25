@@ -5,25 +5,26 @@ block head
   meta(name="description" content="Discover Ballride Style and find out more about Soaring Balls Syndicate and Ballriders Creative Group")
   link(rel='stylesheet', href='/stylesheets/main.css')
 block main
-  .menu_block.menu_block-soaring_balls_syndicate
-    video#vid
-        source(src="images/u.mov" type="video/mp4")
-    a(href="soaring_balls_syndicate")
-      span.section_header - Soaring Balls Syndicate -
-  .menu_block.menu_block-ballride_style.menu_block-selected.coming_soon
-    img(src="images/soon.svg", alt="")
-    a()
-      span.section_header - Ballride Style -
-  .menu_block.menu_block-ballriders_creative_group.coming_soon
-    img(src="images/soon.svg", alt="")
-    a()
-      span.section_header - Ballriders Creative Group -
-    #eventcatalogWidget.evcInformer(data-widget-type='2', data-widget-hash='1afa16ba12d3b770502c2518d4162ead', data-resident-id='11216-ar')
-      .evcWrapper
-        .evcRatingWrapper
-          a(href='http://eventcatalog.ru', title='EventCatalog.ru — всё для организации мероприятий!')
-            img#evcWidgetImage.evcWidgetImage(src='', alt='EventCatalog.ru — всё для организации мероприятий!')
-          script(src='http://eventcatalog.ru/js/widget.js', type='text/javascript')
+    main
+      .menu_block.menu_block-soaring_balls_syndicate
+        video#vid
+            source(src="images/u.mov" type="video/mp4")
+        a(href="soaring_balls_syndicate")
+          span.section_header - Soaring Balls Syndicate -
+      .menu_block.menu_block-ballride_style.menu_block-selected.coming_soon
+        img(src="images/soon.svg", alt="")
+        a()
+          span.section_header - Ballride Style -
+      .menu_block.menu_block-ballriders_creative_group.coming_soon
+        img(src="images/soon.svg", alt="")
+        a()
+          span.section_header - Ballriders Creative Group -
+        #eventcatalogWidget.evcInformer(data-widget-type='2', data-widget-hash='1afa16ba12d3b770502c2518d4162ead', data-resident-id='11216-ar')
+          .evcWrapper
+            .evcRatingWrapper
+              a(href='http://eventcatalog.ru', title='EventCatalog.ru — всё для организации мероприятий!')
+                img#evcWidgetImage.evcWidgetImage(src='', alt='EventCatalog.ru — всё для организации мероприятий!')
+              script(src='http://eventcatalog.ru/js/widget.js', type='text/javascript')
 block js
     script(src="/javascripts/main.js")
     

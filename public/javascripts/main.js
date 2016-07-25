@@ -8,7 +8,7 @@ $(document).ready(function() {
         $('#vid').hide();
         $('img').height(viewport / 4 - 10);
     } else {
-        var trail = $(window).width() / 10
+        var trail = $(window).width() / 10;
         $('.menu_block').mouseover(function() {
             var elem = $(this);
             elem.siblings('.menu_block').each(function() {

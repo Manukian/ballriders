@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
+var json2csv = require('json2csv');
+var fs = require('fs');
 
 var transporter = nodemailer.createTransport('SMTP',{
     service: 'yandex',
@@ -12,19 +14,13 @@ var transporter = nodemailer.createTransport('SMTP',{
 });
 
 router.post('/ballride_style/subscribe',function(req, res) {
-            var mailOptions = {
-                from: 'BALLRIDERS <hype@ballriders.com>', // sender address
-                to: 'vaggi25@mail.ru', // list of receivers
-                subject: 'Subscription Successfully Complete', // Subject line
-                text: 'We are glad you here.', // plaintext body
-                html: '' // html body
-            };
-        // send mail with defined transport object
-        transporter.sendMail(mailOptions, function(error, info){
-            if(error){
-                return console.log(error);
-            }
-        });
+        var mailOptions = {
+            from: 'BALLRIDERS <hype@ballriders.com>', // sender address
+            to: 'vaggi25@mail.ru', // list of receivers
+            subject: 'Subscription Successfully Complete', // Subject line
+            text: 'We are glad you here.', // plaintext body
+            html: '' // html body
+        };
     
         var db = req.db;
         var newEmail = req.body.email;
@@ -34,10 +30,24 @@ router.post('/ballride_style/subscribe',function(req, res) {
         }, function (err, doc) {
             if (err) {
             // If it failed, return error
-            res.send("There was a problem adding the information to the database.");
+            res.send("There was a problem making the subscription, please try again");
         }
         else {
             // And forward to success page
+            // send mail with defined transport object
+            transporter.sendMail(mailOptions, function(error, info){
+                if(error){
+                    return console.log(error);
+                }
+            });
+            var fields = ['email'];
+            var emails = collection.find({},function(err, docs) {
+                var csv = json2csv({ data: docs, fields: fields });
+                fs.writeFile('emails.csv', csv, function(err) {
+                  if (err) throw err;
+                  console.log('file saved');
+                });
+            });
             console.log('all good');
             res.send(newEmail);
         }
