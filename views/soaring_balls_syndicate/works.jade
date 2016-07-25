@@ -51,16 +51,15 @@ mixin project_item_reverse(href, number, title, year, category, music)
 block head
     meta(name="keywords" content="freestyle basketball soaring balls syndicate works ballride style choreography ballriders movie video Vaggi примеры работ хореография мяч Вагги промо баскетбольный фристайл выступление шоу видео Вагги")
     meta(name="description" content="Watch videos from Soaring Balls Syndicate. Ballriders Movie. Vaggi | Ballride Style Choreographer.")
-    link(rel="stylesheet", href="/stylesheets/soaring_balls_syndicate/works-min.css")   
+    link(rel="stylesheet", href="/stylesheets/soaring_balls_syndicate/works.css")   
 block main
-    include ../topside_menu.jade
     section#works
         .video_wrapper
           video#hands(autoplay loop )
             source(src="../../images/hands_new.webm" type="video/webm")
             source(src="../../images/hands_new.mov" type="video/mp4")
         #left.menu_div
-          h3.menu_div_title Collaborations
+          h3.menu_div_title Workflow
         #right.menu_div
           h3.menu_div_title Choreographies
         .works_wrapper
@@ -68,7 +67,7 @@ block main
                 .project_list_collab
                     .wrapper
                         .title.text_right
-                            h1.project_list_title Selected Collaborations
+                            h1.project_list_title Selected Workflow
                             span.under_title_text - project list
                     +project_item_reverse('https://vimeo.com/167247232','.02','Vaggi | Ballride Style','Y - 2016', 'Promo', 'DJ VAG / Zion')
                     +project_item_reverse('https://www.youtube.com/watch?v=bXE4w9ZjNuU','.01','Tutorial for IamballerTV','Y - 2014', 'tutorial', '-')
@@ -82,7 +81,7 @@ block main
                             a.proj_link()
                             .proj_wrapper
                               .info_main
-                                span.main_number 04
+                                span.main_number .04
                                 h2.main_title Delay Kak Nado
                               .info_link
                                   .info_link_wrapper

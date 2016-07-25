@@ -348,73 +348,18 @@ optgroup {
 @font-face {
   font-family: proxima-nova-thin;
   src: url(../../fonts/ProximaNova/ProximaNovaThin.otf) format("opentype"); }
+@font-face {
+  font-family: proxima-nova-extra-bold;
+  src: url(../../fonts/ProximaNova/ProximaNovaExtrabold.otf) format("opentype"); }
 body {
   -webkit-font-smoothing: antialiased;
   font-family: proxima-nova;
-  background-color: #f9f9f9; }
+  background-color: white; }
 
-.menu_wrapper {
-  font-family: Neue;
-  position: relative;
-  width: 100%;
-  height: 10%;
-  background-color: #f9f9f9;
-  text-align: center; }
-
-.topside_menu {
-  position: relative;
-  list-style-type: none;
-  display: inline-block;
-  width: 50%;
-  margin: 0; }
-
-.menu_items {
-  display: inline-block;
-  width: 33.3%;
-  height: 70px; }
-
-.menu_items > a {
-  padding-top: 30px;
-  box-sizing: border-box;
-  display: inline-block;
-  width: 100%;
-  height: 70px;
-  text-align: center;
-  text-decoration: none;
-  color: #777;
-  font-size: 10px;
-  text-transform: uppercase;
-  word-spacing: 2px;
-  transition: 0.3s;
-  vertical-align: middle; }
-  .menu_items > a:hover {
-    color: black; }
-
-.coming_soon {
-  pointer-events: none; }
-  .coming_soon a:after {
-    content: " (Coming on June 23)";
-    width: 100%;
-    display: inline-block;
-    text-transform: none;
-    font-size: 12px;
-    color: #FF3399;
-    margin-top: 5px; }
-
-@media(max-width: 1050px) {
-  .topside_menu {
-    width: 80%; } }
-@media(max-width: 768px) {
-  .topside_menu {
-    width: 100%; } }
-@media(max-width: 540px) {
-  li.menu_items a {
-    font-size: 7px; } }
 #works {
   position: relative;
   width: 100%;
   height: 1000px;
-  background-color: #f9f9f9;
   margin-top: 20px; }
 
 .video_wrapper {
@@ -432,7 +377,9 @@ body {
 
 #hands {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  border-right: solid 1px white;
+  box-sizing: border-box; }
 
 #left {
   text-align: left; }
@@ -448,7 +395,7 @@ body {
   display: inline-block;
   cursor: pointer; }
   .menu_div:hover h3 {
-    color: #FF3399; }
+    color: #ab84e4; }
 
 .menu_div_title {
   opacity: 1;
@@ -457,14 +404,14 @@ body {
   text-transform: lowercase; }
 
 .handed {
-  outline: solid 5px #FF3399; }
+  outline: solid 5px #ab84e4; }
   .handed .menu_div_title {
-    color: #FF3399; }
+    color: #ab84e4; }
 
 .works_wrapper {
   width: 100%;
   height: 60%;
-  background-color: #f9f9f9;
+  background-color: white;
   text-align: left;
   overflow: hidden; }
 
@@ -650,7 +597,7 @@ article {
   height: 0%;
   top: 0;
   overflow: hidden;
-  background-color: #FF3399;
+  background-color: #ab84e4;
   z-index: 200;
   pointer-events: none;
   width: 120%;
@@ -855,7 +802,7 @@ article {
     height: 750px; }
 
   .info_main, .title, .proj_link {
-    width: 140%;
+    width: 100%;
     margin-left: 0; }
 
   .info_detail {
@@ -925,6 +872,8 @@ article {
     width: 70%; }
 
   .project_list_collab .info_detail {
-    left: -30px; } }
+    left: -30px; }
+  .project_list_collab .detail_title {
+    width: 70%; } }
 
 /*# sourceMappingURL=works.css.map */

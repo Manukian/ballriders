@@ -348,10 +348,13 @@ optgroup {
 @font-face {
   font-family: proxima-nova-thin;
   src: url(../../fonts/ProximaNova/ProximaNovaThin.otf) format("opentype"); }
+@font-face {
+  font-family: proxima-nova-extra-bold;
+  src: url(../../fonts/ProximaNova/ProximaNovaExtrabold.otf) format("opentype"); }
 body {
   -webkit-font-smoothing: antialiased;
   font-family: proxima-nova;
-  background-color: #f9f9f9; }
+  background-color: white; }
 
 body {
   overflow: hidden; }
@@ -435,7 +438,7 @@ menu {
   .coming_soon img {
     width: 90%; }
   .coming_soon a:after {
-    content: " (Coming on June 23)";
+    content: " (Coming on July 23)";
     width: 100%;
     display: inline-block;
     text-align: center;

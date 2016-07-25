@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * modified version of eric meyer's reset 2.0
  * http://meyerweb.com/eric/tools/css/reset/
@@ -349,52 +348,79 @@ optgroup {
 @font-face {
   font-family: proxima-nova-thin;
   src: url(../../fonts/ProximaNova/ProximaNovaThin.otf) format("opentype"); }
+@font-face {
+  font-family: proxima-nova-extra-bold;
+  src: url(../../fonts/ProximaNova/ProximaNovaExtrabold.otf) format("opentype"); }
 body {
   -webkit-font-smoothing: antialiased;
   font-family: proxima-nova;
-  background-color: #f9f9f9; }
+  background-color: white; }
 
-.menu_wrapper {
-  font-family: Neue;
-  position: relative;
+.topside_menu_mobile_toggle {
+  position: absolute;
+  display: inline-block;
+  left: 30px;
+  top: 30px;
+  width: 35px;
+  height: 35px;
+  z-index: 1000;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../../images/topside_menu_mobile_open.svg);
+  background-position: center;
+  cursor: pointer; }
+
+.topside_menu_mobile_close {
+  background-image: url(../../images/topside_menu_mobile_close.svg);
+  left: 30px;
+  top: 30px;
+  position: absolute;
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer; }
+
+.topside_menu_mobile {
+  position: fixed;
   width: 100%;
-  height: 10%;
+  height: 100%;
+  top: 0;
+  left: 0;
   background-color: #f9f9f9;
-  text-align: center; }
-
-.topside_menu {
-  position: relative;
-  list-style-type: none;
-  display: inline-block;
-  width: 50%;
-  margin: 0; }
-
-.menu_items {
-  display: inline-block;
-  width: 33.3%;
-  height: 70px; }
-
-.menu_items > a {
-  padding-top: 30px;
-  box-sizing: border-box;
-  display: inline-block;
-  width: 100%;
-  height: 70px;
+  opacity: 0;
   text-align: center;
+  z-index: -100; }
+
+.topside_menu_mobile_list {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -124px; }
+
+.topside_menu_mobile_list_item {
+  height: 100%;
+  margin: 50px 0; }
+
+.topside_menu_mobile_list_item_link {
   text-decoration: none;
-  color: #777;
-  font-size: 10px;
-  text-transform: uppercase;
-  word-spacing: 2px;
-  transition: 0.3s;
-  vertical-align: middle; }
-  .menu_items > a:hover {
+  font-size: 16px;
+  color: #3F404B;
+  font-family: Neue;
+  text-transform: uppercase; }
+  .topside_menu_mobile_list_item_link:hover {
     color: black; }
+
+.on {
+  opacity: 1;
+  z-index: 9999; }
 
 .coming_soon {
   pointer-events: none; }
   .coming_soon a:after {
-    content: " (Coming on June 23)";
+    content: " (Coming on July 23)";
     width: 100%;
     display: inline-block;
     text-transform: none;
@@ -402,26 +428,15 @@ body {
     color: #FF3399;
     margin-top: 5px; }
 
-@media(max-width: 1050px) {
-  .topside_menu {
-    width: 80%; } }
-@media(max-width: 768px) {
-  .topside_menu {
-    width: 100%; } }
-@media(max-width: 540px) {
-  li.menu_items a {
-    font-size: 7px; } }
 html, body {
   height: 100%;
-  width: 100%;
-  -webkit-font-smoothing: antialiased; }
+  width: 100%; }
 
 main {
-  height: 100%;
-  background-color: white; }
+  height: 100%; }
 
 #intro {
-  height: 88%; }
+  height: 98.5%; }
 
 #logo {
   margin: 0;
@@ -441,146 +456,29 @@ main {
   position: relative;
   display: block;
   width: auto;
-  top: 67%;
+  top: 70%;
   text-align: center;
   font-size: 28px;
   font-weight: 100;
-  padding: 0 20px; }
+  padding: 0 20px;
+  color: black;
+  font-family: proxima-nova-light; }
 
-#about {
-  background-color: white;
-  text-align: center; }
-  #about [class*="col-"] {
-    padding: 0; }
-  #about img {
-    width: 50%; }
-
-.about_left {
-  background-color: #f73b29;
-  background-color: white;
-  height: 400px;
-  text-align: left; }
-  .about_left .about_text {
-    width: 66%;
-    display: block;
-    font-size: 40px;
-    color: black;
-    margin: 70px auto;
-    font-weight: 100; }
-
-.about_right {
-  background-color: #38a4f7;
-  background-color: white;
-  height: 400px; }
-
-#mail_form {
-  margin-top: 30px; }
-
-.form_wrapper {
-  width: 70%;
-  margin: 0 auto; }
-
-#mail_button {
-  padding: 15px 0;
-  height: 60px;
-  margin: 0;
-  font-size: 18px;
-  font-weight: 500;
-  border: solid 1px #1271c4;
-  border-radius: 0 5px 5px 0;
-  background: #38a4f7;
-  color: white;
-  display: inline-block;
-  vertical-align: top;
-  width: 35%; }
-
-/* form starting stylings ------------------------------- */
-.group {
-  position: relative;
-  margin-bottom: 45px;
-  display: inline-block;
-  vertical-align: top;
-  width: 65%; }
-
-input {
-  font-size: 18px;
-  height: 60px;
-  padding: 15px;
-  display: block;
-  position: relative;
-  border: none;
-  width: 100%;
-  border: 1px solid #dde5ed;
-  border-right: 0;
-  border-radius: 5px 0 0 5px;
-  color: #8da2b5;
-  background: #fafbfc; }
-
-input:focus {
-  outline: none; }
-
-/* LABEL ======================================= */
-label {
-  color: #999;
-  font-size: 18px;
-  font-weight: 300;
-  position: absolute;
-  pointer-events: none;
-  left: 15px;
-  top: 17px;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all; }
-
-/* active state */
-input:focus ~ label, input:valid ~ label {
-  top: 5px;
-  font-size: 14px;
-  color: #38a4f7; }
-
-input:focus {
-  padding-bottom: 0px !important; }
-
-#why_is_great {
-  background-color: white; }
-  #why_is_great .container-fluid {
-    padding: 0 12%; }
-
-.ballride_is_wrapper {
-  margin-top: 50px;
-  text-align: center;
-  height: 150px; }
-
-.ballride_is_text {
-  display: inline-block;
-  font-size: 30px;
-  font-weight: 200; }
-
-.why_is_great_wrapper {
-  text-align: center;
-  margin-bottom: 80px; }
-  .why_is_great_wrapper img {
-    width: 15%; }
-
-.emoji_wrapper {
-  font-size: 40px; }
-
-.why_is_great_text {
-  display: inline-block;
-  width: 90%; }
+.bold {
+  font-family: proxima-nova-bold; }
 
 #tutorials {
   height: auto;
-  background-color: white;
-  color: black;
-  padding: 100px 0; }
+  background-color: black;
+  color: white;
+  padding: 200px 0;
+  font-family: proxima-nova-light; }
 
 .tutorials_header {
   text-align: center;
   padding-bottom: 100px;
   margin: 0;
-  font-weight: 100;
-  font-size: 40px; }
+  font-size: 30px; }
 
 .tutorials_wrapper {
   width: 40%;
@@ -592,29 +490,130 @@ input:focus {
   display: block;
   width: auto;
   text-decoration: none;
-  color: black;
+  color: white;
   margin-bottom: 50px;
   padding: 10px; }
   .tutorial_link:hover {
-    color: inherit; }
-  .tutorial_link:hover:after {
-    content: "🎬";
-    display: inline-block;
-    margin-left: 10px; }
+    color: white; }
 
 .tutorial_title {
   font-size: 22px;
-  font-weight: 700;
   display: inline-block;
   vertical-align: baseline;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid white;
+  font-family: proxima-nova-extra-bold;
   padding-bottom: 5px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 1px; }
 
 .tutorial_description {
-  font-size: 20px;
+  font-size: 23px;
   display: inline-block;
   vertical-align: baseline;
-  margin-left: 30px; }
+  margin-left: 20px; }
+
+#subscribe {
+  height: 500px;
+  position: relative; }
+
+.form_wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 450px;
+  margin-left: -225px;
+  height: 80px;
+  margin-top: -40px; }
+  .form_wrapper:hover .mail_input {
+    padding-bottom: 10px; }
+
+.mail_input {
+  border: none;
+  border-bottom: solid 3px #ccc;
+  width: 100%;
+  font-size: 25px;
+  transition: 0.3s; }
+  .mail_input:focus {
+    outline: none;
+    padding-bottom: 10px; }
+
+.mail_send {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: -6px;
+  font-size: 18px;
+  transition: 0.3s;
+  pointer-events: none;
+  border: solid 3px #ccc;
+  height: 50px;
+  background-color: white;
+  padding: 0 10px;
+  font-family: proxima-nova-bold;
+  color: #ccc; }
+  .mail_send:hover {
+    color: black; }
+
+#bottom_menu {
+  height: 100px;
+  position: relative; }
+
+.bottom_menu_left, .bottom_menu_right {
+  display: inline-block;
+  width: 50%;
+  background-color: #f73b29;
+  background-color: #aafc50;
+  float: left;
+  height: inherit;
+  font-size: 0; }
+
+.bottom_menu_right {
+  background-color: #38a4f7;
+  background-color: #ab84e4; }
+
+.bottom_menu_link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: black; }
+
+.bottom_menu_label {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: Neue;
+  letter-spacing: 1px; }
+
+.bottom_logotype_wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 32px;
+  text-align: center;
+  left: 50%;
+  height: inherit;
+  margin-left: -16px; }
+  .bottom_logotype_wrapper img {
+    width: inherit;
+    margin-top: 18px; }
+
+.subscription_complete {
+  opacity: 0;
+  transition: 0.3s;
+  position: absolute;
+  bottom: 150px;
+  width: 100%;
+  text-align: center; }
+
+.email_emphasized {
+  font-family: proxima-nova-bold;
+  display: inline; }
+
+.mail_send_show {
+  opacity: 1;
+  pointer-events: all; }
 
 /*# sourceMappingURL=ballride_style.css.map */

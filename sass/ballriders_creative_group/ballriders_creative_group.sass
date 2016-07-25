@@ -1,80 +1,142 @@
 @import '../partials/variables'
 @import '../partials/base'
-@import '../layout/topside_menu'
+@import '../layout/topside_menu_mobile'
 
-body
-    font-family:  "Roboto", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif
-
-.nav, .navbar
-    margin: 0
-    border: 0
-    
-.navbar-default .navbar-nav>li>a
-    color: black
-    font-size: 15px
-    &:hover
-        color: black
-
-.navbar
-    background-color: transparent
-    border: 0
-    height: auto
-    color: black
+.main_header
+    height: 175px
+    width: 87%
+    left: 6.5%
     position: absolute
+    background-color: transparent
+
+.menu_toggle_black
+    position: absolute
+    display: inline-block
+    right: -20px
+    top: 15px
+    width: 60px
+    height: 60px
+    z-index: 1000
+    background-repeat: no-repeat
+    background-size: contain
+    background-image: url(../../images/menu_open_black.svg)
+    background-position: center
+    cursor: pointer
+    
+.menu
+    position: absolute
+    right: 0
+    top: 60px
+    z-index: 1000
+    
+.menu_item
+    display: inline-block
+    margin-left: 30px
+    font-size: 15px
+    font-family: proxima-nova
+    
+.mobile_menu
+    position: absolute
+    left: 0
+    top: 100px
+    z-index: 1000
     width: 100%
-
-.navbar-default .navbar-collapse
-    border: 0
-    padding-left: 0
+    padding: 0 25px
+    box-sizing: border-box
+    opacity: 0
+    transition: 0.3s
     
-.navbar-brand 
-    height: auto
-    padding: 40px 120px
-    & > img
-        width: 60px
+.menu_close
+    background-image: url(../../images/menu_close_black.svg)
+    right: -20px
+    top: 15px
+    position: absolute
+    display: inline-block
+    height: 60px
+    width: 60px
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    cursor: pointer
+    z-index: 1000
+    display: none
     
-.navbar-right
-    padding: $navbar-toggle_padding
+.mobile_menu_link
+    padding: 12px 0
+    width: 100%
+    
+.mobile_menu_item
+    border-top: solid 1px $black
 
-.navbar-toggle
-    padding: $navbar-toggle_padding
-    border: 0
-    margin-top: 17px
-    & > .icon-bar
-        height: 1px
-        width: 16px
-        background-color: black !important
-        margin-top: 3px !important
-    &:hover
-        background-color: transparent !important
+.mobile_menu_item:last-child
+    border-bottom: solid 1px $black
 
 .intro
     position: relative
-    height: 510px
+    height: 585px
     width: 100%
+    background-image: url(../../images/soon.jpg)
+    background-size: cover
 
+.projects
+    padding-bottom: 30px
+    
+.project_link
+    margin-top: 40px
+    
 .projects .container-fluid
     padding: 0 7%
+    
+[class*="col-"]
+    padding-right: 10px
+    padding-left: 10px
 
 .project_wrapper img
     width: 100%
     margin-bottom: 10px
+
+.project_description
+    font-size: 13px
     
-.project_link
+.year
+    margin-top: 5px
+    
+a
     display: inline-block
-    color: black
+    color: $black
     &:hover
         text-decoration: none
         color: black
-
-.row
-    margin-top: 30px
     
 .arrow_down, .arrow_up
     width: 100%
-    height: auto
-    padding: 30px 0
+    height: 94px
     background-color: white
     text-align: center
-    & > img
-        cursor: pointer
+    padding: 13px 0
+
+.arrow_img
+    cursor: pointer
+    width: 68px
+    
+.main_footer
+    border-top: solid 1px $black
+    width: 87%
+    padding: 50px 0
+    margin: 0 auto
+    
+.name
+    margin-bottom: 5px
+    font-size: 14px
+    
+.who_is
+    font-size: 14px
+    
+.link_section
+    
+.all_rights_reserved
+    font-size: 12px
+    width: 87%
+    margin: 0 auto
+    padding-bottom: 20px
+    

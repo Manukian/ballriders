@@ -1,0 +1,39 @@
+extends ../layout
+
+block head
+    link(rel="stylesheet", href="/bootstrap-3.3.6-dist/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/stylesheets/ballride_style/about.css")
+block main
+  section#about
+      h1.ballride_style_title The Way you do it. The Emotions you show
+  section#why_is_great
+      h1.ballride_style_title Simple to flow. Flexible to grow.
+      .values_wrapper
+          .container-fluid
+              .row
+                  .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                      .why_is_great_wrapper
+                          span.emoji_wrapper 👾
+                          h3.why_is_great_title Scalable 
+                          span.why_is_great_text Based on a wide range of basic moves and using both hands, BALLRIDE helps to combine any moves
+                  .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                      .why_is_great_wrapper
+                          span.emoji_wrapper 🎧
+                          h3.why_is_great_title Music - Friendly
+                          span.why_is_great_text Each move is short and quick, which allows you to keep up with a beat while going from one move to another, pausing or freezing or stretching the move
+                  .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                      .why_is_great_wrapper
+                          span.emoji_wrapper 🌀
+                          h3.why_is_great_title Fluent
+                          span.why_is_great_text Excellently structured, all moves are logical, switching from one to another but remaining the same style
+    section#subscribe
+          .form_wrapper
+              input(type="email" placeholder="Enter your e-mail to get latest tutorials").mail_input
+              button.mail_send Subscribe
+          .subscription_complete
+              | E-mail 
+              .email_emphasized
+              |  successfully added to list
+block js
+    script(src="/bootstrap-3.3.6-dist/js/bootstrap.min.js")
+    script(src="/javascripts/ballride_style_section.js")

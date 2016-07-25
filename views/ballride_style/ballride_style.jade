@@ -2,58 +2,17 @@ extends ../layout
 
 block head
     link(rel="stylesheet", href="bootstrap-3.3.6-dist/css/bootstrap.min.css")
-    link(rel="stylesheet", href="stylesheets/ballride_style/ballride_style.css")
+    link(rel="stylesheet", href="/stylesheets/ballride_style/ballride_style.css")
 block main
-  include ../topside_menu.jade
+  include ../topside_menu_mobile.jade
   section#intro
+    .topside_menu_mobile_toggle
     h1#logo Ballride Style    
     span#hello
-        b Hello. 
+        span.bold Hello. 
         span You're about to dive into the ballride style.
-  section#about
-      .container-fluid
-          .row
-              .col-xs-12.col-sm-6.col-md-6.col-lg-6
-                  .about_left
-                      span.about_text Freestyle basketball needs to be upgraded 🚀
-              .col-xs-12.col-sm-6.col-md-6.col-lg-6
-                  .about_right
-                      img(src="../../images/insta.png", alt="")
-          .row
-              #change_right.col-xs-12.col-sm-6.col-md-6.col-lg-6.col-sm-push-6
-                  .about_left
-                        span.about_text Ballride takes it to the next level 🌡
-                        .form_wrapper
-                            form#mail_form
-                                    .group
-                                        input(type='text', required='')
-                                        label Enter your email
-                                    button#mail_button Get Started
-              #change_left.col-xs-12.col-sm-6.col-md-6.col-lg-6.col-sm-pull-6
-                  .about_right
-                      img(src="../../images/insta.png", alt="")
-  section#why_is_great
-      .ballride_is_wrapper
-          span.ballride_is_text Ballride is an unique style based on killer moves ♜
-      .container-fluid
-          .row
-              .col-xs-12.col-sm-4.col-md-4.col-lg-4
-                  .why_is_great_wrapper
-                      span.emoji_wrapper 👾
-                      h3.why_is_great_title Scalable 
-                      span.why_is_great_text Due to a big range of basics and both hands usage BALLRIDE allows you to link any move with any move
-              .col-xs-12.col-sm-4.col-md-4.col-lg-4
-                  .why_is_great_wrapper
-                      span.emoji_wrapper 🎧
-                      h3.why_is_great_title Music - Friendly
-                      span.why_is_great_text Each move is short and quick, which allows you to keep up with a beat while going from one move to another, pausing or freezing or stretching the move
-              .col-xs-12.col-sm-4.col-md-4.col-lg-4
-                  .why_is_great_wrapper
-                      span.emoji_wrapper 🌀
-                      h3.why_is_great_title Fluent
-                      span.why_is_great_text Basics are excellently structured, logicaly linked and all moves are of the same style
   section#tutorials
-      h1.tutorials_header Watch Tutorials 🍼
+      h1.tutorials_header Watch Tutorials
       .tutorials_wrapper
           a.tutorial_link(href="#")
               h3.tutorial_title Introduction
@@ -64,6 +23,27 @@ block main
           a.tutorial_link(href="#")
               h3.tutorial_title tutorial second
               span.tutorial_description learning vectors
+          a.tutorial_link(href="#")
+              h3.tutorial_title tutorial third
+              span.tutorial_description learning spectors
+  section#subscribe
+      .form_wrapper
+          input(type="email" placeholder="Enter your e-mail to get latest tutorials").mail_input
+          button.mail_send Subscribe
+      .subscription_complete
+          | E-mail 
+          .email_emphasized
+          |  successfully added to list
+  section#bottom_menu
+      .bottom_logotype_wrapper
+          img(src="../../images/neutral_logo_white.png", alt="")
+      .bottom_menu_left
+          a.bottom_menu_link(href="/ballride_style/about")
+              .bottom_menu_label - About ballride -
+      .bottom_menu_right
+          a.bottom_menu_link(href="")
+              .bottom_menu_label - ballride worldwide -
               
 block js
     script(src="bootstrap-3.3.6-dist/js/bootstrap.min.js")
+    script(src="javascripts/ballride_style.js")

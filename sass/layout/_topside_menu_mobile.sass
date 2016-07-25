@@ -1,6 +1,6 @@
 .topside_menu_mobile_toggle
     position: absolute
-    display: none
+    display: inline-block
     left: 30px
     top: 30px
     width: 35px
@@ -62,16 +62,10 @@
 .coming_soon
     pointer-events: none
     & a:after
-        content: ' (Coming on June 23)'
+        content: ' (Coming on July 23)'
         width: 100%
         display: inline-block
         text-transform: none
         font-size: 12px
         color: $coming_soon
         margin-top: 5px
-    
-@media(max-width: 1050px)
-    li.menu_items
-        display: none
-    .topside_menu_mobile_toggle
-        display: inline-block
