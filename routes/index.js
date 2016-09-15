@@ -71,20 +71,27 @@ router.get('/ballride_style', function(req, res, next) {
 router.get('/ballride_style/about', function(req, res, next) {
   res.render('ballride_style/about', { title: 'Ballride Style | About' });
 });
+router.get('/ballride_style/worldwide', function(req, res, next) {
+  res.render('ballride_style/worldwide', { title: 'Ballride Style | Worldwide' });
+});
 router.get('/ballriders_creative_group', function(req, res, next) {
   res.render('ballriders_creative_group/ballriders_creative_group', { title: 'Ballriders | Ballriders Creative Group' });
 });
-router.get('/digital', function(req, res, next) {
+router.get('/ballriders_creative_group/digital', function(req, res, next) {
   res.render('ballriders_creative_group/digital', { title: 'BCG | Digital ' });
 });
-router.get('/fashion', function(req, res, next) {
+router.get('/ballriders_creative_group/fashion', function(req, res, next) {
   res.render('ballriders_creative_group/fashion', { title: 'BCG | Fashion ' });
 });
-router.get('/web', function(req, res, next) {
+router.get('/ballriders_creative_group/web', function(req, res, next) {
   res.render('ballriders_creative_group/web', { title: 'BCG | Web ' });
 });
-router.get('/music', function(req, res, next) {
+router.get('/ballriders_creative_group/music', function(req, res, next) {
   res.render('ballriders_creative_group/music', { title: 'BCG | Music ' });
 });
+router.get('/ballriders_creative_group/music/barak_obama', function(req, res, next) {
+  res.render('ballriders_creative_group/music/barak_obama', { title: 'Music | Barak Obama ' });
+});
+
 
 module.exports = router;

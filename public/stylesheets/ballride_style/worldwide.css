@@ -356,266 +356,33 @@ body {
   font-family: proxima-nova;
   background-color: white; }
 
-.topside_menu_mobile_toggle {
-  position: absolute;
-  display: inline-block;
-  left: 30px;
-  top: 30px;
-  width: 35px;
-  height: 35px;
-  z-index: 1000;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url(../../images/topside_menu_mobile_open.svg);
-  background-position: center;
-  cursor: pointer; }
+#worldwide {
+  height: 800px;
+  background-color: #ab84e4;
+  padding: 100px 0; }
 
-.topside_menu_mobile_close {
-  background-image: url(../../images/topside_menu_mobile_close.svg);
-  left: 30px;
-  top: 30px;
-  position: absolute;
-  display: inline-block;
-  height: 35px;
-  width: 35px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer; }
-
-.topside_menu_mobile {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #f9f9f9;
-  opacity: 0;
+.ballride_style_title {
+  font-size: 35px;
+  font-family: proxima-nova-thin;
   text-align: center;
-  z-index: -100; }
+  margin: 30px 0 100px; }
 
-.topside_menu_mobile_list {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  margin-top: -124px; }
+.ballriders_style_about {
+  width: 65%;
+  margin: 0 auto;
+  line-height: 40px;
+  text-indent: 0px;
+  font-size: 17px;
+  font-family: proxima-nova-light; }
 
-.topside_menu_mobile_list_item {
-  height: 100%;
-  margin: 50px 0; }
+#people_supporting {
+  height: 800px;
+  padding: 50px 0; }
 
-.topside_menu_mobile_list_item_link {
-  text-decoration: none;
-  font-size: 16px;
-  color: #3F404B;
-  font-family: Neue;
-  text-transform: uppercase; }
-  .topside_menu_mobile_list_item_link:hover {
-    color: black; }
-
-.on {
-  opacity: 1;
-  z-index: 9999; }
-
-.coming_soon {
-  pointer-events: none; }
-  .coming_soon a:after {
-    content: " (Coming on July 23)";
-    width: 100%;
-    display: inline-block;
-    text-transform: none;
-    font-size: 12px;
-    color: #FF3399;
-    margin-top: 5px; }
-
-html, body {
-  height: 100%;
+.person_info_picture {
   width: 100%; }
 
-main {
-  height: 100%; }
+#how_you_can_help {
+  height: 500px; }
 
-#intro {
-  height: 98.5%; }
-
-#logo {
-  margin: 0;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  margin-left: -75px;
-  margin-top: -90px;
-  text-indent: -9999px;
-  width: 150px;
-  height: 170px;
-  background-image: url(../../images/6.svg);
-  background-repeat: no-repeat;
-  background-size: 100%; }
-
-#hello {
-  position: relative;
-  display: block;
-  width: auto;
-  top: 70%;
-  text-align: center;
-  font-size: 28px;
-  font-weight: 100;
-  padding: 0 20px;
-  color: black;
-  font-family: proxima-nova-light; }
-
-.bold {
-  font-family: proxima-nova-bold; }
-
-#tutorials {
-  height: auto;
-  background-color: black;
-  color: white;
-  padding: 200px 0;
-  font-family: proxima-nova-light; }
-
-.tutorials_header {
-  text-align: center;
-  padding-bottom: 100px;
-  margin: 0;
-  font-size: 30px; }
-
-.tutorials_wrapper {
-  width: 60%;
-  margin-left: 30%; }
-  .tutorials_wrapper .tutorial_link:last-child {
-    margin-bottom: 0; }
-
-.tutorial_link {
-  display: block;
-  width: auto;
-  text-decoration: none;
-  color: white;
-  margin-bottom: 50px;
-  padding: 10px; }
-  .tutorial_link:hover {
-    color: white; }
-
-.tutorial_title {
-  font-size: 22px;
-  display: inline-block;
-  vertical-align: baseline;
-  border-bottom: 3px solid #3F404B;
-  font-family: proxima-nova-extra-bold;
-  padding-bottom: 5px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #3F404B; }
-
-.tutorial_description {
-  font-size: 23px;
-  display: inline-block;
-  vertical-align: baseline;
-  margin-left: 20px;
-  color: #aafc50; }
-
-#subscribe {
-  height: 500px;
-  position: relative; }
-
-.form_wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 450px;
-  margin-left: -225px;
-  height: 80px;
-  margin-top: -40px; }
-  .form_wrapper:hover .mail_input {
-    padding-bottom: 10px; }
-
-.mail_input {
-  border: none;
-  border-bottom: solid 3px #ccc;
-  width: 100%;
-  font-size: 25px;
-  transition: 0.3s; }
-  .mail_input:focus {
-    outline: none;
-    padding-bottom: 10px; }
-
-.mail_send {
-  opacity: 0;
-  position: absolute;
-  right: 0;
-  top: -6px;
-  font-size: 18px;
-  transition: 0.3s;
-  pointer-events: none;
-  border: solid 3px #ccc;
-  height: 50px;
-  background-color: white;
-  padding: 0 10px;
-  font-family: proxima-nova-bold;
-  color: #ccc; }
-  .mail_send:hover {
-    color: black; }
-
-#bottom_menu {
-  height: 100px;
-  position: relative; }
-
-.bottom_menu_left, .bottom_menu_right {
-  display: inline-block;
-  width: 50%;
-  background-color: #f73b29;
-  background-color: #aafc50;
-  float: left;
-  height: inherit;
-  font-size: 0; }
-
-.bottom_menu_right {
-  background-color: #38a4f7;
-  background-color: #ab84e4; }
-
-.bottom_menu_link {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  color: black; }
-
-.bottom_menu_label {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 13px;
-  font-family: Neue;
-  letter-spacing: 1px; }
-
-.bottom_logotype_wrapper {
-  position: absolute;
-  bottom: 0;
-  width: 32px;
-  text-align: center;
-  left: 50%;
-  height: inherit;
-  margin-left: -16px; }
-  .bottom_logotype_wrapper img {
-    width: inherit;
-    margin-top: 18px; }
-
-.subscription_complete {
-  opacity: 0;
-  transition: 0.3s;
-  position: absolute;
-  bottom: 150px;
-  width: 100%;
-  text-align: center; }
-
-.email_emphasized {
-  font-family: proxima-nova-bold;
-  display: inline; }
-
-.mail_send_show {
-  opacity: 1;
-  pointer-events: all; }
-
-/*# sourceMappingURL=ballride_style.css.map */
+/*# sourceMappingURL=worldwide.css.map */

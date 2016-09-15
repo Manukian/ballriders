@@ -1,0 +1,41 @@
+extends ../layout
+
+block head
+    link(rel="stylesheet", href="/bootstrap-3.3.6-dist/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/stylesheets/ballride_style/worldwide.css")
+block main
+    section#worldwide
+        h1.ballride_style_title Ballwide Worldride
+        .ballriders_style_about 
+            | Ballride style is an independent branch of Freestyle Basketball culture, that values feeling and musicality in the first place. It’s goal is not only doing hard tricks and gracious transitions with a ball, but also telling a story with the body through the ball. Visualising the lyrics, making moves, that perfectly describe the sound and showing your attitude is one of the most important things in ballride style. 
+            br
+            | This is not the manual to how act with a ball. This is just a perception, acknowledged by world top freestylers, that can be used for creating your own story. Tutorials only include basic concepts. The rest is up to you.
+    section#people_supporting
+        .ballride_style_title People supporting Ballride.
+        .container-fluid
+            .row
+                .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                    .person_info_wrapper
+                        img(src="../images/IMG_8317.jpg", alt="").person_info_picture    
+                        .person_info_text
+                            .name Vaggi
+                            .country Russia
+                            .age 24 y.o.
+                            .profession freestyler
+                .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                    .person_info_wrapper
+                        img(src="../images/IMG_8317.jpg", alt="").person_info_picture     
+                        .person_info_text
+                            .name Loh
+                            .country Russia
+                            .age 30 y.o.
+                            .profession alcoholic
+    section#how_you_can_help
+        .ballride_style_title How you can help?
+        .steps
+            .fingers_tutorial step one
+            .pic step two
+        
+block js
+    script(src="/bootstrap-3.3.6-dist/js/bootstrap.min.js")
+    script(src="/javascripts/ballride_style_section.js")
