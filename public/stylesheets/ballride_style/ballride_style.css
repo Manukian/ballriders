@@ -568,7 +568,8 @@ main {
   background-color: #aafc50;
   height: inherit;
   font-size: 0;
-  vertical-align: top; }
+  height: 100px;
+  float: left; }
 
 .bottom_menu_right {
   background-color: #38a4f7;
