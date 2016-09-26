@@ -436,7 +436,7 @@ main {
   height: 100%; }
 
 #intro {
-  height: 98.5%; }
+  min-height: 450px; }
 
 #logo {
   margin: 0;
@@ -643,9 +643,6 @@ main {
   .tutorials_header {
     font-size: 20px;
     padding-bottom: 50px; }
-
-  #intro {
-    height: 96.5%; }
 
   .form_wrapper {
     width: 280px;
