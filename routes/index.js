@@ -74,6 +74,9 @@ router.get('/ballride_style/about', function(req, res, next) {
 router.get('/ballride_style/worldwide', function(req, res, next) {
   res.render('ballride_style/worldwide', { title: 'Ballride Style | Worldwide' });
 });
+router.get('/ballride_style/people', function(req, res, next) {
+  res.render('ballride_style/people', { title: 'Ballride Style | People' });
+});
 router.get('/ballriders_creative_group', function(req, res, next) {
   res.render('ballriders_creative_group/ballriders_creative_group', { title: 'Ballriders | Ballriders Creative Group' });
 });

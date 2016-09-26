@@ -412,7 +412,7 @@ body {
 
 #about {
   background-color: #aafc50;
-  height: 750px;
+  min-height: 750px;
   padding: 100px 0; }
 
 #subscribe {
@@ -438,7 +438,7 @@ body {
   width: 100%;
   font-size: 25px;
   transition: 0.3s;
-  color: #f9f9f9; }
+  color: white; }
   .mail_input:focus {
     outline: none;
     padding-bottom: 10px; }
@@ -453,12 +453,12 @@ body {
   pointer-events: none;
   border: solid 3px #999;
   height: 50px;
-  background-color: black;
+  background-color: transparent;
   padding: 0 10px;
   font-family: proxima-nova-bold;
   color: #999; }
   .mail_send:hover {
-    color: #fff; }
+    color: white; }
 
 .subscription_complete {
   opacity: 0;
@@ -467,7 +467,7 @@ body {
   bottom: 150px;
   width: 100%;
   text-align: center;
-  color: #f9f9f9; }
+  color: white; }
 
 .email_emphasized {
   font-family: proxima-nova-bold;
@@ -476,5 +476,38 @@ body {
 .mail_send_show {
   opacity: 1;
   pointer-events: all; }
+
+@media(max-width: 500px) {
+  .form_wrapper {
+    width: 280px;
+    margin-left: -140px;
+    top: 60%; }
+
+  .mail_input {
+    font-size: 15px; }
+
+  .mail_send {
+    font-size: 15px;
+    top: -18px; }
+
+  .values_wrapper {
+    margin-top: 50px; }
+
+  .ballriders_style_about {
+    width: 90%; }
+
+  .watch_introduction {
+    display: block;
+    text-align: center; }
+
+  #about {
+    padding: 60px 0; }
+
+  .subscription_complete {
+    padding: 0 15px;
+    bottom: 50px; }
+
+  #subscribe {
+    height: 300px; } }
 
 /*# sourceMappingURL=about.css.map */

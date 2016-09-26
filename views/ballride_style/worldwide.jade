@@ -7,35 +7,44 @@ block main
     section#worldwide
         h1.ballride_style_title Ballwide Worldride
         .ballriders_style_about 
-            | Ballride style is an independent branch of Freestyle Basketball culture, that values feeling and musicality in the first place. It’s goal is not only doing hard tricks and gracious transitions with a ball, but also telling a story with the body through the ball. Visualising the lyrics, making moves, that perfectly describe the sound and showing your attitude is one of the most important things in ballride style. 
+            | More and more people learning about Ballride all around the world. This section is made in order to put them all together who supports this style and freestyle community in general. They are the truest inspiration, that gives us the power to do what we love most. 
+            br 
+            | It doesnt matter wheather you are freestyle basketball player or not  &nbsp-&nbsp you are always welcome to discover ballride perception and philosophy. Also feel free to leave some feedback about how we can become better at what we do.
             br
-            | This is not the manual to how act with a ball. This is just a perception, acknowledged by world top freestylers, that can be used for creating your own story. Tutorials only include basic concepts. The rest is up to you.
-    section#people_supporting
-        .ballride_style_title People supporting Ballride.
-        .container-fluid
-            .row
-                .col-xs-12.col-sm-4.col-md-4.col-lg-4
-                    .person_info_wrapper
-                        img(src="../images/IMG_8317.jpg", alt="").person_info_picture    
-                        .person_info_text
-                            .name Vaggi
-                            .country Russia
-                            .age 24 y.o.
-                            .profession freestyler
-                .col-xs-12.col-sm-4.col-md-4.col-lg-4
-                    .person_info_wrapper
-                        img(src="../images/IMG_8317.jpg", alt="").person_info_picture     
-                        .person_info_text
-                            .name Loh
-                            .country Russia
-                            .age 30 y.o.
-                            .profession alcoholic
+            a(href="/ballride_style/people").people - see people supporting Ballride -
     section#how_you_can_help
         .ballride_style_title How you can help?
-        .steps
-            .fingers_tutorial step one
-            .pic step two
+        .steps.container-fluid
+            .row
+                .step.col-xs-12.col-sm-12.col-md-12.col-lg-12
+                    span.step_number 1
+                    span.step_text Frame your fingers into a ballride sign as shown below
+            .fingers_tutorial
+                img(src="../images/fingers_tutorial.png", alt="")
+            .row
+                .step.col-xs-12.col-sm-12.col-md-12.col-lg-4
+                    span.step_number 2
+                    span.step_text Take a full height picture next to a solid wall
+                .step.col-xs-12.col-sm-12.col-md-12.col-lg-7
+                    span.step_number 3
+                    span.step_text 
+                        | Send it to 
+                        a(href="mailto:weballriders@gmail.com") weballriders@gmail.com 
+                        | and we will publish it on the website.
+            .row
+                .step.col-xs-12.col-sm-12.col-md-12.col-lg-12
+                    span.step_number 4
+                    span.step_text Don't forget to untangle your fingers, otherwise you will die
+    section#subscribe
+          .form_wrapper
+              input(type="email" placeholder="Enter your e-mail to get latest tutorials").mail_input
+              button.mail_send Subscribe
+          .subscription_complete
+              | E-mail 
+              .email_emphasized
+              |  successfully added to list
         
 block js
     script(src="/bootstrap-3.3.6-dist/js/bootstrap.min.js")
     script(src="/javascripts/ballride_style_section.js")
+    script(src="/javascripts/worldwide.js")
