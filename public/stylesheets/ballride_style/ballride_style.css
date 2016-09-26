@@ -512,7 +512,7 @@ main {
   display: inline-block;
   vertical-align: baseline;
   margin-left: 20px;
-  color: #aafc50; }
+  color: white; }
 
 #subscribe {
   height: 500px;
@@ -585,18 +585,6 @@ main {
   font-size: 13px;
   font-family: Neue;
   letter-spacing: 1px; }
-
-.bottom_logotype_wrapper {
-  position: absolute;
-  bottom: 0;
-  width: 32px;
-  text-align: center;
-  left: 50%;
-  height: inherit;
-  margin-left: -16px; }
-  .bottom_logotype_wrapper img {
-    width: inherit;
-    margin-top: 18px; }
 
 .subscription_complete {
   opacity: 0;
@@ -676,9 +664,6 @@ main {
 
   .tutorial_description {
     font-size: 14px; }
-
-  .bottom_logotype_wrapper {
-    display: none; }
 
   .bottom_menu_left, .bottom_menu_right {
     min-height: 50px; } }
