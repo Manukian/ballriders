@@ -6,9 +6,6 @@ html,body
     height: 100%
     width: 100%
 
-body
-    border: solid 1px transparent
-
 main
     height: 100%
 
@@ -95,7 +92,6 @@ main
 #subscribe
     height: 500px
     position: relative
-    background-color: black
     
 .form_wrapper
     position: absolute
@@ -135,22 +131,24 @@ main
     &:hover
         color: black
     
-.bottom_menu_left,.bottom_menu_right
-    display: block
-    background-color: #f73b29
+.bottom_menu_left
     background-color: $tachikara
-    height: 50px
-    font-size: 0
+    display: block
+    position: relative
+    width: 50%
+    text-align: center
+    min-height: 100px
+    float: left
+    color: black
 
 .bottom_menu_right
-    background-color: #38a4f7
     background-color: $purple
-    
-.bottom_menu_link
-    display: inline-block
-    width: 100%
-    height: 100%
+    display: block
     position: relative
+    width: 50%
+    text-align: center
+    min-height: 100px
+    float: right
     color: black
     
 .bottom_menu_label
@@ -247,7 +245,7 @@ main
     .bottom_logotype_wrapper
         display: none
     .bottom_menu_left,.bottom_menu_right
-        height: 50px
+        min-height: 50px
         
 @media(max-width: 370px)
     #hello

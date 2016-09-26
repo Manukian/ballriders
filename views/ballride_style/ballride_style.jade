@@ -36,12 +36,10 @@ block main
           |  successfully added to list
   .bottom_logotype_wrapper
       img(src="../../images/neutral_logo_white.png", alt="")
-  .bottom_menu_left
-      a.bottom_menu_link(href="/ballride_style/about")
-          .bottom_menu_label - About ballride -
-  .bottom_menu_right
-      a.bottom_menu_link(href="/ballride_style/worldwide")
-          .bottom_menu_label - ballride worldwide -
+  a.bottom_menu_left(href="/ballride_style/about")
+      .bottom_menu_label - About ballride -
+  a.bottom_menu_right(href="/ballride_style/worldwide")
+      .bottom_menu_label - ballride worldwide -
               
 block js
     script(src="bootstrap-3.3.6-dist/js/bootstrap.min.js")
