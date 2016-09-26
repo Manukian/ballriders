@@ -384,6 +384,12 @@ body {
   .watch_introduction:hover {
     color: #1b1b1b; }
 
+.comming_soon:after {
+  display: block;
+  content: " (available on October 1) ";
+  color: #ab84e4;
+  text-transform: none; }
+
 #why_is_great {
   background-color: white;
   padding: 60px 0; }

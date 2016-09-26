@@ -2,7 +2,7 @@
 @import '../partials/base'
 
 #people
-    height: 800px
+    height: 100%
     padding: 100px 0
 
 .ballride_style_title
@@ -20,6 +20,65 @@
     width: 100%
     
 [class*="col-"]
+    
+#subscribe
+    height: 500px
+    position: relative
+    
+.form_wrapper
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 450px
+    margin-left: -225px
+    height: 80px
+    margin-top: -40px
+    &:hover .mail_input
+        padding-bottom: 10px
+
+.mail_input
+    border: none
+    border-bottom: solid 3px #ccc
+    width: 100%
+    font-size: 25px
+    transition: 0.3s
+    &:focus
+        outline: none
+        padding-bottom: 10px
+    
+.mail_send
+    opacity: 0
+    position: absolute
+    right: 0
+    top: -6px
+    font-size: 18px
+    transition: 0.3s
+    pointer-events: none
+    border: solid 3px #ccc
+    height: 50px
+    background-color: white
+    padding: 0 10px
+    font-family: proxima-nova-bold
+    color: #ccc
+    &:hover
+        color: black
+        
+.subscription_complete
+    opacity: 0
+    transition: 0.3s
+    position: absolute
+    bottom: 150px
+    width: 100%
+    text-align: center
+    
+.email_emphasized
+    font-family: proxima-nova-bold
+    display: inline
+    
+    
+.mail_send_show
+    opacity: 1
+    pointer-events: all
     
 .container-fluid
     padding: 0 150px

@@ -422,7 +422,8 @@ body {
 
 #subscribe {
   height: 500px;
-  position: relative; }
+  position: relative;
+  background-color: black; }
 
 .form_wrapper {
   position: absolute;
@@ -436,11 +437,13 @@ body {
     padding-bottom: 10px; }
 
 .mail_input {
+  background-color: transparent;
   border: none;
-  border-bottom: solid 3px #ccc;
+  border-bottom: solid 3px #999;
   width: 100%;
   font-size: 25px;
-  transition: 0.3s; }
+  transition: 0.3s;
+  color: white; }
   .mail_input:focus {
     outline: none;
     padding-bottom: 10px; }
@@ -453,14 +456,14 @@ body {
   font-size: 18px;
   transition: 0.3s;
   pointer-events: none;
-  border: solid 3px #ccc;
+  border: solid 3px #999;
   height: 50px;
-  background-color: white;
+  background-color: transparent;
   padding: 0 10px;
   font-family: proxima-nova-bold;
-  color: #ccc; }
+  color: #999; }
   .mail_send:hover {
-    color: black; }
+    color: white; }
 
 .subscription_complete {
   opacity: 0;
@@ -468,7 +471,8 @@ body {
   position: absolute;
   bottom: 150px;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  color: white; }
 
 .email_emphasized {
   font-family: proxima-nova-bold;

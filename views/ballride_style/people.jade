@@ -3,6 +3,8 @@ extends ../layout
 block head
     link(rel="stylesheet", href="/bootstrap-3.3.6-dist/css/bootstrap.min.css")
     link(rel="stylesheet", href="/stylesheets/ballride_style/people.css")
+    meta(name="keywords" content="freestyle basketball ballride style choreography ball worldwide people support ballrider sign хореография мяч болрайд знак люди поддержка стиль баскетбольный фристайл")
+    meta(name="description" content="People supporting Ballride style.")
 block main
     section#people
         h1.ballride_style_title We glad you are with us.
@@ -28,7 +30,16 @@ block main
                 .col-xs-12.col-sm-6.col-md-6.col-lg-6
                     .person_info_wrapper
                         img(data-src="../images/people6.jpg" src="" alt="").person_info_picture
+    section#subscribe
+      .form_wrapper
+          input(type="email" placeholder="Enter your e-mail to get latest updates").mail_input
+          button.mail_send Subscribe
+      .subscription_complete
+          | E-mail 
+          .email_emphasized
+          |  successfully added to list
 block js
     script(src="/bootstrap-3.3.6-dist/js/bootstrap.min.js")
+    script(src="/javascripts/ballride_style_section.js")
     script(src="/javascripts/jQuery-Plugin-To-Smartly-Load-Images-While-Scrolling-loadScroll/jQuery.loadScroll.js")
     script(src="/javascripts/people.js")
