@@ -684,12 +684,12 @@ main {
   .tutorial_description {
     font-size: 14px; }
 
-  .bottom_logotype_wrapper {
-    display: none; }
-
   #bottom_menu {
     height: 50px; } }
 @media(max-width: 370px) {
+  #intro {
+    height: 563.66px; }
+
   #hello {
     font-size: 10px; }
 
