@@ -557,10 +557,6 @@ main {
   .mail_send:hover {
     color: black; }
 
-#bottom_menu {
-  height: 100px;
-  position: relative; }
-
 .bottom_menu_left, .bottom_menu_right {
   display: block;
   width: 50%;
@@ -690,7 +686,7 @@ main {
   .bottom_logotype_wrapper {
     display: none; }
 
-  #bottom_menu {
+  .bottom_menu_left, .bottom_menu_right {
     height: 50px; } }
 @media(max-width: 370px) {
   #hello {
