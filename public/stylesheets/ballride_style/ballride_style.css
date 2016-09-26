@@ -626,6 +626,12 @@ main {
     width: 80%;
     margin-left: 10%; } }
 @media(max-width: 767px) {
+  #logo {
+    width: 50px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -25px; }
+
   .tutorial_title {
     font-size: 15px; }
 
@@ -635,6 +641,9 @@ main {
   #hello {
     font-size: 15px; } }
 @media(max-width: 500px) {
+  #intro {
+    height: 99.5%; }
+
   .form_wrapper {
     width: 280px;
     margin-left: -140px;
@@ -667,6 +676,9 @@ main {
   .tutorial_description {
     font-size: 14px; } }
 @media(max-width: 370px) {
+  #hello {
+    font-size: 10px; }
+
   .tutorial_title {
     font-size: 10px; }
 
@@ -680,8 +692,7 @@ main {
     height: 65px; }
 
   .bottom_logotype_wrapper {
-    width: 20px;
-    margin-left: -10px; }
+    display: none; }
 
   .tutorial_link {
     margin-bottom: 30px; } }
