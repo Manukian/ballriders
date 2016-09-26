@@ -432,6 +432,9 @@ html, body {
   height: 100%;
   width: 100%; }
 
+body {
+  border: solid 1px transparent; }
+
 main {
   height: 100%; }
 
