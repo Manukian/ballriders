@@ -685,11 +685,10 @@ main {
     font-size: 14px; }
 
   .bottom_logotype_wrapper {
-    width: 0px;
-    height: 0px; }
+    display: none; }
 
   #bottom_menu {
-    height: 50px; } }
+    height: 100px; } }
 @media(max-width: 370px) {
   #hello {
     font-size: 10px; }
