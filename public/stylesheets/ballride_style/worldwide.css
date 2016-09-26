@@ -498,7 +498,8 @@ body {
     padding: 60px 0px 0px; }
 
   .ballriders_style_about {
-    width: 90%; }
+    width: 90%;
+    text-align: justify; }
 
   .people {
     display: block;
@@ -512,6 +513,9 @@ body {
     bottom: 50px; }
 
   #subscribe {
-    height: 300px; } }
+    height: 300px; }
+
+  .steps {
+    padding-left: 20px; } }
 
 /*# sourceMappingURL=worldwide.css.map */
