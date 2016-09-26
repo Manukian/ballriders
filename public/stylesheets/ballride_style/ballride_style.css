@@ -571,7 +571,8 @@ main {
 .bottom_menu_right {
   background-color: #38a4f7;
   background-color: #ab84e4;
-  float: right; }
+  float: right;
+  display: block; }
 
 .bottom_menu_link {
   display: inline-block;
