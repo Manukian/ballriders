@@ -559,19 +559,14 @@ main {
 
 .bottom_menu_left, .bottom_menu_right {
   display: block;
-  width: 50%;
   background-color: #f73b29;
   background-color: #aafc50;
-  height: inherit;
-  font-size: 0;
-  height: 100px;
-  float: left;
-  display: none; }
+  height: 50px;
+  font-size: 0; }
 
 .bottom_menu_right {
   background-color: #38a4f7;
-  background-color: #ab84e4;
-  display: block; }
+  background-color: #ab84e4; }
 
 .bottom_menu_link {
   display: inline-block;
