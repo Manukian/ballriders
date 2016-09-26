@@ -438,5 +438,24 @@ body {
 @media(max-width: 1000px) {
   .container-fluid {
     padding: 0 20px; } }
+@media(max-width: 500px) {
+  .form_wrapper {
+    width: 280px;
+    margin-left: -140px;
+    top: 60%; }
+
+  .mail_input {
+    font-size: 15px; }
+
+  .mail_send {
+    font-size: 15px;
+    top: -18px; }
+
+  .subscription_complete {
+    padding: 0 15px;
+    bottom: 50px; }
+
+  #subscribe {
+    height: 300px; } }
 
 /*# sourceMappingURL=people.css.map */
