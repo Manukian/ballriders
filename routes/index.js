@@ -95,6 +95,9 @@ router.get('/ballriders_creative_group/music', function(req, res, next) {
 router.get('/ballriders_creative_group/music/barak_obama', function(req, res, next) {
   res.render('ballriders_creative_group/music/barak_obama', { title: 'Music | Barak Obama ' });
 });
+router.get('/ballriders_creative_group/digital/lips', function(req, res, next) {
+  res.render('ballriders_creative_group/digital/lips', { title: 'Digital | Lips ' });
+});
 
 
 module.exports = router;
