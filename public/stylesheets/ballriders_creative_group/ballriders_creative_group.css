@@ -501,8 +501,10 @@ body {
   position: relative;
   height: 585px;
   width: 100%;
-  background-image: url(../../images/IMG_1139.JPG);
-  background-size: cover; }
+  background-image: url(../../images/IMG_0977.JPG);
+  background-size: 30%;
+  background-position: center;
+  background-repeat: no-repeat; }
 
 .projects {
   padding-bottom: 30px; }
