@@ -6,6 +6,7 @@ $(document).ready(function() {
         }, 1000);
     });
 }
+    $('.intro').height($(window).height()*0.85);
 
     $('.arrow_down').children('img').click(function(){
         $('.projects').scrollView();
