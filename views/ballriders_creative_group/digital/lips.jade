@@ -5,64 +5,49 @@ block head
     link(rel="stylesheet", href="/stylesheets/ballriders_creative_group/menu_items.css")
 block main
     header
-        .main_header
-            a(href="/ballriders_creative_group").logotype_wrapper
-                img(src="../../images/6.svg", alt="")
-            .menu_toggle_black.hidden-lg.hidden-md
-            .menu_close.hidden-lg.hidden-md
-            ul.menu.hidden-sm.hidden-xs
-                li.menu_item
-                  a(href='/ballriders_creative_group/digital') Digital
-                li.menu_item
-                  a(href='/ballriders_creative_group/fashion') Fashion
-                li.menu_item
-                  a(href='/ballriders_creative_group/web') Web
-                li.menu_item
-                  a(href='/ballriders_creative_group/music') Music
-            ul.mobile_menu.hidden-lg.hidden-md
-                li.mobile_menu_item
-                  a(href='/ballriders_creative_group/digital').mobile_menu_link Digital
-                li.mobile_menu_item
-                  a(href='/ballriders_creative_group/fashion').mobile_menu_link Fashion
-                li.mobile_menu_item
-                  a(href='/ballriders_creative_group/web').mobile_menu_link Web
-                li.mobile_menu_item
-                  a(href='/ballriders_creative_group/music').mobile_menu_link Music
-        .header_divider
+        include ../menu
     .section_title 
         h1.title Bubblips
         .year _16
         .short_description A serie of photos implementing the fusion of make up art and bubblegum.
     .img_section
         .img_wrapper
-            img(src="../../images/IMG_1032.JPG", alt="").big_pic
-            img(src="../../images/IMG_1129.JPG", alt="").small_pic.absolute_lips_two
-            img(src="../../images/IMG_1120.JPG", alt="").small_pic.absolute_lips_one
+            img(src="../../images/IMG_1833.jpg", alt="").big_pic
+            img(src="../../images/IMG_1833.jpg", alt="").small_pic
         .img_wrapper
-            img(src="../../images/IMG_1127.JPG", alt="").big_pic
-            img(src="../../images/IMG_1122.JPG", alt="").small_pic.absolute_lips_two
+            img(src="../../images/IMG_1811.jpg", alt="").big_pic
+            img(src="../../images/IMG_1811.jpg", alt="").small_pic
         .img_wrapper
-            img(src="../../images/IMG_1119.JPG", alt="").big_pic_right
-            img(src="../../images/IMG_1130.JPG", alt="").small_pic.absolute_lips_four
-            img(src="../../images/IMG_1124.JPG", alt="").small_pic.absolute_lips_tree
-        
+            img(src="../../images/IMG_1834.jpg", alt="").big_pic
+            img(src="../../images/IMG_1834.jpg", alt="").small_pic
+        .img_wrapper
+            img(src="../../images/IMG_1829.jpg", alt="").big_pic
+            img(src="../../images/IMG_1829.jpg", alt="").small_pic
+        .img_wrapper
+            img(src="../../images/IMG_1817.jpg", alt="").big_pic
+            img(src="../../images/IMG_1817.jpg", alt="").small_pic
     .description_section
         .description_title Bubblips
         .row
             .col-xs-12.col-sm-12.col-md-12.col-lg-6.long_description 
-                p An homage to Kubrick's mathematically relevant Tycho Monolith from the film adaptation of Arthur C. Clark's 2001. The monolith is officially described as having a ratio of 1:4:9 with the depth being the smallest of those integers, and the length being the largest. This is an expression of (1×1):(2×2):(3×3).
-                p Monolith I (2011). The piece illustrates the moment immediately following the tragic impact of a small body against this large, omnipresent object. 
-                p Monolith II (2012). From an original photo by James Cambourne taken at Saunton, between Exmoor and Dartmoor on the coast, presented in very wide 2.35:1 format. 
-                p Monolith III (2012). From an original photo taken at St. Michael’s Mount, Cornwall by Rob Chiu. I loved the mood and tone of the shot; cold and somewhat timeless. It already had a daunting but benevolent feel that made it the perfect backdrop to this piece.
-
+                p Project was inspired by japanese bubblegum vending machine in Galeria shopping mall, Saint-Petersburg city. The main idea was to get shots of bubblegum gluing the lips and looking like some iced water or cliffs outhgrowth when opening mouth.
+                p Acid pink&purple in fusion with tic-tac candies, bubblegum material and adorable make up lead the final product to be understood as different instanses of euphoria. Photoshoot was held in pitch black home-studio with only two iPhone 5s flashlights, sacrificing the quality in order to get the right vibe.
+                p.underlines _______________________
+                p Model & Make Up:
+                    a(href="https://www.instagram.com/farrellina/" target="_blank").insta_link Alisha Farrellina
+                p Photographer:
+                    a(href="https://www.instagram.com/ponchikz/" target="_blank").insta_link Ponchik
+                p Retouch:
+                    a(href="https://www.instagram.com/farrellina/" target="_blank").insta_link Alsiha Farrellina
+                    | ,
+                    a(href="https://www.instagram.com/vaggi_tsss/" target="_blank").insta_link Vagan Manukian
+                    
+                    
+                    
     .arrow_up
       img(src="../../images/arrow_up_pure.svg", alt="").arrow_img
 block footer
-    .main_footer
-        .name Vagan Manukian
-        .who_is CEO of Ballriders Creative Group, founder of Soaring Balls Syndicate. Front-end developer and web-designer.
-        .link_section
-    .all_rights_reserved ©2016 BALLRIDERS. All rights reserved. No part of this site may be reproduced without permission.
+    include ../footer
       
 block js
     script(src="/bootstrap-3.3.6-dist/js/bootstrap.min.js")

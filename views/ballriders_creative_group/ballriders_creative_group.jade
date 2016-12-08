@@ -13,21 +13,24 @@ block main
             ul.menu.hidden-sm.hidden-xs
                 li.menu_item
                   a(href='/ballriders_creative_group/digital') Digital
-                li.menu_item
-                  a(href='/ballriders_creative_group/fashion') Fashion
-                li.menu_item
-                  a(href='/ballriders_creative_group/web') Web
-                li.menu_item
-                  a(href='/ballriders_creative_group/music') Music
+                li.menu_item.comming_soon
+                  a() Fashion
+                li.menu_item.comming_soon
+                  a() Web
+                li.menu_item.comming_soon
+                  a() Music
             ul.mobile_menu.hidden-lg.hidden-md
                 li.mobile_menu_item
                   a(href='/ballriders_creative_group/digital').mobile_menu_link Digital
                 li.mobile_menu_item
-                  a(href='/ballriders_creative_group/fashion').mobile_menu_link Fashion
+                  a().mobile_menu_link Fashion 
+                      .comming_soon_mobile (comming soon)
                 li.mobile_menu_item
-                  a(href='/ballriders_creative_group/web').mobile_menu_link Web
+                  a().mobile_menu_link Web 
+                      .comming_soon_mobile (comming soon)
                 li.mobile_menu_item
-                  a(href='/ballriders_creative_group/music').mobile_menu_link Music
+                  a().mobile_menu_link Music 
+                      .comming_soon_mobile (comming soon)
     section.intro
     .arrow_down
       img(src="../../images/arrow_down_pure.svg", alt="").arrow_img
@@ -37,32 +40,18 @@ block main
           .row
             .col-xs-12.col-sm-6.col-md-6.col-lg-3
               .project_wrapper
-                a(href="").project_link
-                  img(src="../../images/1.png", alt="")
+                a(href="/ballriders_creative_group/digital/bubblips").project_link
+                  img(src="../../images/IMG_1833.jpg", alt="")
                   .project_description
-                    .project_title Toothbrush
+                    .project_title 'Bubblips'
                     .year _16
             .col-xs-12.col-sm-6.col-md-6.col-lg-3
               .project_wrapper
-                a(href="").project_link
-                  img(src="../../images/2.png", alt="")
-                  .project_description
-                    .project_title Women Bag
-                    .year _16
-            .col-xs-12.col-sm-6.col-md-6.col-lg-3
-              .project_wrapper
-                a(href="").project_link
+                a().project_link
                   img(src="../../images/IMG_8317.jpg", alt="")
                   .project_description
                     .project_title 'Art Is In Our Hands'
-                    .year _16
-            .col-xs-12.col-sm-6.col-md-6.col-lg-3
-              .project_wrapper
-                a(href="").project_link
-                  img(src="../../images/4.png", alt="")
-                  .project_description
-                    .project_title Shadow Ball
-                    .year _16
+                    .year COMMING SOON
 
     .arrow_up
       img(src="../../images/arrow_up_pure.svg", alt="").arrow_img
@@ -71,6 +60,12 @@ block footer
         .name Vagan Manukian
         .who_is CEO of Ballriders Creative Group, founder of Soaring Balls Syndicate. Front-end developer and web-designer.
         .link_section
+            a(href="https://www.instagram.com/vaggi_tsss/" target="_blank").link_icon
+                img(src="../../images/insta_logo.svg", alt="").link_icon_img
+            a(href="https://www.facebook.com/vaggi.lapedi?ref=bookmarks" target="_blank").link_icon
+                img(src="../../images/fb_logo.svg", alt="").link_icon_img
+            a(href="https://vk.com/vaggi" target="_blank").link_icon
+                img(src="../../images/vk_logo.svg", alt="").link_icon_img
     .all_rights_reserved ©2016 BALLRIDERS. All rights reserved. No part of this site may be reproduced without permission.
       
 block js

@@ -5,30 +5,7 @@ block head
     link(rel="stylesheet", href="/stylesheets/ballriders_creative_group/menu_items.css")
 block main
     header
-        .main_header
-            a(href="/ballriders_creative_group").logotype_wrapper
-                img(src="../../images/6.svg", alt="")
-            .menu_toggle_black.hidden-lg.hidden-md
-            .menu_close.hidden-lg.hidden-md
-            ul.menu.hidden-sm.hidden-xs
-                li.menu_item
-                  a(href='/ballriders_creative_group/digital') Digital
-                li.menu_item
-                  a(href='/ballriders_creative_group/fashion') Fashion
-                li.menu_item
-                  a(href='/ballriders_creative_group/web') Web
-                li.menu_item
-                  a(href='/ballriders_creative_group/music') Music
-            ul.mobile_menu.hidden-lg.hidden-md
-                li.mobile_menu_item
-                  a(href='/ballriders_creative_group/digital').mobile_menu_link Digital
-                li.mobile_menu_item
-                  a(href='/ballriders_creative_group/fashion').mobile_menu_link Fashion
-                li.mobile_menu_item
-                  a(href='/ballriders_creative_group/web').mobile_menu_link Web
-                li.mobile_menu_item
-                  a(href='/ballriders_creative_group/music').mobile_menu_link Music
-        .header_divider
+        include menu
     h1.section_title Fashion
     
     section.projects
@@ -52,12 +29,7 @@ block main
     .arrow_up
       img(src="../../images/arrow_up_pure.svg", alt="").arrow_img
 block footer
-    .main_footer
-        .name Vagan Manukian
-        .who_is CEO of Ballriders Creative Group, founder of Soaring Balls Syndicate. Front-end developer and web-designer.
-        .link_section
-    .all_rights_reserved ©2016 BALLRIDERS. All rights reserved. No part of this site may be reproduced without permission.
-      
+    include footer
 block js
     script(src="/bootstrap-3.3.6-dist/js/bootstrap.min.js")
     script(src="/javascripts/menu_item.js")

@@ -538,8 +538,7 @@ a {
 .img_section {
   text-align: center;
   padding: 0 6.5%;
-  box-sizing: border-box;
-  min-height: 2100px; }
+  box-sizing: border-box; }
 
 .img_wrapper {
   width: 100%;
@@ -551,32 +550,44 @@ a {
   width: 50%;
   float: left; }
 
-.big_pic_right {
-  float: right;
-  width: 50%; }
-
 .small_pic {
   width: 25%; }
 
-.absolute_lips_one {
-  position: absolute;
-  left: 12.5%;
-  top: 85.5%;
-  z-index: 1000; }
+.insta_link {
+  font-family: proxima-nova-bold;
+  margin-left: 10px; }
 
-.absolute_lips_two {
-  position: absolute;
-  right: 5%;
-  top: 15%; }
+.underlines {
+  letter-spacing: 1px;
+  font-family: proxima-nova-bold;
+  margin-bottom: 30px; }
 
-.absolute_lips_tree {
-  position: absolute;
-  top: 89%;
-  right: 5%; }
+.link_icon {
+  width: 30px;
+  display: inline-block;
+  margin: 30px 10px 0 0; }
 
-.absolute_lips_four {
-  position: absolute;
-  left: 35.8%;
-  top: -39.5%; }
+.link_icon_img {
+  width: 30px; }
+
+.comming_soon:before {
+  content: "comming soon";
+  font-family: proxima-nova-bold;
+  color: #FF3399;
+  font-size: 7px;
+  display: block; }
+
+.comming_soon_mobile {
+  font-family: proxima-nova-bold;
+  color: #FF3399;
+  font-size: 10px;
+  display: inline-block; }
+
+@media(max-width: 767px) {
+  .big_pic {
+    width: 100%; }
+
+  .small_pic {
+    display: none; } }
 
 /*# sourceMappingURL=menu_items.css.map */

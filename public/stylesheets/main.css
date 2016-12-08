@@ -413,14 +413,15 @@ menu {
 
 .menu_block-ballride_style {
   left: 30%;
-  background-image: url(../../images/soon.jpg);
+  background-image: url(../../images/B.jpg);
   background-position: center;
-  background-size: cover; }
+  background-size: 30%;
+  background-repeat: no-repeat; }
 
 .menu_block-ballriders_creative_group {
   left: 70%;
-  background-image: url(../../images/soon_cg.jpg);
-  background-position: center;
+  background-image: url(../../images/IMG_1833.jpg);
+  background-position: -50px 0;
   background-size: cover; }
 
 .menu_block-selected {

@@ -386,7 +386,7 @@ body {
 
 .comming_soon:after {
   display: block;
-  content: " (available on October 1) ";
+  content: " (available soon) ";
   color: #ab84e4;
   text-transform: none; }
 
