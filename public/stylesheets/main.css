@@ -408,7 +408,10 @@ menu {
 .menu_block-soaring_balls_syndicate {
   left: -10%;
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  background-image: url(../../images/IMG_1122.JPG);
+  background-size: 30%;
+  background-repeat: no-repeat; }
 
 .menu_block-ballride_style {
   left: 30%;
@@ -455,5 +458,9 @@ menu {
   pointer-events: none; }
   #eventcatalogWidget a:after {
     content: none; }
+
+@media (max-width: 768px) {
+  .menu_block-soaring_balls_syndicate, .menu_block-ballride_style, .menu_block-ballriders_creative_group {
+    background-position: top; } }
 
 /*# sourceMappingURL=main.css.map */

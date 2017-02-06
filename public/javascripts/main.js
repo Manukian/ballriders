@@ -5,11 +5,7 @@ $(document).ready(function() {
         var viewport = $(window).height();
         $('.menu_block_mobile').height(viewport / 3);
         $('.section_header').css('margin-top', viewport / 4 - 15 + 'px');
-        $('#vid').hide();
         $('img').height(viewport / 4 - 10);
-        $('.menu_block-ballriders_creative_group').css('background','none');
-        $('.menu_block-ballride_style').css('background','none');
-        $('.menu_block-soaring_balls_syndicate').css('background','none');
     } else {
         var trail = $(window).width() / 10;
         $('.menu_block').mouseover(function() {
