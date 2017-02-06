@@ -662,7 +662,10 @@ body {
   height: 679px;
   position: relative;
   height: 679px;
-  background-color: black; }
+  background-color: black;
+  background-image: url(../../images/IMG_0555.JPG);
+  background-size: cover;
+  background-position: 40px 0; }
 
 .about_text_wrapper {
   font-size: 23px;
@@ -687,12 +690,28 @@ body {
   background-color: black;
   text-align: center;
   background-image: url(../../images/grain.jpg);
-  background-repeat: repeat;
-  background-position: 0 0;
-  -webkit-animation: noiseAnim 0.5s infinite linear alternate;
-  -moz-animation: noiseAnim 0.5s infinite linear alternate;
-  -o-animation: noiseAnim 0.5s infinite linear alternate;
-  animation: noiseAnim 0.5s infinite linear alternate; }
+  background-repeat: repeat; }
+
+.instagram_link {
+  width: 400px;
+  height: auto;
+  color: white;
+  font-family: proxima-nova-bold;
+  position: absolute;
+  top: 88%;
+  right: 25px;
+  z-index: 1000;
+  text-align: center; }
+  .instagram_link img {
+    width: 20px;
+    margin: 12.5px;
+    display: inline-block;
+    vertical-align: middle; }
+  .instagram_link .text {
+    width: 300px;
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: middle; }
 
 #contact_section {
   width: 100%;
@@ -728,15 +747,25 @@ body {
   .about_text_wrapper {
     font-size: 15px;
     margin-top: -195px;
-    line-height: 30px; } }
+    line-height: 30px; }
+
+  .instagram_link {
+    width: 100%;
+    right: 0; } }
 @media(max-width: 400px) {
   .menu_big_list {
     width: 240px;
     margin-left: -120px; }
 
   .about_text_wrapper {
-    font-size: 12px;
     margin-top: -175px;
-    line-height: 25px; } }
+    line-height: 25px; }
+
+  .instagram_link {
+    width: 80%;
+    top: 78%;
+    margin: 0 10%; }
+    .instagram_link .text {
+      width: 100%; } }
 
 /*# sourceMappingURL=soaring_balls_syndicate.css.map */

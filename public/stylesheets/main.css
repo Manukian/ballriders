@@ -414,8 +414,10 @@ menu {
   left: 30%;
   background-image: url(../../images/B.jpg);
   background-position: center;
-  background-size: 30%;
+  background-size: cover;
   background-repeat: no-repeat; }
+  .menu_block-ballride_style span.section_header {
+    color: white; }
 
 .menu_block-ballriders_creative_group {
   left: 70%;
