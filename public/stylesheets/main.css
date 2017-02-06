@@ -414,7 +414,7 @@ menu {
   left: 30%;
   background-image: url(../../images/B.jpg);
   background-position: center;
-  background-size: cover;
+  background-size: 30%;
   background-repeat: no-repeat; }
   .menu_block-ballride_style span.section_header {
     color: white; }
