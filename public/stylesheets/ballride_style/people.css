@@ -358,7 +358,7 @@ body {
 
 #people {
   height: 100%;
-  padding: 100px 135px; }
+  padding: 100px 0px; }
 
 .ballride_style_title {
   font-size: 35px;
@@ -433,11 +433,11 @@ body {
   pointer-events: all; }
 
 .container-fluid {
-  padding: 0 150px; }
+  padding: 0 150px !important; }
 
-@media(max-width: 1000px) {
+@media(max-width: 767px) {
   .container-fluid {
-    padding: 0 20px; } }
+    padding: 0 20px !important; } }
 @media(max-width: 500px) {
   .form_wrapper {
     width: 280px;
