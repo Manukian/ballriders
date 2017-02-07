@@ -16,21 +16,13 @@ menu
     width: $menu_block-width
     display: inline-block
     transition: 0.4s transform
-    background-size: contain
+    background-size: cover
+    background-position: center
     font-size: 0
-    opacity: 0.2
+    opacity: 0.7
     float: left
-    overflow: hidden
-    
-.menu_block_mobile
-    position: relative
-    width: 100%
-    opacity: 1
-    left: 0 !important
-    & .section_header
-        font-size: 20px !important
+    overflow: visible
 
-    
 .menu_block a
     position: absolute
     display: block
@@ -48,59 +40,40 @@ menu
     font-weight: 400
     letter-spacing: 1px
     font-family: Neue
-    font-size: 28px
+    font-size: 21px
     color: $black
-    transition: 0.4s
     
     
 .menu_block-soaring_balls_syndicate
-    left: -10%
-    background-position: center
-    background-size: cover
-    background-image: url(../../images/IMG_1122.JPG)
-    background-size: 30%
-    background-repeat: no-repeat
+    left: $menu_block-width - 10%
 
 .menu_block-ballride_style
-    left: $menu_block-width - 10%
-    background-image: url(../../images/B.jpg)
-    background-position: center
-    background-size: 30%
-    background-repeat: no-repeat
-    & span.section_header
-        color: $black
+    left: -10%
+    z-index: 100
 
     
 .menu_block-ballriders_creative_group
     left: $menu_block-width + 30%
-    background-image: url(../../images/IMG_0977.JPG)
     background-position: center
-    background-size: 30%
-    background-repeat: no-repeat
     
 .menu_block-selected
     opacity: 1
     
 #vid
-    height: 100%
+    height: 135%
     position: absolute
     bottom: 0
     left: 50%
-    margin-left: -580px
+    margin-left: -770px
+    top: 0
+    z-index: -100
     
-.coming_soon
-    text-align: center
-    & img
-        width: 90%
-    & a:after
-        content: ' (Coming on October 27)'
-        width: 100%
-        display: inline-block
-        text-align: center
-        text-transform: none
-        font-size: 16px
-        color: $coming_soon
-        margin-top: 5px
+.menu_block_mobile
+    position: relative
+    width: 33.3%
+    left: 0
+    overflow: hidden
+    
     
 #eventcatalogWidget
     opacity: 0
@@ -109,5 +82,7 @@ menu
     pointer-events: none
     
 @media (max-width: 768px)
-    .menu_block-soaring_balls_syndicate,.menu_block-ballride_style,.menu_block-ballriders_creative_group
-        background-position: top
+    .menu_block span.section_header
+        font-size: 14px
+        padding: 5px
+    
