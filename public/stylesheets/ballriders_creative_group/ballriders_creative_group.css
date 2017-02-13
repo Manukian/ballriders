@@ -406,7 +406,8 @@ body {
 
 .topside_menu_mobile_list_item_link {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
+  letter-spacing: 2px;
   color: #3F404B;
   font-family: Neue;
   text-transform: uppercase; }
@@ -416,17 +417,6 @@ body {
 .on {
   opacity: 1;
   z-index: 9999; }
-
-.coming_soon {
-  pointer-events: none; }
-  .coming_soon a:after {
-    content: " (Coming on October 27)";
-    width: 100%;
-    display: inline-block;
-    text-transform: none;
-    font-size: 12px;
-    color: #FF3399;
-    margin-top: 5px; }
 
 .main_header {
   height: 175px;
