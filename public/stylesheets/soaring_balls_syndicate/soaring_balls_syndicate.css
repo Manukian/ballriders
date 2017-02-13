@@ -357,7 +357,7 @@ body {
   background-color: white; }
 
 .topside_menu_mobile_toggle {
-  position: absolute;
+  position: fixed;
   display: inline-block;
   left: 30px;
   top: 30px;
@@ -368,7 +368,8 @@ body {
   background-size: contain;
   background-image: url(../../images/topside_menu_mobile_open.svg);
   background-position: center;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 9999; }
 
 .topside_menu_mobile_close {
   background-image: url(../../images/topside_menu_mobile_close.svg);
@@ -632,8 +633,7 @@ body {
   position: relative;
   background-image: url(../../images/IMG_0555.JPG);
   background-size: cover;
-  background-position: right;
-  z-index: 1000; }
+  background-position: right; }
 
 .about_text_wrapper {
   font-size: 23px;
@@ -662,8 +662,7 @@ body {
   -webkit-animation: noiseAnim 0.5s infinite linear alternate;
   -moz-animation: noiseAnim 0.5s infinite linear alternate;
   -o-animation: noiseAnim 0.5s infinite linear alternate;
-  animation: noiseAnim 0.5s infinite linear alternate;
-  z-index: 1000; }
+  animation: noiseAnim 0.5s infinite linear alternate; }
 
 .instagram_link {
   width: 300px;
