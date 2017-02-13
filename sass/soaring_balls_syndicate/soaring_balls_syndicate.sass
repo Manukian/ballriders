@@ -72,22 +72,8 @@
     opacity: 1
     z-index: 9999
     
-.menu_big_toggle
-    position: absolute
-    display: inline-block
-    right: 15px
-    top: 15px
-    width: 60px
-    height: 60px
-    z-index: 1000
-    background-repeat: no-repeat
-    background-size: contain
-    background-image: url(../../images/menu_open.svg)
-    background-position: center
-    cursor: pointer
-    
 .menu_big_toggle_black
-    position: absolute
+    position: fixed
     display: inline-block
     right: 15px
     top: 15px
@@ -121,7 +107,7 @@
 #home_section
     position: relative
     width: 100%
-    background-color: transparent
+    background-color: $white
     text-align: center
     & .arrow_pure
         cursor: auto
@@ -161,7 +147,7 @@
 #works_section
     position: relative
     width: 100%
-    background-color: transparent
+    background-color: $white
     text-align: center
 
 #clients_section
@@ -232,6 +218,7 @@
     background-image: url(../../images/IMG_0555.JPG)
     background-size: cover
     background-position: right
+    z-index: 1000
     
 .about_text_wrapper
     font-size: 23px
@@ -261,6 +248,7 @@
     -moz-animation: noiseAnim 0.5s infinite linear alternate
     -o-animation: noiseAnim 0.5s infinite linear alternate
     animation: noiseAnim 0.5s infinite linear alternate
+    z-index: 1000
     
 .instagram_link
     width: 300px
@@ -286,7 +274,7 @@
 #contact_section
     width: 100%
     position: relative
-    background-color: transparent
+    background-color: $white
     text-align: center
         
 .link_wrapper
