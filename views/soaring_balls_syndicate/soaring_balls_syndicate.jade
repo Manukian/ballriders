@@ -434,31 +434,31 @@ block head
     meta(name="keywords" content="freestyle basketball soaring balls syndicate ballride style performance choreography wedding show Vaggi баскетбольный фристайл свадебный перфоманс выступление детское шоу интерактив хореография мяч Вагги")
     meta(name="description" content="Discover one of the best freestyle basketballe team. Get the best entertainment show for your event")
 block main
-    main#fullpage
+    main
         include ../topside_menu_mobile.jade
-        .menu_big#menu
+        .menu_big
             .menu_close
             ul.menu_big_list
-                li.menu_big_item(data-menuanchor="home")
-                    a.menu_big_item_link(href="#home").color2 H o m e
-                li.menu_big_item(data-menuanchor="about")
-                    a.menu_big_item_link(href="#about").color3 A b o u t
-                li.menu_big_item(data-menuanchor="works")
-                    a.menu_big_item_link(href="#works").color4 W o r k s
-                li.menu_big_item(data-menuanchor="clients")
-                    a.menu_big_item_link(href="#clients").color5 C l i e n t s
-                li.menu_big_item(data-menuanchor="about")
-                    a.menu_big_item_link(href="#service").color6 S e r v i c e
-                li.menu_big_item(data-menuanchor="contact")
-                    a.menu_big_item_link(href="#contact").color7 C o n t a c t
+                li.menu_big_item
+                    a.menu_big_item_link(href="#home_section").color2 H o m e
+                li.menu_big_item
+                    a.menu_big_item_link(href="#about_section").color3 A b o u t
+                li.menu_big_item
+                    a.menu_big_item_link(href="#works_section").color4 W o r k s
+                li.menu_big_item
+                    a.menu_big_item_link(href="#clients_section").color5 C l i e n t s
+                li.menu_big_item
+                    a.menu_big_item_link(href="#service_section").color6 S e r v i c e
+                li.menu_big_item
+                    a.menu_big_item_link(href="#contact_section").color7 C o n t a c t
         .section#home_section
             .topside_menu_mobile_toggle
             .menu_big_toggle_black
             .circle_wrapper
                 .circle
                     img(src="../../images/soaring_balls_syndicate_allV.svg", alt="").section_svg
-                a(href="#about").arrow_pure
-                    img(src="../../images/arrow_down_pure.svg", alt="")
+            .arrow_pure
+                img(src="../../images/arrow_down_pure.svg", alt="")
         .section#about_section
             .menu_big_toggle
             .about_text_wrapper
@@ -507,14 +507,13 @@ block main
             .circle_wrapper
                 .circle
                     img(src="../../images/contact_circle_allV.svg", alt="").section_svg
-                a(href="#home").arrow_pure
+                .arrow_pure
                     img(src="../../images/arrow_up_pure.svg", alt="")
                 a.hitmebaby(href="mailto:weballriders@gmail.com")
 
-        link(rel="stylesheet", href="stylesheets/soaring_balls_syndicate/soaring_balls_syndicate-min.css")
+        link(rel="stylesheet", href="stylesheets/soaring_balls_syndicate/soaring_balls_syndicate.css")
 block js
     script(src="javascripts/soaring_balls_syndicate.js")
-    script(type='text/javascript', src='fullpage.js/jquery.fullPage.js')
 
 
 
