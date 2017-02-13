@@ -533,7 +533,7 @@ body {
     cursor: auto;
     position: absolute;
     font-size: 12px;
-    bottom: 0;
+    bottom: -20px;
     left: 50%;
     margin-left: -34px; }
 
@@ -722,7 +722,10 @@ body {
 
   .instagram_link {
     width: 100%;
-    right: 0; } }
+    right: 0; }
+
+  .arrow_pure {
+    bottom: 0; } }
 @media(max-width: 400px) {
   .menu_big_list {
     width: 240px;
