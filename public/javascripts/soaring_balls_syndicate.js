@@ -1,6 +1,6 @@
 $(document).ready(function(){$.fn.scrollView=function(){return this.each(function(){$('html, body').animate({scrollTop:$(this).offset().top},1000);});}
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    $('.section').height($(window).height()+50);
+    $('.section').height($(window).height()+60);
     $('#home_section').height($(window).height());
 } else {
     $('.section').height($(window).height());
