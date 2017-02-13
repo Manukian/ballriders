@@ -418,6 +418,9 @@ body {
   opacity: 1;
   z-index: 9999; }
 
+@media (max-width: 600px) {
+  .topside_menu_mobile_list_item_link {
+    font-size: 12px; } }
 .menu_big {
   position: fixed;
   width: 100%;
@@ -540,7 +543,9 @@ body {
   background-color: transparent;
   text-align: center; }
   #home_section .arrow_pure {
+    cursor: auto;
     position: absolute;
+    font-size: 12px;
     bottom: 0;
     left: 50%;
     margin-left: -34px; }
