@@ -1,5 +1,10 @@
 $(document).ready(function(){$.fn.scrollView=function(){return this.each(function(){$('html, body').animate({scrollTop:$(this).offset().top},1000);});}
-$('.section').height($(window).height());
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    $('.section').height($(window).height()+50);
+    $('#home_section').height($(window).height());
+} else {
+    $('.section').height($(window).height());
+}
 $('#contact_section').children('.circle_wrapper').children('.arrow_pure').click(function () {
     $('#home_section').scrollView();
 });
