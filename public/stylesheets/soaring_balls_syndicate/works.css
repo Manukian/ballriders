@@ -356,6 +356,9 @@ body {
   font-family: proxima-nova;
   background-color: white; }
 
+body {
+  background-color: #f9f9f9; }
+
 #works {
   position: relative;
   width: 100%;
@@ -371,7 +374,8 @@ body {
   height: 30%;
   text-align: center;
   overflow: hidden;
-  background-size: cover; }
+  background-size: cover;
+  background-color: #f9f9f9; }
   .video_wrapper img {
     height: 100%; }
 
@@ -576,6 +580,7 @@ article {
 .project_arrow {
   position: relative;
   width: 40%;
+  height: 20px;
   display: inline-block;
   text-indent: 150%;
   overflow: hidden;
@@ -655,6 +660,8 @@ article {
   text-transform: uppercase;
   font-weight: 600; }
 
+.active .project_arrow {
+  background-image: url(../../images/arrow_right_white.svg); }
 .active a {
   width: 100%;
   margin: 0;
@@ -671,6 +678,8 @@ article {
 .active .link_project {
   -webkit-transform: translateY(8px); }
 
+.project_list_collab .active .project_arrow {
+  background-image: url(../../images/arrow_left_white.svg); }
 .project_list_collab .proj_link {
   top: 0;
   left: 0;

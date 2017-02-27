@@ -1,0 +1,107 @@
+extends ../layout
+
+mixin project_item(href, number, title, year, category, music)
+    article
+        .wrapper_work
+            a.proj_link(href=href target="_blank")
+            .proj_wrapper
+              .info_main
+                span.main_number= number
+                h2.main_title= title
+              .info_link
+                  .info_link_wrapper
+                    span.link_year= year
+                    span.link_project
+                      span.project_view Смотреть Проект
+                      span.project_arrow Перейти К Проекту
+              .info_detail
+                h1.detail_title= title
+                .detail_wrapper
+                    .detail_category
+                      .top Категория
+                      .bot= category
+                    .detail_music
+                      .top Музыка
+                      .bot= music
+
+mixin project_item_reverse(href, number, title, year, category, music)
+    article
+        .wrapper_work
+            a.proj_link(href=href target="_blank")
+            .proj_wrapper
+              .info_main
+                h2.main_title= title
+                span.main_number= number
+              .info_link
+                  .info_link_wrapper
+                    span.link_year= year
+                    span.link_project
+                      span.project_arrow Перейти К Проекту
+                      span.project_view Смотреть Проект
+              .info_detail
+                .detail_wrapper
+                    .detail_category
+                      .top Категория
+                      .bot= category
+                    .detail_music
+                      .top Музыка
+                      .bot= music
+                h1.detail_title= title
+      
+block head
+    meta(name="keywords" content="freestyle basketball soaring balls syndicate works ballride style choreography ballriders movie video Vaggi примеры работ хореография мяч Вагги промо баскетбольный фристайл выступление шоу видео Вагги")
+    meta(name="description" content="Watch videos from Soaring Balls Syndicate. Ballriders Movie. Vaggi | Ballride Style Choreographer.")
+    link(rel="stylesheet", href="/stylesheets/soaring_balls_syndicate/works-min.css")   
+block main
+    section#works
+        .video_wrapper
+          video#hands(autoplay loop )
+            source(src="../../images/hands_new.webm" type="video/webm")
+            source(src="../../images/hands_new.mov" type="video/mp4")
+        #left.menu_div
+          h3.menu_div_title Другие Работы
+        #right.menu_div
+          h3.menu_div_title Хореографии
+        .works_wrapper
+            .project_list
+                .project_list_collab
+                    .wrapper
+                        .title.text_right
+                            h1.project_list_title Выбранные Работы
+                            span.under_title_text - список проектов
+                    +project_item_reverse('https://www.youtube.com/watch?v=MGWPJnIrxp4','.03','Vaggi vs Kalani','Г - 2016','Турнир','-')
+                    +project_item_reverse('https://vimeo.com/167247232','.02','Vaggi | Ballride Style','Г - 2016', 'Промо', 'DJ VAG / Zion')
+                    +project_item_reverse('https://www.youtube.com/watch?v=bXE4w9ZjNuU','.01','Класс для IamballerTV','Г - 2014', 'Туториал', '-')
+                .project_list_choreo
+                    .wrapper
+                        .title
+                            h1.project_list_title Выбранные Хореографии
+                            span.under_title_text - список проектов
+                    article
+                        .wrapper_work
+                            a.proj_link()
+                            .proj_wrapper
+                              .info_main
+                                span.main_number .04
+                                h2.main_title Делай Как Надо
+                              .info_link
+                                  .info_link_wrapper
+                                    span.link_year Г - 2017
+                                    span.link_project
+                                      span.project_view Смотреть Проект
+                                      span.project_arrow Перейти К Проекту
+                              .info_detail
+                                h1.detail_title Делай Как Надо
+                                .detail_wrapper
+                                    .detail_category
+                                      .top Категория
+                                      .bot Скоро Премьера
+                                    .detail_music
+                                      .top Музыка
+                                      .bot Kizaru
+                    +project_item('https://vimeo.com/111230188','.03','Все Мои Парни','Г - 2014', 'Choreo', 'Kizaru')
+                    +project_item('https://vimeo.com/101261220','.02','Не Лезь На Угол','Г - 2014', 'Choreo', 'Kizaru')
+                    +project_item('https://vimeo.com/98450544','.01','Не Оставляют Пальцев','Г - 2014', 'Choreo', 'Kizaru')
+                    
+block js
+    script(src="/javascripts/works.js")

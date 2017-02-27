@@ -1,0 +1,82 @@
+extends ../layout
+
+block head
+    meta(name="keywords" content="freestyle basketball soaring balls syndicate ballride style performance choreography wedding show Vaggi баскетбольный фристайл свадебный перфоманс выступление детское шоу интерактив хореография мяч Вагги")
+    meta(name="description" content="Discover one of the best freestyle basketballe team. Get the best entertainment show for your event")
+block main
+    main
+        include ../topside_menu_mobile.jade
+        .menu_big
+            .menu_close
+            ul.menu_big_list
+                li.menu_big_item
+                    a.menu_big_item_link(href="#home_section").color2 Г л а в н а я
+                li.menu_big_item
+                    a.menu_big_item_link(href="#about_section").color3 О б о М н е
+                li.menu_big_item
+                    a.menu_big_item_link(href="#works_section").color4 Р а б о т ы
+                li.menu_big_item
+                    a.menu_big_item_link(href="#clients_section").color5 К л и е н т ы
+                li.menu_big_item
+                    a.menu_big_item_link(href="#service_section").color6 У с л у г и
+                li.menu_big_item
+                    a.menu_big_item_link(href="#contact_section").color7 К о н т а к т
+        .section#home_section
+            .topside_menu_mobile_toggle
+            .menu_big_toggle_black
+            a.lang_change(href="/soaring_balls_syndicate") EN
+            .circle_wrapper
+                .circle
+                    img(src="../../images/soaring_balls_syndicate/ru/soaring_balls_syndicate_ru_allV.svg", alt="").section_svg
+            .arrow_pure(style="margin-left: -33px") листай вниз
+        .section#about_section
+            .about_text_wrapper
+                br
+                | Привет.
+                br
+                | Я Ваган Манукян.
+                br
+                | Я живу и выступаю в России.
+                br
+                | Я делаю акробатические шоу с элементами
+                br
+                | баскетбольного фристайла.
+                br
+                | Свободно владею мячом.
+                br
+                | Для меня фристайл это не только
+                br
+                | развлекательная индустрия,
+                br
+                | но также и способ рассказать некоторые
+                br
+                | истории из жизни.
+        .section#works_section
+            .circle_wrapper
+                .circle
+                    img(src="../../images/soaring_balls_syndicate/ru/works_selection_ru_allV.svg", alt="").section_svg
+                a.hitmebaby(href="/ru/soaring_balls_syndicate/works")
+        .section#clients_section
+            .circle_wrapper
+                .circle
+                    img(src="../../images/soaring_balls_syndicate/ru/white_circle_ru_allV.svg", alt="").section_svg
+        .section#service_section
+            .circle_wrapper
+                a.instagram_link(href="http://instagram.com/vaggi_tsss" target="_blank")
+                    img(src="../../images/insta_logo_white.svg", alt="")
+                    .text Взглянуть на мой инстаграм
+                    img(src="../../images/arrow_right_white.svg", alt="")
+                .circle
+                    img(src="../../images/soaring_balls_syndicate/ru/service_circle_ru_allV.svg", alt="").section_svg
+        .section#contact_section
+            .circle_wrapper
+                .circle
+                    img(src="../../images/soaring_balls_syndicate/ru/contact_circle_ru_allV.svg", alt="").section_svg
+                a.hitmebaby(href="mailto:weballriders@gmail.com")
+
+        link(rel="stylesheet", href="../stylesheets/soaring_balls_syndicate/soaring_balls_syndicate-min.css")
+block js
+    script(src="../javascripts/soaring_balls_syndicate.js")
+
+
+

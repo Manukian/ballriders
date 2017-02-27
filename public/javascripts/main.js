@@ -4,9 +4,9 @@ $(document).ready(function() {
             $(this).addClass('menu_block_mobile');
             $(this).height($(window).height());
             $('span.section_header').css('margin-top', ($(window).height()*0.5));
-            $('.menu_block-ballride_style').css('background-image','url(../images/people3.jpg)');
-            $('.menu_block-soaring_balls_syndicate').css('background-image','url(../images/ballhead.jpg)');
-            $('.menu_block-ballriders_creative_group').css('background-image','url(../images/IMG_1811_min.jpg)');
+            $('.menu_block-ballride_style').css('background-image','url(../images/people/people3.jpg)');
+            $('.menu_block-soaring_balls_syndicate').css('background-image','url(../images/soaring_balls_syndicate/ballhead.jpg)');
+            $('.menu_block-ballriders_creative_group').css('background-image','url(../images/bubblips/IMG_1811_min.jpg)');
             $('#vid').height(0);
         });
     } else {

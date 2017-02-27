@@ -1,6 +1,9 @@
 @import '../partials/variables'
 @import '../partials/base'
 
+body
+    background-color: $white
+
 #works
     position: relative
     width: 100%
@@ -17,6 +20,7 @@
     text-align: center
     overflow: hidden
     background-size: cover
+    background-color: $white
     & img
         height: 100%
 
@@ -223,6 +227,7 @@ article
 .project_arrow
     position: relative
     width: 40%
+    height: 20px
     display: inline-block
     text-indent: 150%
     overflow: hidden
@@ -304,6 +309,8 @@ article
     font-weight: 600
     
 .active
+    & .project_arrow
+        background-image: url(../../images/arrow_right_white.svg)
     & a
         width: 100%
         margin: 0
@@ -321,6 +328,8 @@ article
         -webkit-transform: translateY(8px)
 
 .project_list_collab
+    & .active .project_arrow
+        background-image: url(../../images/arrow_left_white.svg)
     & .proj_link
         top: 0
         left: 0
