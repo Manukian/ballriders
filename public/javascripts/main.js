@@ -3,11 +3,7 @@ $(document).ready(function() {
         $('.menu_block').each(function(){
             $(this).addClass('menu_block_mobile');
             $(this).height($(window).height());
-            $('span.section_header').css('margin-top', ($(window).height()*0.5));
-            $('.menu_block-ballride_style').css('background-image','url(../images/people/people3.jpg)');
-            $('.menu_block-soaring_balls_syndicate').css('background-image','url(../images/soaring_balls_syndicate/ballhead.jpg)');
-            $('.menu_block-ballriders_creative_group').css('background-image','url(../images/bubblips/IMG_1811_min.jpg)');
-            $('#vid').height(0);
+            $(this).css('opacity','1');
         });
     } else {
         var trail = $(window).width() / 10;
@@ -34,13 +30,6 @@ $(document).ready(function() {
                 });
             }
             elem.addClass('menu_block-selected');
-            if (elem.hasClass('menu_block-soaring_balls_syndicate')) {
-                elem.children('video').attr('loop', 'true');
-                elem.children('video')[0].play();
-            }
         });
     }
-    $('.menu_block').mouseleave(function() {
-        $('video')[0].pause();
-    });
 });
