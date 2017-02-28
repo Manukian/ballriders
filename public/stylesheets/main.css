@@ -400,6 +400,10 @@ menu {
   font-family: Neue;
   font-size: 21px;
   color: #f9f9f9; }
+  .menu_block span.section_header:before {
+    content: "- "; }
+  .menu_block span.section_header:after {
+    content: " -"; }
 
 .menu_block-description {
   width: 100%;
@@ -444,8 +448,14 @@ menu {
 @media (max-width: 768px) {
   .menu_block span.section_header {
     font-size: 14px;
-    padding: 0 5px;
+    padding: 0 10px;
     box-sizing: border-box; }
+    .menu_block span.section_header:after {
+      content: ""; }
+    .menu_block span.section_header:before {
+      content: "-----------";
+      display: block;
+      margin-bottom: 5px; }
 
   .menu_block-description {
     font-size: 11px; } }
