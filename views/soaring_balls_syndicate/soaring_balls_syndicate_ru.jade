@@ -4,6 +4,9 @@ block head
     meta(name="keywords" content="freestyle basketball soaring balls syndicate ballride style performance choreography wedding show Vaggi баскетбольный фристайл свадебный перфоманс выступление детское шоу интерактив хореография мяч Вагги")
     meta(name="description" content="Discover one of the best freestyle basketballe team. Get the best entertainment show for your event")
 block main
+    .loader_area
+        .loader
+            img(src="../../images/fluent_color.svg", alt="")
     main
         include ../topside_menu_mobile.jade
         .menu_big
@@ -27,10 +30,13 @@ block main
             a.lang_change(href="/soaring_balls_syndicate") EN
             .circle_wrapper
                 .circle
-                    img(src="../../images/soaring_balls_syndicate/ru/soaring_balls_syndicate_ru_allV.svg", alt="").section_svg
+                    .title_label.wow.fadeIn Шоу летающих мячей от
+                    .section_title.wow.fadeInLeft Вагги Тссс
+                    .section_cta.wow.fadeInUp Хочу шоу
             .arrow_pure(style="margin-left: -33px") листай вниз
+            img(src="../../images/fluent_color.svg", alt="").drop.wow.fadeInDown
         .section#about_section
-            .about_text_wrapper(style="margin-top: -212px")
+            .about_text_wrapper(style="margin-top: -212px").wow.fadeIn
                 br
                 | Привет.
                 br
@@ -54,28 +60,61 @@ block main
         .section#works_section
             .circle_wrapper
                 .circle
-                    img(src="../../images/soaring_balls_syndicate/ru/works_selection_ru_allV.svg", alt="").section_svg
-                a.hitmebaby(href="/ru/soaring_balls_syndicate/works")
+                    .title_label.wow.fadeIn Видео
+                    .section_title.wow.fadeInRight Портфолио
+                    a.section_cta(href="/ru/soaring_balls_syndicate/works").wow.fadeInUp Смотреть
         .section#clients_section
             .circle_wrapper
-                .circle
-                    img(src="../../images/soaring_balls_syndicate/ru/white_circle_ru_allV.svg", alt="").section_svg
+                .circle2
+                    .section_title Клиенты
+                    .clients_text
+                        .clients_row 
+                            .bold Adidas 
+                            | • A-One • 
+                            .bold Apple 
+                            | • Asus • 
+                            .lg-only Ballaholix • 
+                            | Centr
+                        .clients_row Дождь • 
+                            .bold FIBA 
+                            | •  
+                            .lg-only Funbox • Gurme • 
+                            | Kia • 
+                            .bold Ленинград Центр 
+                        .clients_row Li-Ning • 
+                            .bold МЕЧ 
+                            | • Minsk Street Gamez
+                        .clients_row НТВ • Redbull • 
+                            .bold Reebok 
+                            | • 
+                            .lg-only Streetball • 
+                            .bold Tachikara 
+                        .clients_row 
+                            .bold ТНТ 
+                            | • WFBA • Zero • Zuidepark
         .section#service_section
             .circle_wrapper
                 a.instagram_link(href="http://instagram.com/vaggi_tsss" target="_blank")
                     img(src="../../images/insta_logo_white.svg", alt="")
                     .text Взглянуть на мой инстаграм
                     img(src="../../images/arrow_right_white.svg", alt="")
-                .circle
-                    img(src="../../images/soaring_balls_syndicate/ru/service_circle_ru_allV.svg", alt="").section_svg
+                .circle3
+                    .section_title  Услуги
+                    .service_text 
+                        .service_row Баскетбольное фристайл шоу
+                        .service_row Хореография с мячами
+                        .service_row Дриблинг • Кручение мяча на пальце
+                        .service_row Мастерклассы
         .section#contact_section
             .circle_wrapper
                 .circle
-                    img(src="../../images/soaring_balls_syndicate/ru/contact_circle_ru_allV.svg", alt="").section_svg
-                a.hitmebaby(href="mailto:weballriders@gmail.com")
-
-        link(rel="stylesheet", href="../stylesheets/soaring_balls_syndicate/soaring_balls_syndicate-min.css")
+                    .title_label Для связи
+                    .section_title Пишимне
+                    a.section_cta(href="mailto:weballriders@gmail.com") Писать
+        link(rel="stylesheet", href="../stylesheets/soaring_balls_syndicate/animate.css")
+        link(rel="stylesheet", href="../stylesheets/soaring_balls_syndicate/soaring_balls_syndicate.css")
 block js
+    script(src="../javascripts/wow.min.js")
     script(src="../javascripts/soaring_balls_syndicate.js")
 
 

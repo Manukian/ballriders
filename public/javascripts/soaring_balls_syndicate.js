@@ -1,4 +1,9 @@
-$(document).ready(function(){
+$(window).on('load', function () {
+    $preloader = $('.loader_area'),
+    $loader = $preloader.find('.loader');
+    $loader.delay(500).fadeOut('slow');
+    $preloader.delay(600).fadeOut('slow');
+
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         $('.section').height($(window).height()+70);
         $('#home_section').height($(window).height());
@@ -25,4 +30,5 @@ $(document).ready(function(){
         $('.topside_menu_mobile').removeClass('on');
         $('.topside_menu_mobile_toggle').show();
     });
+    new WOW().init();
 });

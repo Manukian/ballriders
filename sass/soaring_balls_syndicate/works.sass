@@ -44,7 +44,7 @@ body
     display: inline-block
     cursor: pointer
     &:hover h3
-        color: $purple
+        color: $purple_new
         
 
 .menu_div_title
@@ -54,9 +54,9 @@ body
     text-transform: lowercase
 
 .handed
-    outline: solid 5px $purple
+    outline: solid 5px $purple_new
     & .menu_div_title
-        color: $purple
+        color: $purple_new
 
 .works_wrapper
     width: 100%
@@ -68,7 +68,7 @@ body
 .project_list_title
     margin: 0
     font-size: 45px
-    font-weight: 700
+    font-family: proxima-nova-bold
     border-bottom: 5px solid black
     padding-bottom: 30px
     margin-bottom: 30px
@@ -169,7 +169,7 @@ article
     
 .main_title
     font-size: 30px
-    font-weight: 700
+    font-family: proxima-nova-bold
 
     
 .main_number
@@ -223,12 +223,14 @@ article
     color: $white
     opacity: 0
     width: 60%
+    vertical-align: middle
 
 .project_arrow
     position: relative
     width: 40%
     height: 20px
     display: inline-block
+    vertical-align: middle
     text-indent: 150%
     overflow: hidden
     white-space: nowrap
@@ -249,7 +251,7 @@ article
     height: 0%
     top: 0
     overflow: hidden
-    background-color: $purple
+    background-color: $purple_new
     z-index: 200
     pointer-events: none
     width: 120%
@@ -263,7 +265,7 @@ article
     margin-left: 1.6%
     margin-right: 2%
     width: 30%
-    font-weight: 700
+    font-family: proxima-nova-bold
     font-size: 35px
     height: 100%
     padding: 35px 0 10px
@@ -306,7 +308,7 @@ article
 .bot
     position: relative
     text-transform: uppercase
-    font-weight: 600
+    font-family: proxima-nova
     
 .active
     & .project_arrow
