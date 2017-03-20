@@ -359,6 +359,30 @@ body {
 body {
   background-color: #f9f9f9; }
 
+.loader_area {
+  position: fixed;
+  z-index: 100000;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #f9f9f9; }
+
+.loader {
+  width: 50px;
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+  top: -140px; }
+
+.loader {
+  animation: animate 1.2s infinite linear; }
+
+@keyframes animate {
+  0% {
+    transform: translateY(0px); }
+  100% {
+    transform: translateY(1000px); } }
 #works {
   position: relative;
   width: 100%;

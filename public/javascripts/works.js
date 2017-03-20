@@ -1,4 +1,8 @@
-$(document).ready(function(){
+$(window).on('load', function () {
+    $preloader = $('.loader_area'),
+    $loader = $preloader.find('.loader');
+    $loader.delay(500).fadeOut('slow');
+    $preloader.delay(600).fadeOut('slow');
 
 var hands = $('#hands');
     
