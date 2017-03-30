@@ -37,7 +37,7 @@ function setHandClass(elem) {
 
 function handsChange(elem) {
     if ((elem.attr('id') == 'left') && !(elem.hasClass('handed'))) {
-        cicle(elem,2.29,4.00);
+        cicle(elem,2.29,3.59);
     }
     if ((elem.attr('id') == 'right') && !(elem.hasClass('handed'))) {
         cicle(elem,0,1.30);

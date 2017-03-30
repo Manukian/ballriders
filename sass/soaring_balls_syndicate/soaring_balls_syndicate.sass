@@ -1,6 +1,7 @@
 @import '../partials/variables'
 @import '../partials/base'
 @import '../layout/topside_menu_mobile'
+@import 'glitch'
 
 body
     overflow-x: hidden
@@ -23,7 +24,7 @@ body
     
 .loader
     animation: animate 1.2s infinite linear
- 
+
 @keyframes animate
     0%
         transform: translateY(0px)
@@ -379,13 +380,7 @@ body
     position: relative
     background-color: black
     text-align: center
-    background-image: url(../../images/grain.jpg)
-    background-repeat: repeat
-    background-position: 0 0
-    -webkit-animation: noiseAnim 0.5s infinite linear alternate
-    -moz-animation: noiseAnim 0.5s infinite linear alternate
-    -o-animation: noiseAnim 0.5s infinite linear alternate
-    animation: noiseAnim 0.5s infinite linear alternate
+
     
 .service_text
     position: absolute
@@ -405,7 +400,6 @@ body
     color: $white
     
 .instagram_link
-    width: 300px
     height: auto
     color: white
     font-family: proxima-nova-bold
@@ -440,6 +434,32 @@ body
     &:hover
         color: $darkGray + 20
     
+.glitch_cta:hover
+    @include textGlitch("glitch_cta", 12, $black, $tachikara, red, blue, 170, 80)
+    position: absolute
+    &:after
+        top: 15px
+    &:before
+        top: 14px
+        left: 2px
+
+.glitch_text
+    @include textGlitch("glitch_text", 12, $white, black, red, blue, 400, 55)
+        
+.glitch_instagram
+    position: absolute
+    bottom: 202px
+    right: 191px
+    height: auto
+    width: auto
+    z-index: 1000
+    @include imgGlitch("glitch", 12, 50, 60)
+    & img
+        position: absolute
+        top: 0
+        left: 0
+        height: 150px
+    
 @media(max-width: 1110px)
     .clients_row
         letter-spacing: 4px
@@ -448,6 +468,8 @@ body
         line-height: 25px
     
 @media(max-width: 790px)
+    .glitch_cta:after:before
+        display: none
     .section_title
         font-size: 40px
         top: 47%
@@ -465,6 +487,12 @@ body
         display: none
     
 @media(max-width: 600px)
+    .glitch_instagram
+        left: 50%
+        margin-left: -16px
+        top: 78%
+        & img
+            height: 100px
     .menu_big_list
         margin-top: -165px
     .menu_big_item
@@ -508,6 +536,12 @@ body
         line-height: 48px
         
 @media(max-width: 400px)
+    .glitch_instagram
+        left: 50%
+        top: 70%
+        margin-left: -16px
+        & img
+            height: 100px
     .menu_big_list
         width: 240px
         margin-left: -120px
@@ -516,7 +550,7 @@ body
         line-height: 25px
     .instagram_link
         width: 80%
-        top: 78%
+        top: 88%
         margin: 0 10%
         & .text
             width: 100%
