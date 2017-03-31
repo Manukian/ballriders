@@ -434,15 +434,6 @@ body
     color: $black
     &:hover
         color: $darkGray + 20
-    
-.glitch_cta:hover
-    @include textGlitch("glitch_cta", 12, $black, $tachikara, red, blue, 170, 80)
-    position: absolute
-    &:after
-        top: 15px
-    &:before
-        top: 14px
-        left: 2px
 
 .glitch_text
     @include textGlitch("glitch_text", 12, $white, black, red, blue, 400, 55)
@@ -471,8 +462,6 @@ body
 @media(max-width: 790px)
     .glitch_instagram
         top: 74.5%
-    .glitch_cta:after:before
-        display: none
     .section_title
         font-size: 40px
         top: 47%
