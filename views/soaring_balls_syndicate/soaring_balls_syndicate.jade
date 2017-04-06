@@ -29,11 +29,26 @@ block main
             .menu_big_toggle_black
             a.lang_change(href="/ru/soaring_balls_syndicate") RU
             .circle_wrapper
+                .promo_wrapper.wow.fadeInRight
+                    .promo_circle_wrapper
+                        .promo_circle_small
+                        .promo_circle_small_text watch my promo
+                    .promo_text_label or nah...
+                    .promo_close
+                iframe.promo_video_wrapper(src="", frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+                    p
+                        a(href='https://vimeo.com/167247232') Vaggi | Ballride Style Choreographer
+                        |  from 
+                        a(href='https://vimeo.com/ballriders') BALLRIDERS SYNDICATE
+                        |  on 
+                        a(href='https://vimeo.com') Vimeo
+                        | .
+                .promo_video_close
                 .circle
                     .title_label.wow.fadeIn Soaring Balls Show by
                     .section_title.wow.fadeInLeft Vaggi Tsss
                     a.section_cta.wow.fadeInUp(href="mailto:weballriders@gmail.com") Get a show
-            .arrow_pure scroll down
+            .small_label scroll down
             img(src="../../images/fluent_color.svg", alt="").drop.wow.fadeInDown
         .section#about_section
             .about_text_wrapper.wow.fadeIn
@@ -114,6 +129,7 @@ block main
                     .title_label.wow.fadeIn For contact
                     .section_title.wow.fadeInLeft Hitmebaby
                     a.section_cta(href="mailto:weballriders@gmail.com").wow.fadeInUp Say hi
+            .small_label weballriders@gmail.com
         link(rel="stylesheet", href="stylesheets/soaring_balls_syndicate/animate.css")
         link(rel="stylesheet", href="stylesheets/soaring_balls_syndicate/soaring_balls_syndicate-min.css")
 block js

@@ -3,6 +3,7 @@ $(window).on('load', function () {
     $loader = $preloader.find('.loader');
     $loader.delay(500).fadeOut('slow');
     $preloader.delay(600).fadeOut('slow');
+    $('body').css('overflow','visible');
 
 var hands = $('#hands');
     

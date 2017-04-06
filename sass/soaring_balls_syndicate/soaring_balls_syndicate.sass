@@ -5,6 +5,7 @@
 
 body
     overflow-x: hidden
+    overflow: hidden
     
 .loader_area
     position: fixed
@@ -191,23 +192,29 @@ body
     &:hover
         text-decoration: underline
 
+.small_label
+    cursor: pointer
+    height: auto
+    width: 100%
+    text-align: center
+    display: inline-block   
+    cursor: auto
+    position: absolute
+    font-size: 12px
+    left: 0
+    bottom: 35px
+    
 #home_section
     position: relative
     width: 100%
     background-color: $white
     text-align: center
-    & .arrow_pure
-        cursor: auto
-        position: absolute
-        font-size: 12px
-        bottom: -20px
-        left: 50%
-        margin-left: -30px
 
 .circle_wrapper
     position: relative
     width: 100%
     height: 100%
+    overflow: hidden
     
 .circle
     position: absolute
@@ -251,12 +258,120 @@ body
         letter-spacing: 50px
         padding-left: 25px
         color: $white
-
+        
+.promo_wrapper
+    position: absolute
+    right: 15%
+    top: 15%
+    width: auto
+    z-index: 1000
     
-.arrow_pure
-    cursor: pointer
-    height: 10%
+.promo_circle_wrapper
+    position: relative
+    width: auto
+    height: 100%
     display: inline-block
+    vertical-align: middle
+    
+.promo_circle_small
+    background-image: url(../../images/small_green_circle.svg)
+    background-position: center
+    background-size: cover
+    border-radius: 100px
+    width: 50px
+    height: 50px
+    font-size: 12px
+    letter-spacing: 1.5px
+    cursor: pointer
+    transition: 0.3s transform
+    box-sizing: border-box
+    &:hover
+        transform: scale(4)
+        -webkit-transform: scale(4)
+        -moz-transform: scale(4)
+        -o-transform: scale(4)
+        background-image: url(../../images/promo.gif)
+        border: solid 1px $tachikara
+    
+.promo_circle_small_text
+    display: none
+    position: absolute
+    left: -8px
+    top: -34px
+    pointer-events: none
+    z-index: 1000
+    font-size: 16px
+    font-family: proxima-nova-bold
+    line-height: 40px
+    letter-spacing: 2px
+    text-transform: uppercase
+    color: $tachikara
+    
+.promo_text_label
+    width: auto
+    margin: 0 25px 0 40px
+    height: 100%
+    display: inline-block
+    vertical-align: middle
+
+.promo_close
+    width: 50px
+    height: 50px
+    background-image: url(../../images/menu_close_black.svg)
+    background-repeat: no-repeat
+    display: inline-block
+    vertical-align: middle
+    cursor: pointer
+    
+.promo_closed
+    transform: translateX(500px)
+    -webkit-transform: translateX(500px)
+    -moz-transform: translateX(500px)
+    -o-transform: translateX(500px)
+    opacity: 0
+    transition: 0.3s
+    
+.circle_small_clicked
+    & .promo_circle_small
+        transition: 1.5s transform
+        transform: scale(80)
+        -webkit-transform: scale(80)
+        -moz-transform: scale(80)
+        -o-transform: scale(80)
+        background-image: none
+        background-color: black
+    & .promo_circle_small_text
+        opacity: 0
+    & .promo_text_label
+        opacity: 0
+    & .promo_close
+        opacity: 0
+        
+.promo_video_wrapper
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 0
+    opacity: 0
+    transition: 0.3s
+    
+.promo_video_close
+    display: none
+    left: 0px
+    top: 0px
+    position: absolute
+    width: 70px
+    height: 70px
+    background-image: url(../../images/menu_close.svg)
+    background-repeat: no-repeat
+    cursor: pointer
+    z-index: 10000
+        
+.promo_video_wrapper_show
+    opacity: 1
+    z-index: 10000
     
 #works_section
     position: relative
@@ -458,6 +573,10 @@ body
         font-size: 16px
         width: 85%
         line-height: 25px
+        
+@media (max-width: 1050px)
+    .promo_wrapper
+        right: 5%
     
 @media(max-width: 790px)
     .glitch_instagram
@@ -479,6 +598,9 @@ body
         display: none
     
 @media(max-width: 600px)
+    .promo_wrapper
+        right: 50%
+        margin-right: -110px
     .glitch_instagram
         left: 50%
         margin-left: -16px
@@ -496,8 +618,8 @@ body
     .instagram_link
         width: 100%
         right: 0
-    #home_section .arrow_pure
-        bottom: 0
+    #home_section .small_label
+        bottom: 50px
     .section_cta
         font-size: 14px
         height: 46px
